@@ -22,7 +22,7 @@
     <style>
     .h7 {
         color: #868D92;
-        font-size: 20px;
+        font-size: 10px;
     }
     </style>
 </head>
