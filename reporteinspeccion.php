@@ -356,7 +356,7 @@ if ($origen == '1') {
         while ($extraermatcolumnas = $consultarangos->fetch_array()) {
             $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
             $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
         }
     }
     $tabla .= "</tr>";
@@ -367,8 +367,9 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores = $extraerColores['id_alfanumerico'];
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td style='background-color:".$extraerColores['id_alfanumerico'].";' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerColores['id_alfanumerico']. "</center><b></td>";
+            $tabla .= "<td style='background-color:'" . $colores . "';' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -723,7 +724,7 @@ if ($origen == '1') {
         while ($extraermatcolumnas = $consultarangos->fetch_array()) {
             $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
             $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
         }
     }
     $tabla .= "</tr>";
@@ -734,8 +735,9 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores = $extraerColores['id_alfanumerico'];
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b><center>" . $extraerColores['id_alfanumerico'] . "</center><b></td>";
+            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores . "';'><b><center>" . $extraerlongitudes['nombre']  . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -1090,7 +1092,7 @@ if ($origen == '1') {
         while ($extraermatcolumnas = $consultarangos->fetch_array()) {
             $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
             $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
         }
     }
     $tabla .= "</tr>";
@@ -1101,8 +1103,9 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores = $extraerColores['id_alfanumerico'];
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b><center>" . $extraerlongitudes['id_alfanumericonombre'] . "</center><b></td>";
+            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores . "';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
