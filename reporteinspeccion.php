@@ -1174,7 +1174,8 @@ $options->set([
 ]);
 
 // Creamos una instancia de Dompdf y cargamos el HTML a convertir a PDF
-
+echo $tabla;
+/* 
 $dompdf = new Dompdf($options);
 
 ob_start();
@@ -1229,4 +1230,4 @@ $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 unlink('MostrarPDF/Imagen_Grafica.png');
 unlink('MostrarPDF/Imagen_Grafica2.png');
 unlink('MostrarPDF/mapa.png');
-/*  */
+ */
