@@ -10,18 +10,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- CDN for chosen plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
     </script>
 
     <!-- CDN for CSS of chosen plugin -->
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        .h7 {
-            color: #868D92;
-            font-size: 10px;
-        }
+    .h7 {
+        color: #868D92;
+        font-size: 20px;
+    }
     </style>
 </head>
 
@@ -833,13 +835,13 @@
     }
     </script>
     <style>
-        div.box {
-            width: 200px;
-            margin: 10px 50px;
-            padding: 20px;
-            background-color: #ffffff;
-            color: #000;
-        }
+    div.box {
+        width: 200px;
+        margin: 10px 50px;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #000;
+    }
     </style>
     <div class="titulo_p">
         <form action="" method="post"></form>
@@ -857,9 +859,9 @@
     if ($proceso == 'FR') {
         $id_inspeccion = $_REQUEST["id_encuesta"];
     ?>
-        <div class="link_int">
-            <div class="titulo2"> <a href="listarencabezadoencabezadofreemium">+Listar Encabezados Freemium</a></div>
-        </div>
+    <div class="link_int">
+        <div class="titulo2"> <a href="listarencabezadoencabezadofreemium">+Listar Encabezados Freemium</a></div>
+    </div>
     <?php
     }
     ?>
@@ -880,34 +882,35 @@
             $id_inspeccion = $_REQUEST["id_encuesta"];
         ?>
 
-            <form action="capturarubicacionB.php" target="_blank" method="POST">
-                <input type="hidden" name="id_encuesta" value="<?php echo $id_inspeccion ?>">
-                <input type="hidden" name="usuario_id" value=<?php echo $id_usuario_ext ?>>
-                <input type="hidden" name="tipo_proceso" value="FR">
-                <button type="submit" class="btn_azul" onClick="myFunction()" name="capturarubicacionfree">TERMINAR INSPECCIÓN FREEMIUM </button>
-            </form>
+        <form action="capturarubicacionB.php" target="_blank" method="POST">
+            <input type="hidden" name="id_encuesta" value="<?php echo $id_inspeccion ?>">
+            <input type="hidden" name="usuario_id" value=<?php echo $id_usuario_ext ?>>
+            <input type="hidden" name="tipo_proceso" value="FR">
+            <button type="submit" class="btn_azul" onClick="myFunction()" name="capturarubicacionfree">TERMINAR
+                INSPECCIÓN FREEMIUM </button>
+        </form>
 
-            <script>
-                function myFunction() {
-                    alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
-                    window.location.href = "menu.php";
-                    //setTimeout("window.close('menu.php')", 3000)
-                }
-            </script>
+        <script>
+        function myFunction() {
+            alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
+            window.location.href = "menu.php";
+            //setTimeout("window.close('menu.php')", 3000)
+        }
+        </script>
         <?php
         } else {
         ?>
-            <form action="controller/controllerpreguntas.php" method="POST">
-                <?php
+        <form action="controller/controllerpreguntas.php" method="POST">
+            <?php
                 $id_inspeccion = $_REQUEST["id_encuesta"];
                 ?>
-                <input type="hidden" name="id_inspeccion" value="<?php echo $id_inspeccion ?>">
-                <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
-                <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
+            <input type="hidden" name="id_inspeccion" value="<?php echo $id_inspeccion ?>">
+            <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
+            <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
 
-                <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN</button>
+            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN</button>
 
-            </form>
+        </form>
         <?php
         }
         ?>
