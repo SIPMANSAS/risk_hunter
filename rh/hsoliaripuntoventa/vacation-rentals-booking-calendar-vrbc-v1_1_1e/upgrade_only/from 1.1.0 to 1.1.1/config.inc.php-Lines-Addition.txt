@@ -1,0 +1,4 @@
+
+
+// Limit past years in public view
+define('CFG_PUBLPASTYEARS', 1); // 0,1,2,3..... Set 0 to disable past year(s)

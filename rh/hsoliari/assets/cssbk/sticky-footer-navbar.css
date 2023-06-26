@@ -1,0 +1,376 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+   background: #2a3f54;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  line-height: 30px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.contenedor {
+    background: ;
+  padding: 5px;
+  max-width: 1140px;
+   position: relative;
+  margin:0 auto;
+    border-radius:20px ;
+}
+#result{
+    padding: 2em 0;
+    height: auto;
+}
+#result .row .detalle {
+    background: #4CAF50;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 0;
+    padding: 1em 0 4em;
+}
+#result li{
+    list-style: none;
+    margin: .5em;
+    
+}
+#result .nav-item{
+    background: #dc3545;
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+}
+#result .nav-item a{
+    color: #fff;
+    font-weight: bold;
+}
+.mt-5{
+    background: #048C7F;;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1em;
+    padding: .5em;
+    width: 100%;
+}
+.mt-5 h3{
+    color: #fff;
+    text-shadow: 3px 3px 3px #333;
+}
+.mt-5 p{
+    text-shadow: 3px 3px 3px black;
+}
+.mt-5, .my-5 {
+    margin-top: 1rem !important;
+}
+label{
+    font-size: 1em;
+    font-weight: normal;
+    margin: -.05em;
+    text-shadow: 3px 3px 3px black;
+}
+.footer > .container {
+  padding-right: 0px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/*----------cabecera de pagina o header----------*/
+header{
+    /*flex*/
+    background: #2a3f54;
+    height: auto;
+    width: 100%;
+}
+header nav{
+    background:#08212F;
+    max-width:1140px ;
+    margin: 0 auto;
+    /*flex*/
+    align-items:center;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+header nav a{
+    color: #fff;
+    font-size: .9em;
+    font-weight: bold;
+    padding: 18px;
+    text-decoration: none;
+    /*flex*/
+    flex-grow:1;
+    text-align: center;
+}
+header nav a:hover{
+    text-decoration: none;
+}
+.logo{
+
+    height: auto;
+    width: 90px;
+}
+.logo img{
+    margin: 10px auto;
+    width: 80px;
+}
+
+.viaje{
+    border-bottom: 1px solid #6363;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 0 .5em;
+    text-align: center;
+    margin: .5em auto;
+}
+.viaje div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.viaje div input{
+    background: #f2f2f2;
+    border-radius: 3px;
+    border: 1px solid #636363;
+    color: black;
+    font-size: .8em;
+    padding: 3px;
+}
+.viaje div a{
+    color: #636363;
+    display: inline-block;
+}
+.viaje div input[type="number"]{
+   width: 100%;
+}
+
+.viaje div input[type="text"]{
+   width: 100%;
+    border: none;
+    box-shadow: 3px 3px 3px black;
+}
+.viaje div input[type="date"]{
+    margin: 0;
+    width: 100%;
+}
+.viaje div select{
+    background: #f2f2f2;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    font-size: .8em;
+    padding: 6px;
+    margin: 0;
+}
+
+.referido{
+    background: #BF4141;
+    border-radius: 20px;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1em;
+    width: 100%;
+}
+.referido div{
+    width: 30%;
+}
+.referido div div{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    margin: .2em;
+    padding: .5em;
+    width: 100%;
+}
+#check_auto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.referido select{
+    box-shadow: 3px 3px 3px black;
+    border:none;
+    border-radius: 5px;
+    font-size: .8em;
+    padding: .2em;
+    width: 100%;
+}
+.referido input[type="text"]{
+    box-shadow: 3px 3px 3px black;
+    width: 96%;
+    text-align: center;
+    margin: .4em auto;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+}
+.referido input[type="file"] {
+    box-shadow: 3px 3px 3px black;
+    border-radius: 5px;
+    margin: 0 auto;
+   width: 70%;
+    text-shadow: 3px 3px 3px black;
+}
+.referido input[type="textarea"] {
+  margin-top: 0;
+    height:20px;
+   width: 50%;
+}
+#idtarifa {
+    background: red;
+    color: #fff;
+    width:  35px;
+}
+#check__auto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%
+}
+.check__auto div{
+    width: 40%;
+}
+.check__auto input[type="radio"]{
+    display: inline-block;
+    background: red;
+}
+#tercero{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+#tercero div{
+    display: flex;
+    flex-direction: row;
+}
+#tercero div input[type="text"]{
+    width: 10%;
+    margin: 1%;
+    color: #000;
+}
+.det-2{
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+}
+.mt-6{
+    background: #F2AC29;;
+    border-radius: 20px;
+    padding: 1em;
+    color: #fff;
+}
+.radio{
+    border-bottom: 1px solid #fff;
+    color: #2a3f54;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.radio div{
+    background: #2a3f54;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: .5em;
+    margin-right: .1em;
+}
+.radio div div{
+    flex-direction: row;
+    justify-content: center;
+}
+.radio img{
+    width: 80px;
+    height: auto;
+}
+.op-b{
+    text-align: center;
+}
+.radio input[type="radio"]{
+   margin: 0 .6em -.2em;
+}
+.tipo-h{
+    font-size: .55em;
+    color:purple;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.op-b span{
+    color: #272727;
+    font-size: .8em;
+    margin: auto;
+}
+.op-b h2{
+    color: #1fba57;
+}
+footer{
+    color: #fff;
+    text-align: center;
+}
+
+/* ----media query----- mobil*/
+@media screen and (max-width: 1050px)
+{    
+    
+    header nav{
+        justify-content: center;
+        width: 100%;
+    }
+    .menu-a{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .contenedor{
+        margin-top: 80px;
+    }
+    .referido{
+        flex-direction: column;
+    }
+    .referido div{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 900px){
+    .viaje div{
+        width: 70%;
+        margin: 0 auto;
+    }
+}

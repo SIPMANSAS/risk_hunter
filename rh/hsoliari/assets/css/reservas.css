@@ -1,0 +1,120 @@
+body{
+    background: #069;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    
+}
+header{
+    background: #fff;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1140px;
+    margin: 0 auto;
+    height: 55px;
+    z-index: 99;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+    height: 100;
+}
+.logo{
+    width: 40px;
+    height: auto;
+    margin:  .5em;
+}
+.logo img{
+    width:100%;
+}
+.menu-a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%; 
+}
+.menu-a a{
+    color: rgba(0,0,0, .5);
+    line-height: 3.8em;
+    margin: 0 1em;
+    text-decoration: none;
+}
+#MnuRuta{
+    background: #eee;
+    border-radius: 5px 5px 0 0;
+    color: #aeaeae;
+    width: 98%;
+    margin: 0 auto;    
+}
+#MnuRuta div{
+    padding: 5px;
+}
+
+.gst_reserva{
+    background: #fff;
+    width: 98%;
+    margin: 0 auto;
+}
+.gst_reserva #tabsRes{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    width: 100%;    
+}
+.gst_reserva #tabsRes ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.links{
+    height: 50px;
+    line-height: 3em;
+}
+.links a{
+    background: #069;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+#buscar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#buscar div{
+    display: flex;
+    flex-direction: column;
+}
+#buscar div input[type="text"]{
+    border-radius: 5px;
+    border: none;
+    background: #eee;
+    color: #aeaeae;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+#buscar div a{
+    background: #069;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+.Txtmenu{
+    color: #069;
+    font-weight: bolder;
+}

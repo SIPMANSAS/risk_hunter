@@ -1,0 +1,4 @@
+[27-Dec-2022 16:36:43 UTC] PHP Notice:  Undefined index: email in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/correoEnviar/send.php on line 19
+[27-Dec-2022 16:36:43 UTC] PHP Notice:  Undefined index: subject in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/correoEnviar/send.php on line 20
+[27-Dec-2022 16:41:53 UTC] PHP Warning:  require(.../libreria/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/correoEnviar/send.php on line 2
+[27-Dec-2022 16:41:53 UTC] PHP Fatal error:  require(): Failed opening required '.../libreria/PHPMailerAutoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/correoEnviar/send.php on line 2

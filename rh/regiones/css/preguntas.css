@@ -1,0 +1,77 @@
+:root {
+                --color-green: rgba(8, 113, 196,1.0);
+                --color-red: rgb(200, 53, 69);
+                --color-button: #fdffff;
+                --color-black: #000;
+            }
+
+            .switch-button {
+                display: inline-block;
+            }
+
+            .switch-button .switch-button__checkbox {
+                display: none;
+            }
+
+             .switch-button .switch-button__checkbox1 {
+                display: none;
+            }
+
+            .switch-button .switch-button__label {
+                background-color: var(--color-red);
+                width: 3rem;
+                height: 1.5rem;
+                border-radius: 3rem;
+                display: inline-block;
+                position: relative;
+            }
+
+            .switch-button .switch-button__label1 {
+                background-color: var(--color-green);
+                width: 3rem;
+                height: 1.5rem;
+                border-radius: 3rem;
+                display: inline-block;
+                position: relative;
+            }
+
+            .switch-button .switch-button__label:before {
+                transition: .2s;
+                display: block;
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--color-button);
+                content: '';
+                border-radius: 50%;
+                box-shadow: inset 0px 0px 0px 1px var(--color-black);
+            }
+
+            .switch-button .switch-button__label1:before {
+                transition: .2s;
+                display: block;
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--color-button);
+                content: '';
+                border-radius: 50%;
+                box-shadow: inset 0px 0px 0px 1px var(--color-black);
+            }
+
+            .switch-button .switch-button__checkbox:checked + .switch-button__label {
+                background-color: var(--color-green);
+            }
+
+            .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+                transform: translateX(2rem);
+            }
+
+             .switch-button .switch-button__checkbox1:checked + .switch-button__label1 {
+                background-color: var(--color-green);
+            }
+
+            .switch-button .switch-button__checkbox1:checked + .switch-button__label1:before {
+                transform: translateX(2rem);
+            }
+            

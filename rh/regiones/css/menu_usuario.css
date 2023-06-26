@@ -1,0 +1,55 @@
+.usuario{
+    display: none;
+}
+.nombre_u{
+    font-size: .8em;
+    text-align: center;
+    margin: auto 10px;
+}
+.usuario i{
+    color: #fff;
+    font-size: 2em;
+    margin:5px ;
+}
+.usuario i:hover{
+    text-shadow: 0px 0px 10px #fff;
+}
+.sesion{
+	background: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: fit-content;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 0 0 0 10px;
+    transition: all 0.3s;
+}
+.sesion a{
+	text-decoration: none;
+	color: #fff;
+    line-height: 3em;
+    font-size: .7em;
+}
+
+.sesion a:hover{
+    text-shadow: 0px 0px 10px #fff;
+}
+@media (min-width:1024px) {
+    .menu_u{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+    }
+    .usuario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        color: #fff;
+        height: 60px;
+        align-content: center;
+        position: relative;
+    }
+}

@@ -1,0 +1,12 @@
+[06-Sep-2022 20:19:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method consultasbd::buscafirmas2() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php on line 14
+[06-Sep-2022 20:19:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method consultasbd::buscafirmas2() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php on line 14
+[06-Sep-2022 20:19:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method consultasbd::buscafirmas2() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/firmas/funciones/obtienesearchfirmas2.php on line 14

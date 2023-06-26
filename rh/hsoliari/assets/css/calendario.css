@@ -1,0 +1,233 @@
+body{
+    background: #069;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 0.875rem;
+}
+/*-------menu-----header-------*/
+header{
+    background: #fff;
+    box-shadow: 0 2px 2px #ccc;
+    width: 1140px;
+    margin: 0 auto;
+    height: 55px;
+    z-index: 99;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+    height: 100;
+}
+.logo{
+    width: 40px;
+    height: auto;
+    margin:  .5em;
+}
+.logo img{
+    width:100%;
+}
+.menu-a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%; 
+}
+.menu-a a{
+    color: rgba(0,0,0, .5);
+    line-height: 3.8em;
+    margin: 0 1em;
+    text-decoration: none;
+}
+.menu-b{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%; 
+}
+.menu-b a{
+    color: rgba(0,0,0, .5);
+    line-height: 3em;
+    margin: 0 1em;
+    text-decoration: none;
+}
+/*---contenedor---*/
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:  1140px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: -99;
+}
+.sub-menu{
+    border-bottom: 3px dotted #069;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.sub-menu a{
+    background: #666;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em .5em;
+    text-decoration: none;
+    margin:  1em;
+    text-align: center;
+}
+
+.contenedor h1{
+    color: #666;
+    font-size: 24px;
+    text-align: left;
+}
+.calendario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.calendario div{
+    margin:0 auto;
+    width:50%;
+}
+.calendario div select{
+    border: 1px solid #ccc;
+    color: #999;
+    font-weight: bolder;
+    padding: .5em;
+    width: 100%;
+}
+.habitaciones{
+    background: #069;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em 0;
+    width: 100%;
+    padding: .6em;
+    
+}
+.habitaciones div{
+    background: #fff;
+    border-radius: 50px;
+    color: #069;
+    line-height: 3em;
+    margin: 5px;
+    width: auto;
+    height: 40px;
+    padding: 0 1em ;
+    
+}
+.year{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;    
+    justify-content: space-around;
+}
+
+.year a{
+    background: #666;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em .5em;
+    text-decoration: none;
+    margin: 0 1em;
+    text-align: center;
+}
+.real{
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: #999;
+    font-weight: bolder;
+    padding:0 .1em ;
+    text-align: center;
+}
+.tit{
+    margin: 0;
+    padding: 0;
+}
+.meses{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+}
+.
+.mes{
+    background: #666;
+    border:1px solid #dbdbdb;
+    border-radius: 10px 10px 0 0;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 266px;
+    margin: .5em auto;
+    overflow: hidden;
+}
+.mes tbody{
+    background: #eee;
+    overflow: hidden;
+    width: auto;
+}
+.nom-mes{
+    background: #069;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-weight: bold;
+    height: 40px;
+    line-height: 2.8em;
+    text-align: center;
+}
+.week{
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    font-size: .8em;
+    justify-content: flex-start;
+    width: 270px;
+    
+}
+.week div{
+    border:1px solid #dbdbdb;
+    height: 36px;
+    line-height: 3em;
+    width: 36px;
+    text-align: center;
+}
+.cont-month{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.day{
+    background: #FFF;
+    border:1px solid #dbdbdb;
+    height: 36px;
+    line-height: 3em;
+    width: 30px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div{
+    color: #999;
+    padding: 2em;
+}

@@ -1,0 +1,83 @@
+body{
+	background-color: #fff;
+	border-radius: 1px;
+	box-shadow: 0 0 1in -.25in rgba(0,0,0,0.5);
+	box-sizing: border-box;
+    font-family: sans-serif;
+    position: relative;
+	margin: 0 auto;
+	min-height: 10in;
+	padding: .4in .5in;
+	width: 20.4in;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;    
+}
+header img{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+header span{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #2a3f54;
+    line-height: 4em;
+    font-weight: bold;
+}
+header a{
+    color: #2a3f54;
+    font-weight: bold;
+    line-height: 3.2em;
+    padding: 3px;
+    text-decoration: none;
+}
+.mostrar{
+    background: #2a3f54;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-shadow: 3px 3px 3px black;
+    margin: 0 auto;
+    width: 100%;
+}
+.titulo{
+    background: #2a3f54;
+    border-bottom: 1px dotted #2a3f54;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-shadow: none;
+    width: 100%;
+}
+.titulo div{
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    width: 11%;
+}
+.datos{
+    background: #fff;
+    border-bottom: 1px dotted #2a3f54;
+    display: flex;
+    flex-direction: row;
+    text-shadow: none;
+    width: 100%;
+}
+.datos div{
+    margin: auto;
+    padding: 5px 0;
+    width: 100%;
+}
+@media print{
+    
+    .printbutton{
+        display: none;
+    }
+}

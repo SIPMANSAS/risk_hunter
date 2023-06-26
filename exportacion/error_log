@@ -1,0 +1,107 @@
+[05-Jan-2023 17:25:34 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:25:34 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:25:34 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 26
+[05-Jan-2023 17:25:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 26
+[05-Jan-2023 17:25:43 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:25:43 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:25:43 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 27
+[05-Jan-2023 17:25:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 27
+[05-Jan-2023 17:26:01 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:01 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:01 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 27
+[05-Jan-2023 17:26:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 27
+[05-Jan-2023 17:26:16 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:16 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:24 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:24 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:33 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:26:33 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:28:40 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 17:28:40 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:13:12 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:13:12 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:18:13 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:18:13 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:22:17 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:22:17 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:22:17 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:22:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:06 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:06 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:06 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:33 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:33 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:33 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:42 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:42 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:23:42 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:23:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 18
+[05-Jan-2023 18:24:02 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:24:02 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:24:02 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 14
+[05-Jan-2023 18:24:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 14
+[05-Jan-2023 18:24:14 UTC] PHP Warning:  include(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:24:14 UTC] PHP Warning:  include(): Failed opening 'conexion/conexion.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:24:14 UTC] PHP Notice:  Undefined variable: mysqli in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 14
+[05-Jan-2023 18:24:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 14
+[05-Jan-2023 18:34:08 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 42
+[05-Jan-2023 18:34:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 42
+[05-Jan-2023 18:35:19 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 42
+[05-Jan-2023 18:35:44 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 42
+[05-Jan-2023 18:36:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 18:37:12 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 18:38:23 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 18:38:44 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 18:39:36 UTC] PHP Warning:  require(conexion/conexion.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:39:36 UTC] PHP Fatal error:  require(): Failed opening required 'conexion/conexion.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 4
+[05-Jan-2023 18:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 18:40:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 19:18:20 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 19:22:06 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 19:22:21 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[05-Jan-2023 19:22:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 44
+[06-Jan-2023 19:24:28 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:24:28 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:24:46 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:24:46 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:04 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:04 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:28 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:28 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:46 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 19:25:46 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 23:33:32 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 23:33:32 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 23:33:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 47
+[06-Jan-2023 23:33:41 UTC] PHP Warning:  include(clases/bloques.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 23:33:41 UTC] PHP Warning:  include(): Failed opening 'clases/bloques.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 5
+[06-Jan-2023 23:33:41 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ee9q3n5dmxdu/public_html/rh1.capitalhorus.com/exportacion/exportarsabanafiltro.php on line 47

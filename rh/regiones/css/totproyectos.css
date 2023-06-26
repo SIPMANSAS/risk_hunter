@@ -1,0 +1,323 @@
+.contenedor-1{
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+    
+}
+
+.contenedor-1 input#search{
+  background-color: rgb(222, 216, 216); 
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  border-radius: 5px;
+  transition: background .55s ease;
+}
+
+.contenedor-1 input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+
+.contenedor-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;
+}
+
+.contenedor-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;
+}
+
+.contenedor-1 input#search:-ms-input-placeholder {
+   color: #65737e;
+}
+
+.contenedor-1 .icon{
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 10px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.contenedor-1 input#search:hover, .contenedor-1 input#search:focus, .contenedor-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+  
+  
+
+#sugerencia {
+    box-shadow: 2px 2px 8px  #222;
+    height: auto;
+    position: absolute;
+    top: 225px;
+    z-index: 9999;
+    border-radius: 5px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+}
+
+#sugerencia .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+#sugerencia .sugerencia-element:hover{
+    background: rgba(8,113,196, 1.0);
+    color: #fff;
+} 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.titulo_s{
+    color: #0000;
+    background: #444;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 1.3em;
+    width: 15%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-botton: 15px;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 2px #333;
+    word-break:break-all;
+     float: right;
+}
+
+div#sugerencia2 {
+    box-shadow: 2px 2px 8px  #222;
+    height: auto;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 65px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+}
+.l_roles_crea{
+    display: flex;
+    flex-direction: column;
+    background: rgba(8, 113, 196,1.0);
+}
+
+div#sugerencia2 .sugerencia2-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia2 .sugerencia2-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia3 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin: 50px auto 0;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+.l_bloques{
+    display: flex;
+    flex-direction: column;
+    background: rgba(8, 113, 196,1.0);
+}
+div#sugerencia3 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia3 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+
+#sugerencia4 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 30px;
+    margin-left: 340px;
+  
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia4 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia4 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia5 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 30px;
+    margin-left: 100px;
+  
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia5 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia5 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia6 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 15px;
+    margin-left: 350px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia6 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia6 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia7 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 540px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia7 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia7 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia8 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 510px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia8 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia8 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia9 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 570px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia9 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia9 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}
+#sugerencia10 {
+    box-shadow: 2px 2px 8px  #222;
+    position: absolute;   
+    z-index: 9999;
+    background: rgba(8, 113, 196,1.0);
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 250px;
+    background: rgba(8, 113, 196,1.0);
+    padding: 5px;
+    
+}
+div#sugerencia10 .sugerencia-element {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+div#sugerencia10 .sugerencia-element:hover {
+    background: rgba(8, 113, 196,1.0);
+    color: #fff;
+}

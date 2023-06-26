@@ -1,0 +1,5 @@
+
+- Fixed notification sent to admin and associated/assigned managers only
+- Adjusted export ics URLs no longer forced to download
+- Added config limit to past years in public view
+- Select boxes custom style

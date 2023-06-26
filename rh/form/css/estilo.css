@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+.formulario{    
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em auto;
+    width: 90%;
+    box-shadow: 1px 1px 10px #999;
+    color: #444;
+}
+.registro{
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    width: 49%;
+    padding: .5em;
+}
+.registro_p{
+    background-color: #000;
+    border-radius: 10px;
+    width: 49%;
+    padding: .5em;
+}
+.registro input{
+    border: 0px solid #999;
+    border-radius: 5px;
+    padding: .5em;
+    margin-bottom:5px;
+    color: #999;
+    background-color: #efefef;
+}
+.registro select{
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom:5px;
+    color: #999;
+    text-align: center;
+}
+.fila{
+    padding: 5px;
+    text-align: center;
+}
+.fila span{
+    font-size: 1.3em;
+}
+.t_plan{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.v_plan{
+    font-size: 3em;
+    color: #274682;
+    font-weight: bold;
+}
+.l_plan{
+    padding: 10px 0;
+    border-radius: 50px;
+    color: #aca775;
+    font-weight: 900;
+    font-size: 3em;
+    text-align: left;
+}
+.plan .titulo1{
+    text-align: center;
+    background: #274682;
+    color: #fff;
+    font-weight: 600;
+    width: fit-content;
+    margin:0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+.plan .titulo2{
+    border-radius: 5px;
+    background: #E1C54C;
+    color:#274682;
+    font-weight: bold;
+    padding:10px 5px;
+    width: 100%;
+    margin:-5px auto 10px;    
+    text-align: center;
+    font-size: 2em;
+}
+.plan ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.plan ul li{
+    display: flex;
+    flex-direction: row;
+    list-style:none ;
+    width: 48%;
+    margin-bottom: 10px;
+    align-items: center;
+    color: #aca775;
+}
+.plan ul li i{
+    color: green;
+}
+.registro .btn_dorado{
+    color: #aca775;
+    text-align: center;
+    background: #000;
+    font-weight: 600;
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+}
+.nota{
+    color: gray;
+    font-size: .7em;
+}
+.titulo_p{
+    font-size: 3em;
+    text-align: center;
+    text-shadow: #ccc 1px 1px 10px;
+    color: #555;
+}
+/*estilos en celular */
+@media (max-width: 800px)
+{
+    .formulario{
+        flex-direction: column;
+    }
+    .registro{
+        width: 98%;
+        margin: 5px auto;
+    }
+    .registro_p{
+        width: 98%;
+        margin: 0 auto;
+    }
+    .plan ul li{
+        width: 60%;
+        margin: 10px auto;
+        text-align: center;
+
+    }
+    .t_plan{
+        flex-direction: column;
+    }
+
+
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://kit.fontawesome.com/ba54e2cec4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>   
+</head>
+<body>
+    <h2 class="titulo_p">Inscripción</h2>    
+    <div class="formulario">        
+        
+    <form class="registro" action="" method="post" >
+        <div class="fila"><span>Llena los datos a continuación:</span></div>
+        <div class="fila">
+            <label for="nombre">Tu nombre:</label><br>
+            <input type="text" name="nombre" >
+        </div>
+        <div class="fila">
+            <label for="apellidos">Tu apellido:</label><br>
+            <input type="text" name="apellidos"  >
+        </div>
+        <div class="fila">
+            <label for="telefono">Tu teléfono:</label><br>
+            <input type="number" name="telefono" required>
+        </div>
+        <div class="fila">
+            <label for="referido">Pais:</label><br>
+            <select name="referido" id="referido" >
+                <option value="00001">Colombia</option>
+                <option value="luzmary">Panama</option>
+            </select>
+        </div>
+        <div class="fila">
+            <label for="correo">Tu correo:(sera tu Usuario)</label><br>
+            <input type="email" name="correo" autocomplete="off" required>
+        </div>
+        <div class="fila">
+            <label for="">Tu contraseña:</label><br>
+            <input type="password" name="pass" autocomplete="off" required>
+            <div class="nota">Recuerda la contraseña debe contener almenos <br> una letra mayuscula, un número, y un caracter especial </div>
+        </div>
+        <div class="fila">
+            <label for="referido">Referido por:</label><br>
+            <select name="referido" id="referido" required >
+                <option value="00001">00001</option>
+                <option value="luzmary">luz mary</option>
+            </select>
+        </div>
+        <div class="fila">
+            <input class="btn_dorado" type="submit" value="Contratar" onclick="return validateEmail()">
+        </div>
+    </form>
+    <div class="registro_p">
+        <div class="t_plan">
+            <div class="l_plan">Plan Oro</div>
+            <div class="v_plan">$100</div>
+        </div>
+        <div class="plan">
+            <div class="titulo1">Inscribete Ya</div>
+            <div class="titulo2">Rendimiento hasta el 4%</div>
+            <ul>
+                <li><i class="fa-solid fa-circle-check"></i>&nbsp; Oficina virtual</li>
+                <li><i class="fa-solid fa-circle-check"></i>&nbsp; Plataforma educativa</li>
+                <li><i class="fa-solid fa-circle-check"></i>&nbsp; Entrenadores estrategicos</li>
+                <li><i class="fa-solid fa-circle-check"></i>&nbsp; Beneficios del interes compuesto</li>
+            </ul>
+        </div>
+    </div>
+    </div>    
+<script type="text/javascript">
+         function validateEmail(){
+             // Define our regular expression.
+             var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+             // Using test we can check if the text match the pattern
+             if( validEmail.test( jQuery('#useremail').val() ) ){
+                 return true;
+             }else{
+                 alert('Email es invalido, no se puede continuar con el registro');
+                 return false;
+             }
+         }
+     </script>
+</body>
+</html>

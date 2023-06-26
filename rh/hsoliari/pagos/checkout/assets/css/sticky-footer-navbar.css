@@ -1,0 +1,200 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+   background: #069;
+    box-sizing: border-box;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  line-height: 30px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    background: #fff;
+  padding: 80px 15px 15px;
+
+}
+
+.contenedor {
+    background: #fff;
+  padding: 0px 15px 15px;
+  max-width: 1140px;
+  margin: 4em auto 0;
+    
+}
+
+
+.footer > .container {
+  padding-right: 0px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/*----------cabecera de pagina o header----------*/
+header{
+    /*flex*/
+    background: #069;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    margin-top: -80px;
+}
+header nav{
+    background:#08212F;
+    max-width:1140px ;
+    margin: 0 auto;
+    /*flex*/
+    align-items:center;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+header nav a{
+    color: #fff;
+    font-size: .9em;
+    font-weight: bold;
+    padding: 18px;
+    text-decoration: none;
+    /*flex*/
+    flex-grow:1;
+    text-align: center;
+}
+header nav a:hover{
+    text-decoration: none;
+}
+.logo{
+
+    height: auto;
+    width: 90px;
+}
+.logo img{
+    margin: 10px auto;
+    width: 80px;
+}
+
+.viaje{
+    width: 100%;
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    color: #636363;
+    font-size: 1.2em;
+}
+.viaje div{
+    width: 130px;
+    font-size: .9em;
+   margin-right: 5px;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.viaje div input{
+    background: #f2f2f2;
+    border-radius: 3px;
+    border: 1px solid #636363;
+    color: #636363;
+    font-size: .8em;
+    padding: 3px;
+}
+.viaje div a{
+    color: #636363;
+    display: inline-block;
+}
+.viaje div input[type="number"]{
+   width: 70px;
+}
+
+.viaje div input[type="text"]{
+   width: 105px;
+}
+.viaje div input[type="date"]{
+    margin: 0;
+    max-width: 100px;
+}
+.viaje div select{
+    background: #f2f2f2;
+    border-radius: 3px;
+    border: 1px solid #636363;
+    color: #000000;
+    font-size: .8em;
+    padding: 3px;
+    margin: 0;
+    max-width: 100px;
+}
+
+.referido{
+    border: 1px solid rgba(0,0,0, 0.3);
+    color:#636363;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1em;
+    width: 100%;
+}
+.referido select{
+    background: #f2f2f2;
+    border: #636363 1px solid;
+    border-radius: 5px;
+    color: #636363;
+    font-size: .8em;
+    margin: 0 1em;
+}
+
+.referido input[type="file"] {
+  margin-top: 0;
+   width: 100%;
+}
+
+.referido input[type="textarea"] {
+  margin-top: 0;
+    height:20px
+   width: 50%
+}
+
+.radio{
+    align-items: center;
+    color: #069;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+
+.radio input[type="radio"]{
+    margin: .8em;
+    color: #069;
+
+}
+
+.op-b{
+    text-align: center;
+}
+.op-b span{
+    color: #272727;
+    font-size: .8em;
+    margin: auto;
+}
+.op-b h2{
+    color: #1fba57;
+}
+

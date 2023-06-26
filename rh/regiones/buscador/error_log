@@ -1,0 +1,244 @@
+[31-Aug-2022 23:56:01 UTC] PHP Notice:  Undefined variable: opciones in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 40
+[31-Aug-2022 23:56:14 UTC] PHP Notice:  Undefined variable: opciones in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[31-Aug-2022 23:57:30 UTC] PHP Notice:  Undefined variable: opciones in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 43
+[01-Sep-2022 00:01:17 UTC] PHP Notice:  Undefined index: busqueda in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 37
+[01-Sep-2022 00:01:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 43
+[01-Sep-2022 00:02:11 UTC] PHP Notice:  Undefined index: busqueda in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 37
+[01-Sep-2022 00:02:11 UTC] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 43
+[01-Sep-2022 00:02:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 45
+[01-Sep-2022 00:02:36 UTC] PHP Notice:  Undefined index: busqueda in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 37
+[01-Sep-2022 00:02:36 UTC] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 43
+[01-Sep-2022 00:02:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 45
+[01-Sep-2022 00:05:32 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 50
+[01-Sep-2022 00:05:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipman_risk_hunter.lista_paises' doesn't exist in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:54
+Stack trace:
+#0 /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php(54): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 54
+[01-Sep-2022 00:06:42 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 50
+[01-Sep-2022 00:06:42 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 58
+[01-Sep-2022 00:06:42 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 58
+[01-Sep-2022 00:06:42 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 58
+[01-Sep-2022 00:06:42 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 58
+[01-Sep-2022 00:07:19 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 51
+[01-Sep-2022 00:07:19 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:07:19 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:07:19 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:07:19 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:08:01 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 51
+[01-Sep-2022 00:08:01 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:08:01 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:08:01 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:08:01 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 59
+[01-Sep-2022 00:08:50 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 83
+[01-Sep-2022 00:08:50 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:50 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:50 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:50 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 83
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: palabra in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 83
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:08:58 UTC] PHP Notice:  Undefined index: nombres in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 91
+[01-Sep-2022 00:37:38 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:37:46 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:08 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:12 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:13 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:13 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:16 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:16 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:17 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:18 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:18 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:19 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:19 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:25 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:25 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:38:25 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:26 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:27 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:41 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:42 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:42 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:42 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:43 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:38:43 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:57:41 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:57:42 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:57:42 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:31 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:58:31 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 109
+[01-Sep-2022 00:58:34 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:34 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 109
+[01-Sep-2022 00:58:34 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:34 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 109
+[01-Sep-2022 00:58:34 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:34 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 109
+[01-Sep-2022 00:58:42 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:44 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:47 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:47 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:50 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:50 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:58:50 UTC] PHP Notice:  Undefined variable: datos in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 108
+[01-Sep-2022 00:59:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:01 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:04 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:04 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 101
+[01-Sep-2022 00:59:43 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:00 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:02 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:00:03 UTC] PHP Notice:  Undefined index: identificador in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 120
+[01-Sep-2022 01:03:44 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:44 UTC] PHP Notice:  Undefined index: search in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 63
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 70
+[01-Sep-2022 01:03:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 73
+[01-Sep-2022 01:04:40 UTC] PHP Notice:  Undefined index: search in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:06 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:07 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:09 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:09 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:09 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:05:10 UTC] PHP Notice:  Undefined index: txtSearch in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 66
+[01-Sep-2022 01:08:54 UTC] PHP Fatal error:  Cannot redeclare conexion() (previously declared in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:47) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 90
+[01-Sep-2022 01:09:39 UTC] PHP Fatal error:  Cannot redeclare conexion() (previously declared in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:47) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 90
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/1_aplicacion_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/1_aplicacion_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/2_html_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/2_html_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/3_cabecera.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/3_cabecera.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/4_menu.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/4_menu.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/5_pie.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/5_pie.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/6_aplicacion_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/6_aplicacion_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(includes/7_html_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[01-Sep-2022 01:30:02 UTC] PHP Warning:  include(): Failed opening 'includes/7_html_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/1_aplicacion_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/1_aplicacion_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/2_html_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/2_html_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/3_cabecera.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/3_cabecera.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/4_menu.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/4_menu.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/5_pie.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/5_pie.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/6_aplicacion_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/6_aplicacion_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(includes/7_html_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[01-Sep-2022 02:24:29 UTC] PHP Warning:  include(): Failed opening 'includes/7_html_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/1_aplicacion_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/1_aplicacion_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 4
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/2_html_inicio.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/2_html_inicio.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 7
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/3_cabecera.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/3_cabecera.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 10
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/4_menu.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/4_menu.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 13
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/5_pie.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/5_pie.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/6_aplicacion_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/6_aplicacion_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 35
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(includes/7_html_fin.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[05-Sep-2022 22:27:44 UTC] PHP Warning:  include(): Failed opening 'includes/7_html_fin.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 38
+[05-Sep-2022 22:35:56 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 32
+[05-Sep-2022 22:35:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 34
+[05-Sep-2022 23:02:18 UTC] PHP Notice:  Undefined index: key in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 26
+[05-Sep-2022 23:02:47 UTC] PHP Notice:  Undefined index: key in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 26
+[05-Sep-2022 23:03:23 UTC] PHP Notice:  Undefined index: key in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 26
+[05-Sep-2022 23:03:41 UTC] PHP Notice:  Undefined index: key in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/buscador/buscador.php on line 26

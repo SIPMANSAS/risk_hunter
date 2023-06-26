@@ -1,0 +1,47 @@
+body{
+    background: #2a3f54;
+    position: relative;
+	box-sizing: border-box;
+	min-height: 10in;
+	width: 8.4in;
+	border-radius: 1px;
+	box-shadow: 0 0 1in -.25in rgba(0,0,0,0.5);
+	margin: 0 auto;
+	padding: .4in .5in;
+	background-color: #fff;
+}
+h1{
+    font-size: 1.em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    color: #666;
+}
+.datos div{
+    display: block;
+    width: 100%;
+    border-top: 1px dotted #666;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-transform: capitalize;
+}
+hr{
+    width: 40%;
+}
+.firma{
+    
+    text-align: center;
+    color: #666;
+    width: 30%;
+    margin: 0 auto;
+    
+}

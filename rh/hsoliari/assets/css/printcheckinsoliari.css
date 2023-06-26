@@ -1,0 +1,194 @@
+.body{
+    background: #2a3f54;
+    position: relative;
+	box-sizing: border-box;
+	min-height: 10in;
+	width: 8.4in;
+	border-radius: 1px;
+	box-shadow: 0 0 1in -.25in rgba(0,0,0,0.5);
+	margin: 0 auto;
+	padding: .3in .5in;
+	background-color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    height: 80px
+    
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+.logo div h1{
+    color: #3B8194;
+    font-size: 1.4em;
+    margin: .4em 1.5em 0;
+    text-transform: capitalize;
+    text-align: center; 
+}
+.logo div h2{
+    color: #3B8194;
+    text-align: center;
+    font-size: .8em;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.registro{
+    width: 55%;
+}
+.registro h1{
+    background:#3B8194;
+    color: #Fff;
+    margin: 0;
+    font-size: 1.2em;
+    padding: .2em 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.registro div{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+.registro div span{
+    font-size: .7em;
+    line-height: 3.3em;
+    margin-right: .5em;
+}
+.registro div input{
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5em 1em;
+    width: 50%;
+    text-align: center;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.datos div{
+    display: flex;
+    flex-direction: row;    
+    font-size: .7em;
+    line-height: 2.2em;
+    justify-content: space-between;
+    margin: 1px 0;
+    padding: 0;
+}
+.datos div input{
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 0 .5em;
+}
+.datos .nombres input{
+    width: 75%;
+    margin-left: 7px;
+}
+.datos .ciudad input{
+    width: 35%
+}
+.datos .docs input{
+    width: 30%;
+}
+.datos .canal input{
+    width: 38%;
+}
+.datos .vehiculo input{
+    width: 17%
+}
+.datos .nota{
+    border: 1px gray solid;
+    border-radius: 7px;
+    width: 100%;
+}
+.datos .nota span{
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+.horario{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.horario div{
+    width: 100%;
+}
+.horario .check-in{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.horario .check-in span{
+    background: #777;
+    color: #fff;
+    font-size: .7em;
+    padding: .2em .5em;
+}
+.horario .check-in input{
+    width: 22%;
+}
+.horario .check-out{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.horario .check-out span{
+    background: #777;
+    color: #fff;
+    font-size: .7em;
+    padding: .2em .5em;
+}
+.horario .check-out input{
+    width: 21%;
+}
+.horario .noches{
+    width: 30%;
+}
+.horario .noches input{
+    width: 20%;
+}
+.compa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3px 0;
+    line-height: 1.6em;
+}
+.compa span{
+    font-size: .7em;
+}
+.a-nombre{
+    width: 28%;
+}
+.dni{
+    width: 30px;
+}
+.nacimiento{
+    width: 30%;
+}
+.contenedor p{
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-size: 8px;
+    text-align: justify;
+}
+.firma{
+    border: 1px solid #000;
+    font-size: .8em;
+    height: 4em;
+    width: 100%;
+}

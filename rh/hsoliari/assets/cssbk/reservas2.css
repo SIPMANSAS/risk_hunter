@@ -1,0 +1,294 @@
+body{
+    background: #2a3f54 ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 0.875rem;
+    font-family: font;
+}
+header{
+    /*flex*/
+    background: #2a3f54;
+    height: auto;
+    width: 100%;
+    z-index: 999;
+    
+}
+header nav{
+    background:#2a3f54;
+    max-width:1140px ;
+    margin: 0 auto;
+    align-items:center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+}
+header nav a{
+    color: #fff;
+    font-size: .7em;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    /*flex*/
+    flex-grow:1;
+    text-align: center;
+}
+header nav a:hover{
+    text-decoration: none;
+}
+.icon-menu{
+    display: block;
+    color: #fff;
+}
+.logo{    
+    height: auto;  
+}
+.logo img{
+    margin: 1em;
+    width: 50px;
+}
+#buscar{
+    background: #f2f2f2;
+    box-shadow: 0 2px 2px #ccc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1em;
+    justify-content: flex-start;
+    margin: 0 auto ;
+    max-width:1140px;   
+}
+.buscar{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin:0 auto;
+}
+.buscar h1{
+    color:#2a3f54;
+    width: 100%;
+   font-size: 1.5em;
+    text-align: center;
+}
+.buscar-reserva{
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 48%;
+}
+.buscar div{
+    color: #2a3f54;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: .3em auto;
+}
+.rango{
+    color: #2a3f54;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.rango div{
+    color: #2a3f54;
+}
+.rango input{
+    color: #2a3f54;
+    border: none;
+    border-radius: 10px;
+    background: #ddd;
+    padding: 8px;
+    font-size: .9em;
+    text-align: center;
+    margin: 0 auto;
+}
+.rango label{
+    font-size: 1.2em;
+    display: block;
+}
+#idstatus{
+    background: #ddd;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: #2a3f54;
+    padding: 8px;
+    margin: 0 auto;
+    font-size: .9em;
+}
+.habitaciones{
+    background: #2a3f54 ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 90%;
+}
+.habitaciones a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: .5em;
+    text-align: center;
+}
+.habitaciones a:hover{
+    color: #2a3f54;
+    background: #fff;
+    padding: .5em;
+}
+.habitaciones a img{
+    width: 60px;
+    height: auto;
+}
+#BtnBuscar{
+    background: #2a3f54;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 1em auto;
+    padding: .5em;
+    text-decoration:none;
+    text-transform: capitalize;
+    text-align: center;
+}
+.botones{
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#BtnBuscar:hover{
+    background: #fff;
+    border: 1px #2a3f54 solid;
+    color: #2a3f54;
+}
+#BtnCHECKSINR{
+    background: #2a3f54;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 1em auto;
+    padding: .5em;
+    text-decoration:none;
+    text-transform: capitalize;
+    text-align: center;
+}
+#BtnCHECKSINR:hover{
+    background: #fff;
+    border: 1px #2a3f54 solid;
+    color: #2a3f54;
+}
+caption {
+    width: 40%;
+    margin: 0 auto;
+}
+caption ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+}
+caption ul li{
+    list-style: none;
+    color: green;
+}
+caption ul li a{
+    margin: 0 10px;
+    color: green;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+caption ul li a.active{
+    background: black;
+}
+#resultado{
+    margin: 1em auto;
+    width: 95%;
+}
+#resultado tbody tr {
+    width: 95%;;
+}
+.tituT{
+    background: #2a3f54;
+    color: #fff;
+    padding: .5em;
+}
+.Txtmenu{
+    padding: .5em;
+    color: #fff;
+    text-shadow: 3px 3px 3px black;
+}
+.checkin-img{
+    padding: 1em;
+}
+.checkin-img img{
+    width: 40px;
+    height: 40px;
+}
+/*estilos responsive */
+@media screen and (max-width: 1050px)
+{    
+    header{
+    }
+    header nav{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .menu-a{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .menu-a a{
+        
+    }
+
+    .buscar h1 {
+        font-size: 1.5em
+    }
+    .nuescar-reserva{
+        display: block;
+    }
+    #buscar {
+        width: 95%;
+        margin: 0 auto;
+        padding: .5em;
+    }
+    
+    #rango{
+        flex-direction: column;
+    }
+    .rango input{
+        font-size: .75em;
+    }
+    .habitaciones{
+       
+    }
+    #idstatus{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #resultado{
+        margin-top: -2em;
+    }
+    .tituT{
+        padding: 2px;
+        font-size: .7em;
+    }
+    .Txtmenu{
+        padding: 2px;
+        font-size: .7em;
+    }
+    .checkin-img{
+        padding: 2px;
+        width: 20px;
+        height: 20px;
+    }
+    
+}

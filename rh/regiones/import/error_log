@@ -1,0 +1,57 @@
+[11-Nov-2022 17:29:06 UTC] PHP Warning:  require(clases/gabriel.class.php): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 3
+[11-Nov-2022 17:29:06 UTC] PHP Fatal error:  require(): Failed opening required 'clases/gabriel.class.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 3
+[11-Nov-2022 17:46:21 UTC] PHP Warning:  file(prueba.csv): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 24
+[11-Nov-2022 17:46:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 25
+[11-Nov-2022 17:46:34 UTC] PHP Warning:  file(prueba.csv): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 24
+[11-Nov-2022 17:46:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 25
+[11-Nov-2022 17:46:55 UTC] PHP Warning:  file(prueba.csv): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 24
+[11-Nov-2022 17:46:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 25
+[11-Nov-2022 17:47:04 UTC] PHP Warning:  file(prueba.csv): failed to open stream: No such file or directory in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 24
+[11-Nov-2022 17:47:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 25
+[11-Nov-2022 19:28:39 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 18
+[11-Nov-2022 19:28:39 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 19
+[11-Nov-2022 19:28:39 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 20
+[11-Nov-2022 19:28:39 UTC] PHP Warning:  file(): Filename cannot be empty in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 21
+[11-Nov-2022 19:28:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 26
+[11-Nov-2022 19:28:47 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 18
+[11-Nov-2022 19:28:47 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 19
+[11-Nov-2022 19:28:47 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 20
+[11-Nov-2022 19:28:47 UTC] PHP Warning:  file(): Filename cannot be empty in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 21
+[11-Nov-2022 19:28:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 26
+[11-Nov-2022 19:29:26 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 18
+[11-Nov-2022 19:29:26 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 19
+[11-Nov-2022 19:29:26 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 20
+[11-Nov-2022 19:29:26 UTC] PHP Warning:  file(): Filename cannot be empty in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 21
+[11-Nov-2022 19:29:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 26
+[11-Nov-2022 19:29:56 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 18
+[11-Nov-2022 19:29:56 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 19
+[11-Nov-2022 19:29:56 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 20
+[11-Nov-2022 19:29:56 UTC] PHP Warning:  file(): Filename cannot be empty in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 21
+[11-Nov-2022 19:29:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 26
+[11-Nov-2022 19:34:35 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 18
+[11-Nov-2022 19:34:35 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 19
+[11-Nov-2022 19:34:35 UTC] PHP Notice:  Undefined index: dataCliente in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 20
+[11-Nov-2022 19:34:35 UTC] PHP Warning:  file(): Filename cannot be empty in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 21
+[11-Nov-2022 19:34:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 26
+[11-Nov-2022 19:52:33 UTC] PHP Parse error:  syntax error, unexpected 'nombre' (T_STRING), expecting ',' or ';' in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 22
+[11-Nov-2022 19:55:00 UTC] PHP Parse error:  syntax error, unexpected 'nombre' (T_STRING), expecting ',' or ';' in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 7
+[11-Nov-2022 20:09:53 UTC] PHP Warning:  Use of undefined constant ‘grabar’ - assumed '‘grabar’' (this will throw an Error in a future version of PHP) in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 3
+[11-Nov-2022 20:16:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 37
+[11-Nov-2022 20:20:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 37
+[11-Nov-2022 20:21:40 UTC] PHP Notice:  Undefined variable: sql in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 39
+[11-Nov-2022 20:21:40 UTC] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 39
+[11-Nov-2022 20:21:40 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 39
+[11-Nov-2022 20:25:01 UTC] PHP Notice:  Undefined variable: sql in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:25:01 UTC] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:25:01 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:25:26 UTC] PHP Notice:  Undefined variable: sql in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:25:26 UTC] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:25:26 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:27:41 UTC] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38
+[11-Nov-2022 20:27:41 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/ee9q3n5dmxdu/public_html/rh.deshida.com.co/rh/regiones/import/import_reg.php on line 38

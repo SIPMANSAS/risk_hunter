@@ -1,0 +1,29 @@
+//Currency
+define('CFG_CURRENCY', 'USD');
+define('CFG_CURRENCYSYMBOL', 'US$'); //Currency Symbol
+define('CFG_DECIMALSEPARATOR', '.'); //Decimal Separator . point / , comma
+
+define('FILES_DIR', 'bookingfiles'); //Booking Attachment Files Folder Name
+define('FILES_MAXUPLOADSIZE', 524288); //Max size of each file, in Bytes.
+define('FILES_MAXUPLOADSSIZE', 3145728); //Max total size of files, in Bytes.
+// 524288=500KB / 1048576=1MB / 2097152=2MB / 3145728=3MB / 5242880=5MB / 6291456=6MB / 7340032=7MB
+
+//Max number of files attached to a booking block
+define('FILES_MAXATTACHED', 5);
+
+//Number of file browser/selector
+//Set 0 to disable file upload
+define('FILES_BROWSENUM', 1);
+
+
+//Allow Multiselect files in File Upload Dialog with Ctrl or Shift
+//Best if source files located in the same folder.
+define('FILES_MULTISELECT', true); // true / false
+
+
+// filter filetypes in File Upload Dialog
+define('FILES_TYPES_ACCEPTED', '.jpg,.jpeg,.png,.pdf,.rtf,.doc,.docx,.xls,.xlsx');
+
+
+// Limit past years in public view
+define('CFG_PUBLPASTYEARS', 1); // 0,1,2,3..... Set 0 to disable past year(s)
