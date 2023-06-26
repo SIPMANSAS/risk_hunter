@@ -22,7 +22,7 @@
         <a href=""> Login de Usuariooooo</a>
     </div>
     <div class="contenedor_titulos ">
-        <div class="campos titulo">Iniciar Sesiónnn</div>
+        <div class="campos titulo">Iniciar Sesiónnnnnnnnnn</div>
     </div>
     <div class="contenedor">
         <form class="log" action="index.php" method="post">
