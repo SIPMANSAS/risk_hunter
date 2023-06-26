@@ -368,7 +368,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td style='background-color:'" . $extraerDatos["id_alfanumerico"] . "';' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td style='background-color:'" . $extraerDatos["id_alfanumerico"] . "';' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['id_alfanumerico'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -735,7 +735,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $extraerDatos["id_alfanumerico"] . "';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $extraerDatos["id_alfanumerico"] . "';'><b><center>" . $extraerlongitudes['id_alfanumerico'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -1102,7 +1102,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $extraerDatos["id_alfanumerico"] . "';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $extraerDatos["id_alfanumerico"] . "';'><b><center>" . $extraerlongitudes['id_alfanumerico'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
