@@ -1102,7 +1102,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b><center>" . $extraerColores['id_alfanumerico'] . "</center><b></td>";
+            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: ".$extraerColores['id_alfanumerico'].";'><b><center>" . $extraerlongitudes['id_alfanumericonombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
