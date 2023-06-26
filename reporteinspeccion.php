@@ -352,12 +352,16 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $tabla .= "<br><br><br>";
+    $colores = [];
+    $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-            $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-            $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
-        }
+        $colores[] = [$extraerColores['id_alfanumerico']];
+    }
+    while ($extraermatcolumnas = $consultarangos->fetch_array()) {
+        $num++;
+        $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
+        $ancho = $extraermatcolumnas['Cantidad'];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $colores[$num] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
 
@@ -723,13 +727,18 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $tabla .= "<br><br><br>";
+    $colores = [];
+    $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-            $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-            $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
-        }
+        $colores[] = [$extraerColores['id_alfanumerico']];
     }
+    while ($extraermatcolumnas = $consultarangos->fetch_array()) {
+        $num++;
+        $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
+        $ancho = $extraermatcolumnas['Cantidad'];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $colores[$num] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+    }
+
     $tabla .= "</tr>";
 
     $tabla .= "</table>
@@ -1094,13 +1103,18 @@ if ($origen == '1') {
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $tabla .= "<br><br><br>";
+    $colores = [];
+    $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-            $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-            $ancho = $extraermatcolumnas['Cantidad'];
-            $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $extraerColores['id_alfanumerico'] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
-        }
+        $colores[] = [$extraerColores['id_alfanumerico']];
     }
+    while ($extraermatcolumnas = $consultarangos->fetch_array()) {
+        $num++;
+        $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
+        $ancho = $extraermatcolumnas['Cantidad'];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: " . $colores[$num] . ";'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+    }
+
     $tabla .= "</tr>";
 
     $tabla .= "</table>
