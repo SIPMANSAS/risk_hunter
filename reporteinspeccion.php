@@ -371,7 +371,7 @@ if ($origen == '1') {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-        $tabla .= "<td style='background-color:'" . $colores[count($extraerlongitudes)] . "';' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+        $tabla .= "<td style='background-color:'" . $colores[count($extraerlongitudes)] . "';' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $colores[count($extraerlongitudes)] . "</center><b></td>";
     }
     $tabla .= "<tr>";
 
@@ -741,7 +741,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
 
-        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores[count($extraerlongitudes)] . "';'><b><center>" . $extraerlongitudes['nombre']  . "</center><b></td>";
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores[count($extraerlongitudes)] . "';'><b><center>" . $colores[count($extraerlongitudes)] . "</center><b></td>";
     }
     $tabla .= "<tr>";
 
@@ -1110,7 +1110,7 @@ if ($origen == '1') {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores[count($extraerlongitudes)] . "';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: '" . $colores[count($extraerlongitudes)] . "';'><b><center>" . $colores[count($extraerlongitudes)] . "</center><b></td>";
     }
 
     $tabla .= "<tr>";
