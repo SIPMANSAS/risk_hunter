@@ -361,7 +361,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" . $colores[$num][$num] . "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" .$color. "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
 
@@ -736,7 +737,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" . $colores[$num][$num] . "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" . $color. "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
@@ -1112,7 +1114,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" . $colores[$num][$num] . "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: '" . $color. "';'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
