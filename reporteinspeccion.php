@@ -7,7 +7,7 @@ $origen = $_POST['proceso'];
 require_once  'vendor/autoload.php';
 include 'vendor/dompdf';
 ////////////////////////////////////// FIN DE LA CONEXION //////////////////////////////////////////
-$mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+$mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
 $inspeccion = $_POST['inspeccion'];
 $identificador = $_POST['identificador'];
@@ -46,7 +46,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -178,7 +178,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -366,8 +366,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td style='background-color:$colors;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td style='background-color:'".$extraerDatos["id_alfanumerico"]."';' width='" . $extraerlongitudes['Cantidad'] . "' colspan='6'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -410,7 +409,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -545,7 +544,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -732,8 +731,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $colors;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td width='" . $extraerlongitudes['Cantidad'] . "' colspan='6' style='background-color: '".$extraerDatos["id_alfanumerico"]."';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
@@ -777,7 +775,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -912,7 +910,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -1099,8 +1097,7 @@ if ($origen == '1') {
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
     while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
         while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $colors;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+            $tabla .= "<td width='" . $extraerlongitudes['Cantidad'] . "' colspan='6' style='background-color: '".$extraerDatos["id_alfanumerico"]."';'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
         }
     }
     $tabla .= "<tr>";
