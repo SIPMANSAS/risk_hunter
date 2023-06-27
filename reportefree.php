@@ -319,10 +319,17 @@ $tabla .= "   <td class='' style='background-color:#00E0FF' colspan='3' rowspan=
 
 $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
 $tabla .= "<br><br><br>";
+$colores = array();
+$num = 0;
+while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+    $colores[] = $extraerColores['id_alfanumerico'];
+}
 while ($extraermatcolumnas = $consultarangos->fetch_array()) {
+    $num++;
+    $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'];
-    $tabla .= "<td widht='$ancho' colspan='6' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
+    $tabla .= "<td widht='$ancho' colspan='6' style='background-color: $color;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
 }
 $tabla .= "</tr>";
 
@@ -877,13 +884,21 @@ $tabla .= "   <td class='verticalText'style='background-color:#00E0FF' colspan='
             </td>
             <td rowspan='$textoC'>
                 <table border='1'>";
+$consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 
 $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
 $tabla .= "<br><br><br>";
+$colores = array();
+$num = 0;
+while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+    $colores[] = $extraerColores['id_alfanumerico'];
+}
 while ($extraermatcolumnas = $consultarangos->fetch_array()) {
+    $num++;
+    $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'];
-    $tabla .= "<td widht='$ancho' colspan='6' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
+    $tabla .= "<td widht='$ancho' colspan='6' style='background-color: $color;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
 }
 $tabla .= "</tr>";
 
