@@ -351,7 +351,9 @@ if ($origen == '1') {
 
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+    $tabla .= "<tr>
+    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
+    </tr>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -728,7 +730,9 @@ if ($origen == '1') {
 
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+    $tabla .= "<tr>
+    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
+    </tr>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -1106,7 +1110,9 @@ if ($origen == '1') {
                 <table border='1'>";
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+    $tabla .= "<tr>
+    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
+    </tr>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
