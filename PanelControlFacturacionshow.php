@@ -1,6 +1,6 @@
 <?php
-include "../sec_login.php";
-include '../conexion/conexion.php';
+include "sec_login.php";
+include 'conexion/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,7 +20,7 @@ include '../conexion/conexion.php';
 
 <body>
     <?php
-    include '../header-rh.php';
+    include 'header-rh.php';
 
     $FacShow = $mysqli->query('SELECT * FROM fc_facturacion WHERE id="' . $_GET["show"] . '"');
 
@@ -40,10 +40,6 @@ include '../conexion/conexion.php';
                 <input type="text" value="<?php echo $row["id"]; ?>" readonly>
                 <label>Tipo de Informe</label>
                 <input type="text" value="<?php echo $row["InformeTipo"]; ?>" readonly>
-            </div>
-            <div class="campos-p">
-                <label>Ciclo</label>
-                <input type="text" value="<?php echo $row["CicloDescripcion"]; ?>" readonly>
             </div>
             <div class="campos-p">
                 <label>fecha inicio</label>
@@ -120,7 +116,7 @@ include '../conexion/conexion.php';
 
     });
     </script>
-    <?php include '../footer.php';  ?>
+    <?php include 'footer.php';  ?>
 </body>
 
 </html>
