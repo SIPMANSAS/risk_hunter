@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <title>Documento pdf</title>
     <style>
-        .page-break {
-            page-break-after: always;
-        }
+    .page-break {
+        page-break-after: always;
+    }
 
-        body {
-            font-family: "Calibri Light", sans-serif !important;
-            font-size: 11px;
-        }
+    body {
+        font-family: "Calibri Light", sans-serif !important;
+        font-size: 11px;
+    }
 
-        /*
+    /*
         .verticalText {
             writing-mode: vertical-lr;
             transform: rotate(180deg);
@@ -28,7 +28,7 @@
         */
 
 
-        /*  
+    /*  
         *{
             font-family: "Calibri Light", sans-serif !important;
             font-size: 11px;
@@ -56,13 +56,15 @@
         $rutaImagen = "../../img/IES.jpg";
     ?>
     <center>
-        <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $rutaImagen); ?>" alt="" width="500" height="500">
+        <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $rutaImagen); ?>"
+            alt="" width="500" height="500">
     </center>
     <?php
     }else{
     ?>
     <center>
-        <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $rutaImagen); ?>" alt="" width="500" height="500">
+        <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $rutaImagen); ?>"
+            alt="" width="500" height="500">
     </center>
     <?php
     }
@@ -85,112 +87,112 @@
     <?php
     if ($origen == 1) {
     ?>
-        <h1>
-            <center>DATOS BASICOS DE LA INSPECCIÓN</center>
-        </h1>
-        <br>
-        <br>
-        <center>
-            <table>
-                <td><b>
-                        <h5>Fecha de Solicitud de la inspección
-                    </b></h5>
-                </td>
-                <td style="color:white">---------------------------------------</td>
-                <td>
-                    <h5><?php echo $fecha_elaboracion ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Numero de Inspección</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $inspeccion ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Firma Inspectora</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $firmainspectora ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Número de contacto de la firma inspectora</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $contactofirma ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Pais donde se realizó la inspección</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $pais ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Ciudad donde se realizó la inspección </b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $ciudad ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Dirección de la inspección</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $direccion ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Nombre del sitio a inspeccionar</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $nombreedificacion ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Nombre de la persona que atendió la inspección</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $nombrepersonaatiende ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Número de contacto de la persona que atendió la inspección</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $contactopersonaatiende ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Inspector Asignado</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $inspectorasignado ?></h5>
-                </td>
-                <tr></tr>
-                <td>
-                    <h5><b>Numero de contacto del inspector</b></h5>
-                </td>
-                <td></td>
-                <td>
-                    <h5><?php echo $contactopersonaatiende ?></h5>
-                </td>
-                <tr></tr>
-            </table>
-        </center>
+    <h1>
+        <center>DATOS BASICOS DE LA INSPECCIÓN</center>
+    </h1>
+    <br>
+    <br>
+    <center>
+        <table>
+            <td><b>
+                    <h5>Fecha de Solicitud de la inspección
+                </b></h5>
+            </td>
+            <td style="color:white">---------------------------------------</td>
+            <td>
+                <h5><?php echo $fecha_elaboracion ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Numero de Inspección</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $inspeccion ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Firma Inspectora</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $firmainspectora ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Número de contacto de la firma inspectora</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $contactofirma ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Pais donde se realizó la inspección</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $pais ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Ciudad donde se realizó la inspección </b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $ciudad ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Dirección de la inspección</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $direccion ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Nombre del sitio a inspeccionar</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $nombreedificacion ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Nombre de la persona que atendió la inspección</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $nombrepersonaatiende ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Número de contacto de la persona que atendió la inspección</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $contactopersonaatiende ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Inspector Asignado</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $inspectorasignado ?></h5>
+            </td>
+            <tr></tr>
+            <td>
+                <h5><b>Numero de contacto del inspector</b></h5>
+            </td>
+            <td></td>
+            <td>
+                <h5><?php echo $contactopersonaatiende ?></h5>
+            </td>
+            <tr></tr>
+        </table>
+    </center>
     <?php
     }
     ?>
@@ -238,7 +240,8 @@
     </table>
     <br>
     <br>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/mapa.png" ?>" alt="map not found" width="600" height="300">
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/mapa.png" ?>" alt="map not found"
+        width="600" height="300">
 
     <?php echo "<h2 align='center'>" . $textofinlalinderos . "</h2>"; ?>
 
@@ -263,7 +266,7 @@
     <h1>
         <center>MAPA DE RIESGOS</center>
     </h1>
-    <?php echo str_replace('&nbsp;', '', $tabla); ?>
+    <?php echo $tabla;//str_replace('&nbsp;', '', ); ?>
     <h1>
         <center>ANÁLISIS RISK HUNTER +
     </h1>
@@ -273,7 +276,8 @@
             Niveles Por Riesgo
         </center>
     </h2>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica.png" ?>" alt="Gráfico de nivel de riesgos" width="500" height="300">
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica.png" ?>"
+        alt="Gráfico de nivel de riesgos" width="500" height="300">
     <br>
     <br>
     <br>
@@ -285,7 +289,8 @@
     <br>
     <br>
     <br>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica2.png" ?>" alt="Gráfico de nivel de riesgos" width="500" height="300">
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica2.png" ?>"
+        alt="Gráfico de nivel de riesgos" width="500" height="300">
     <br>
     <br>
     <br>
@@ -295,16 +300,16 @@
     <?php
     if ($origen == 1) {
     ?>
-        <h1>
-                CALIFICACIÓN DE RIESGOS
-                <?php 
+    <h1>
+        CALIFICACIÓN DE RIESGOS
+        <?php 
                     include '../conexion.php';
                     $consultafi = $mysqli->query("SELECT f_ci($identificador) AS f_ci");
                     $extraer_f_ci = $consultafi->fetch_array(MYSQLI_ASSOC);
                     echo $f_ci = $extraer_f_ci['f_ci'];
                 ?>
-        </h1>
-        <br>
+    </h1>
+    <br>
     <?php
     } ?>
     <div class="page-break"></div>
@@ -319,8 +324,9 @@
         <center>REGISTRO FOTOGRAFICO</center>
     </h1>
     <?php if ($imagen != NULL) { ?>
-        <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $imagen); ?>" width="250" height="250"><br>
-        <label><?php echo $pie_de_pagina ?></label>
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter" . str_replace("..", "", $imagen); ?>"
+        width="250" height="250"><br>
+    <label><?php echo $pie_de_pagina ?></label>
     <?php  } ?>
 </body>
 
