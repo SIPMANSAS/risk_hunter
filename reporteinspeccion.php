@@ -1203,7 +1203,7 @@ $options->set([
     'enable_html5_parser' => true, // Habilitar el analizador HTML5
     'enable_remote' => true,
     'enable_javascript' => true,
-    'enable_css_float' => true,
+    'enable_css_float' => false,
     'enable_fontsubsetting' => true,
 ]);
 
