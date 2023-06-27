@@ -357,14 +357,14 @@ if ($origen == '1') {
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        $colores[] =$extraerColores['id_alfanumerico'];
+        $colores[] = $extraerColores['id_alfanumerico'];
     }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num-1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho)'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho);border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
 
@@ -380,7 +380,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num-1];
+        $color = $colores[$num - 1];
         $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
     $tabla .= "<tr>";
@@ -741,8 +741,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num-1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho)'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho);border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
@@ -759,7 +759,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num-1];
+        $color = $colores[$num - 1];
         $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color:$color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
     $tabla .= "<tr>";
@@ -1121,8 +1121,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num-1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho)'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: calc(20px * $ancho);border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
@@ -1139,7 +1139,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num-1];
+        $color = $colores[$num - 1];
         $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
 
