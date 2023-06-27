@@ -111,8 +111,7 @@ include 'conexion/conexion.php';
                         </select>
                     </div>
                     <div class="campos-p"> <label>Fecha inicio</label>
-                        <input type="date" id="fechaInicio" value="<?php echo date("Y-m-d"); ?>" name="ClaseBFInicio"
-                            readonly>
+                        <input type="date" id="fechaInicio" value="<?php echo date("Y-m-d"); ?>" name="ClaseBFInicio" readonly>
                         <label>Fecha fin</label>
                         <input type="date" id="diferenciaFecha" name="ClaseBFTermino" readonly>
                     </div>
@@ -139,118 +138,117 @@ include 'conexion/conexion.php';
             </thead>
             <tbody>
                 <?php foreach ($facturacion as $row) { ?>
-                <tr>
-                    <td><?php echo $row["id"]; ?></td>
+                    <tr>
+                        <td><?php echo $row["id"]; ?></td>
 
-                    <td><?php echo ($row["InformeTipo"] == 817) ? 'Clase A' : (($row["InformeTipo"] == 818) ? 'Clase B' : 'Clase C'); ?>
-                    </td>
-                    <td><?php echo $row["nombres"]; ?></td>
-                    <td><?php echo ($row["fecha_inicio"]) ? $row["fecha_inicio"] : "SIN FECHA"; ?></td>
-                    <td><?php echo ($row["fecha_fin"]) ? $row["fecha_fin"] : "SIN FECHA"; ?></td>
-                    <td><?php echo "$" . number_format($row["valor_total"], 0, ',', '.'); ?></td>
-                    <td><?php echo $row["inspecciones"]; ?></td>
-                    <td><?php echo ($row["inspecciones_cliente"]) ? $row["inspecciones_cliente"] : 0; ?>
-                    </td>
-                    <td>
-                        <a class="btn_azul"
-                            href="PanelControlFacturacion.php?show=<?php echo $row["id"]; ?>">Visualizar</a>
-                        <a class="btn_azul" href="PanelControlFacturacion.php?edit=<?php echo $row["id"]; ?>">editar</a>
-                    </td>
-                </tr>
+                        <td><?php echo ($row["InformeTipo"] == 817) ? 'Clase A' : (($row["InformeTipo"] == 818) ? 'Clase B' : 'Clase C'); ?>
+                        </td>
+                        <td><?php echo $row["nombres"]; ?></td>
+                        <td><?php echo ($row["fecha_inicio"]) ? $row["fecha_inicio"] : "SIN FECHA"; ?></td>
+                        <td><?php echo ($row["fecha_fin"]) ? $row["fecha_fin"] : "SIN FECHA"; ?></td>
+                        <td><?php echo "$" . number_format($row["valor_total"], 0, ',', '.'); ?></td>
+                        <td><?php echo $row["inspecciones"]; ?></td>
+                        <td><?php echo ($row["inspecciones_cliente"]) ? $row["inspecciones_cliente"] : 0; ?>
+                        </td>
+                        <td>
+                            <a class="btn_azul" href="PanelControlFacturacionshow.php?show=<?php echo $row["id"]; ?>">Visualizar</a>
+                            <a class="btn_azul" href="PanelControlFacturacionedit.php?edit=<?php echo $row["id"]; ?>">editar</a>
+                        </td>
+                    </tr>
                 <?php } ?>
             </tbody>
         </table>
 
     </div>
     <script>
-    $('#CondicionTipo').change(function(e) {
-        e.preventDefault();
+        $('#CondicionTipo').change(function(e) {
+            e.preventDefault();
 
-        if (this.value == 1) {
-            $("#Response").css('display', 'block');
-        } else {
-            $('#Response').css('display', 'none');
-            $('#ClaseA').css('display', 'none');
-            $('#ClaseB').css('display', 'none');
-            $('#ClaseC').css('display', 'none');
+            if (this.value == 1) {
+                $("#Response").css('display', 'block');
+            } else {
+                $('#Response').css('display', 'none');
+                $('#ClaseA').css('display', 'none');
+                $('#ClaseB').css('display', 'none');
+                $('#ClaseC').css('display', 'none');
+            }
+        });
+
+        $('#CondicionFactura').change(function(e) {
+            e.preventDefault();
+
+            var numero = this.value;
+
+            switch (numero) {
+                case "1":
+                    $("#ClaseB").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseA").css('display', 'block');
+                    break;
+                case "2":
+                    $("#ClaseA").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseB").css('display', 'block');
+                    break;
+                case "3":
+                    $("#ClaseA").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseB").css('display', 'block');
+                    break;
+
+                case "4":
+                    $("#ClaseA").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseB").css('display', 'block');
+                    break;
+
+                case "5":
+                    $("#ClaseA").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseB").css('display', 'block');
+                    break;
+                default:
+                    break;
+            }
+
+
+            var fechaInicio = new Date($('#fechaInicio').val());
+            var fechaFin = new Date(fechaInicio);
+
+            if (numero === "2") {
+                fechaFin.setMonth(fechaFin.getMonth() + 1);
+            } else if (numero === "3") {
+                fechaFin.setMonth(fechaFin.getMonth() + 3);
+            } else if (numero === "4") {
+                fechaFin.setMonth(fechaFin.getMonth() + 6);
+            } else if (numero === "5") {
+                fechaFin.setFullYear(fechaFin.getFullYear() + 1);
+            }
+
+            var year = fechaFin.getFullYear();
+            var month = (fechaFin.getMonth() + 1).toString().padStart(2, '0');
+            var day = fechaFin.getDate().toString().padStart(2, '0');
+            var fechaFinFormateada = year + '-' + month + '-' + day;
+
+            $('#diferenciaFecha').val(fechaFinFormateada);
+        });
+
+        function hideSucess() {
+            var alertElement = document.getElementById('AlertSucess');
+            alertElement.style.display = 'none';
         }
-    });
 
-    $('#CondicionFactura').change(function(e) {
-        e.preventDefault();
-
-        var numero = this.value;
-
-        switch (numero) {
-            case "1":
-                $("#ClaseB").css('display', 'none');
-
-                $("input[name=Tipo]").val(numero);
-                $("#ClaseA").css('display', 'block');
-                break;
-            case "2":
-                $("#ClaseA").css('display', 'none');
-
-                $("input[name=Tipo]").val(numero);
-                $("#ClaseB").css('display', 'block');
-                break;
-            case "3":
-                $("#ClaseA").css('display', 'none');
-
-                $("input[name=Tipo]").val(numero);
-                $("#ClaseB").css('display', 'block');
-                break;
-
-            case "4":
-                $("#ClaseA").css('display', 'none');
-
-                $("input[name=Tipo]").val(numero);
-                $("#ClaseB").css('display', 'block');
-                break;
-
-            case "5":
-                $("#ClaseA").css('display', 'none');
-
-                $("input[name=Tipo]").val(numero);
-                $("#ClaseB").css('display', 'block');
-                break;
-            default:
-                break;
+        function hideDanger() {
+            var alertElement = document.getElementById('AlertDanger');
+            alertElement.style.display = 'none';
         }
-
-
-        var fechaInicio = new Date($('#fechaInicio').val());
-        var fechaFin = new Date(fechaInicio);
-
-        if (numero === "2") {
-            fechaFin.setMonth(fechaFin.getMonth() + 1);
-        } else if (numero === "3") {
-            fechaFin.setMonth(fechaFin.getMonth() + 3);
-        } else if (numero === "4") {
-            fechaFin.setMonth(fechaFin.getMonth() + 6);
-        } else if (numero === "5") {
-            fechaFin.setFullYear(fechaFin.getFullYear() + 1);
-        }
-
-        var year = fechaFin.getFullYear();
-        var month = (fechaFin.getMonth() + 1).toString().padStart(2, '0');
-        var day = fechaFin.getDate().toString().padStart(2, '0');
-        var fechaFinFormateada = year + '-' + month + '-' + day;
-
-        $('#diferenciaFecha').val(fechaFinFormateada);
-    });
-
-    function hideSucess() {
-        var alertElement = document.getElementById('AlertSucess');
-        alertElement.style.display = 'none';
-    }
-
-    function hideDanger() {
-        var alertElement = document.getElementById('AlertDanger');
-        alertElement.style.display = 'none';
-    }
-    setTimeout(hideSucess, 2000);
-    setTimeout(hideDanger, 2000);
+        setTimeout(hideSucess, 2000);
+        setTimeout(hideDanger, 2000);
     </script>
     <?php include 'footer.php';  ?>
 </body>
