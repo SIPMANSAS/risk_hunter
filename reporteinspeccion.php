@@ -359,7 +359,7 @@ if ($origen == '1') {
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad']."0em";
+        $ancho = $extraermatcolumnas['Cantidad']."0rem";
         $color = $colores[$num-1];
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
@@ -736,7 +736,7 @@ if ($origen == '1') {
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad']."0em";
+        $ancho = $extraermatcolumnas['Cantidad']."0rem";
         $color = $colores[$num-1];
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
@@ -1113,7 +1113,7 @@ if ($origen == '1') {
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad']."0em";
+        $ancho = $extraermatcolumnas['Cantidad']."0rem";
         $color = $colores[$num-1];
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
