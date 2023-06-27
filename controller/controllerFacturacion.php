@@ -140,3 +140,29 @@ switch ($_POST["Tipo"]) {
         # code...
         break;
 }
+
+switch ($_POST["update"]) {
+    case 'update':
+        $id = $_POST["id"];
+        $Tipo = $_POST["Tipo"];
+        $FInicio = $_POST["FInicio"];
+        $FTermino = $_POST["FTermino"];
+        $inspecciones = $_POST["inspecciones"];
+        $InsCliente = $_POST["InsCliente"];
+
+        $mysqli->query("UPDATE fc_facturacion SET 
+        InformeTipo = '$Tipo',
+        fecha_inicio = '$FInicio',
+        fecha_fin = '$FTermino',
+        inspecciones = '$inspecciones',
+        inspecciones_cliente = '$InsCliente'
+      WHERE 
+        id = '$id';");
+
+        echo '<script language="javascript">    
+        window.location.href="../PanelControlFacturacion.php"</script>';
+        break;
+    default:
+        # code...
+        break;
+}

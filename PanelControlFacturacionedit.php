@@ -35,29 +35,30 @@ include 'conexion/conexion.php';
         <center>
             <h2>Visualizar Datos</h2>
             <form action="controller/controllerFacturacion.php" method="post">
+                <input type="hidden" name="update" value="update">
                 <?php foreach ($FacShow as $row) { ?>
-                    <div class="campos-p">
-                        <label>ID</label>
-                        <input type="text" value="<?php echo $row["id"]; ?>">
-                        <label>Tipo de Informe</label>
-                        <input type="text" value="<?php echo $row["InformeTipo"]; ?>">
-                    </div>
-                    <div class="campos-p">
-                        <label>fecha inicio</label>
-                        <input type="date" id="fechaInicio" name="ClaseBFInicio" value="<?php echo $row["fecha_inicio"]; ?>">
-                    </div>
-                    <div class="campos-p">
-                        <label>fecha Vencimiento</label>
-                        <input type="date" id="diferenciaFecha" name="ClaseBFTermino" value="<?php echo $row["fecha_fin"]; ?>">
-                    </div>
-                    <div class="campos-p">
-                        <label>inspecciones</label>
-                        <input type="text" value="<?php echo $row["inspecciones"]; ?>">
-                    </div>
-                    <div class="campos-p">
-                        <label>total inspecciones del cliente</label>
-                        <input type="text" value="<?php echo $row["inspecciones_cliente"]; ?>">
-                    </div>
+                <div class="campos-p">
+                    <label>ID</label>
+                    <input type="text" name="id" value="<?php echo $row["id"]; ?>">
+                    <label>Tipo de Informe</label>
+                    <input type="text" name="Tipo" value="<?php echo $row["InformeTipo"]; ?>">
+                </div>
+                <div class="campos-p">
+                    <label>fecha inicio</label>
+                    <input type="date" id="fechaInicio" name="FInicio" value="<?php echo $row["fecha_inicio"]; ?>">
+                </div>
+                <div class="campos-p">
+                    <label>fecha Vencimiento</label>
+                    <input type="date" id="diferenciaFecha" name="FTermino" value="<?php echo $row["fecha_fin"]; ?>">
+                </div>
+                <div class="campos-p">
+                    <label>inspecciones</label>
+                    <input type="text" name="inspecciones" value="<?php echo $row["inspecciones"]; ?>">
+                </div>
+                <div class="campos-p">
+                    <label>total inspecciones del cliente</label>
+                    <input type="text" name="InsCliente" value="<?php echo $row["inspecciones_cliente"]; ?>">
+                </div>
                 <?php } ?>
                 <div class="campos-p">
                     <button type="submit" class="btn_azul">Guardar</button>
@@ -69,58 +70,6 @@ include 'conexion/conexion.php';
         </center>
 
     </div>
-    <script>
-        $('#CondicionTipo').change(function(e) {
-            e.preventDefault();
-
-            if (this.value == 1) {
-                $("#Response").css('display', 'block');
-            } else {
-                $('#Response').css('display', 'none');
-                $('#ClaseA').css('display', 'none');
-                $('#ClaseB').css('display', 'none');
-                $('#ClaseC').css('display', 'none');
-            }
-        });
-
-        $('#CondicionFactura').change(function(e) {
-            e.preventDefault();
-
-            $('input[name=Tipo]').val(this.value);
-
-            if (this.value == 817) {
-                $("#ClaseB").css('display', 'none');
-                $("#ClaseC").css('display', 'none');
-
-                $("#ClaseA").css('display', 'block');
-            } else if (this.value == 818) {
-                $("#ClaseA").css('display', 'none');
-                $("#ClaseC").css('display', 'none');
-
-                $("#ClaseB").css('display', 'block');
-            } else {
-                $("#ClaseA").css('display', 'none');
-                $("#ClaseB").css('display', 'none');
-
-                $("#ClaseC").css('display', 'block');
-            }
-        });
-
-        $("#frecuencia").change(function(e) {
-            e.preventDefault();
-
-            if (this.value === "mensual") {
-                document.getElementById("fecha-inicio").value = 1;
-            } else if (this.value === "trimestral") {
-                document.getElementById("fecha-inicio").value = 3;
-            } else if (this.value === "semestral") {
-                document.getElementById("fecha-inicio").value = 6;
-            } else {
-                document.getElementById("fecha-inicio").value = 12;
-            }
-
-        });
-    </script>
     <?php include 'footer.php';  ?>
 </body>
 
