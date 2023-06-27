@@ -1183,7 +1183,9 @@ $tabla .= "<style>
   }
 </style>";
 
+echo $tabla;
 // LIBRERIA DE DOMPDF
+/*
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
@@ -1259,4 +1261,4 @@ $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 unlink('MostrarPDF/Imagen_Grafica.png');
 unlink('MostrarPDF/Imagen_Grafica2.png');
 unlink('MostrarPDF/mapa.png');
-/* */
+ */
