@@ -346,25 +346,23 @@ if ($origen == '1') {
                     <center>Probabilidad(%)</center>
                 </h3>
             </td>
-            <td rowspan='$textoC' bgcolor='#00E0FF'>
-                <table>";
+            <td rowspan='$textoC'>
+                <table border='1'>";
 
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<tr>
-    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
-    </tr>";
+    $tabla .= "<br><br><br>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        $colores[] = $extraerColores['id_alfanumerico'];
+        $colores[] =$extraerColores['id_alfanumerico'];
     }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $color;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
 
@@ -380,7 +378,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num - 1];
+        $color = $colores[$num-1];
         $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
     $tabla .= "<tr>";
@@ -725,13 +723,12 @@ if ($origen == '1') {
                     <center>Probabilidad(%)</center>
                 </h3>
             </td>
-            <td rowspan='$textoC' bgcolor='#00E0FF'>
-                <table>";
+            <td rowspan='$textoC'>
+                <table border='1'>";
+
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<tr>
-    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
-    </tr>";
+    $tabla .= "<br><br><br>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -741,8 +738,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $color;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
@@ -759,7 +756,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num - 1];
+        $color = $colores[$num-1];
         $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color:$color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
     $tabla .= "<tr>";
@@ -1105,13 +1102,11 @@ if ($origen == '1') {
                     <center>Probabilidad(%)</center>
                 </h3>
             </td>
-            <td rowspan='$textoC' bgcolor='#00E0FF'>
-                <table>";
+            <td rowspan='$textoC'>
+                <table border='1'>";
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<tr>
-    <td colspan='6' class='verticalTextB' style='height: calc(19px * 2);'></td>
-    </tr>";
+    $tabla .= "<br><br><br>";
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -1121,8 +1116,8 @@ if ($origen == '1') {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'];
-        $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $color = $colores[$num-1];
+        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $color;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
     $tabla .= "</tr>";
@@ -1139,7 +1134,7 @@ if ($origen == '1') {
     }
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
-        $color = $colores[$num - 1];
+        $color = $colores[$num-1];
         $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
 
@@ -1188,7 +1183,7 @@ $tabla .= "<style>
   }
 </style>";
 
-echo $tabla ;
+echo $tabla;
 // LIBRERIA DE DOMPDF
 /*
 use Dompdf\Dompdf;
@@ -1197,14 +1192,17 @@ use Dompdf\Options;
 $options = new Options();
 $options->set([
     'isPhpEnabled' => true,
-    'isHtml5ParserEnabled' => true, // Habilitar el analizador HTML5
+    'isHtml5ParserEnabled' => false,
     'isRemoteEnabled' => true,
     'isJavascriptEnabled' => true,
-    'enable_html5_parser' => true, // Habilitar el analizador HTML5
+    'isFontSubsettingEnabled' => true,
+    'enable_css_float' => true,
+    'enable_html5_parser' => true,
     'enable_remote' => true,
     'enable_javascript' => true,
-    'enable_css_float' => false,
+    'images' => true,
     'enable_fontsubsetting' => true,
+    'enable_php' => true
 ]);
 
 // Creamos una instancia de Dompdf y cargamos el HTML a convertir a PDF
@@ -1263,4 +1261,4 @@ $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 unlink('MostrarPDF/Imagen_Grafica.png');
 unlink('MostrarPDF/Imagen_Grafica2.png');
 unlink('MostrarPDF/mapa.png');
-*/
+ */
