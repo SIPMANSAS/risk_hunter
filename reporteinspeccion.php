@@ -1197,17 +1197,14 @@ use Dompdf\Options;
 $options = new Options();
 $options->set([
     'isPhpEnabled' => true,
-    'isHtml5ParserEnabled' => false,
+    'isHtml5ParserEnabled' => true, // Habilitar el analizador HTML5
     'isRemoteEnabled' => true,
     'isJavascriptEnabled' => true,
-    'isFontSubsettingEnabled' => true,
-    'enable_css_float' => true,
-    'enable_html5_parser' => true,
+    'enable_html5_parser' => true, // Habilitar el analizador HTML5
     'enable_remote' => true,
     'enable_javascript' => true,
-    'images' => true,
+    'enable_css_float' => true,
     'enable_fontsubsetting' => true,
-    'enable_php' => true
 ]);
 
 // Creamos una instancia de Dompdf y cargamos el HTML a convertir a PDF
