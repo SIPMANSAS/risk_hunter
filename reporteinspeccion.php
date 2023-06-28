@@ -384,11 +384,11 @@ if ($origen == '1') {
 
     $numeracion = $filas;
 
-    for ($i = 0; $i <= $filas; $i++) {
+    for ($i = 1; $i <= $filas; $i++) {
 
         $tabla .= "<tr>";
         
-        for ($j = 0; $j <= $columnas; $j++) {
+        for ($j = 1; $j <= $columnas; $j++) {
 
             
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
