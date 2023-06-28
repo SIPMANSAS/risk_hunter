@@ -301,24 +301,20 @@ $textoC = strval($filas + 3);
 $numero = 1;
 //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
 /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-$tabla = "<table border='1' width='80%' height='60%'>";
+$tabla = "<table border='1' width='100%' height='60%'>";
 $color_actual = ' ';
-$tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
-$tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+$tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
+$tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
 $tabla .= "<tr>";
-$tabla .= "";
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-$tabla .= "   <td class='' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+$tabla .= "<td class='verticalText' style='background-color:#00E0FF;width: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC'>
-                <table border='1'>";
-
-$consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-$tabla .= "<br><br><br>";
+                <table>";
+$consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+$consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
 $colores = array();
 $num = 0;
 while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -329,21 +325,25 @@ while ($extraermatcolumnas = $consultarangos->fetch_array()) {
     $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'];
-    $tabla .= "<td widht='$ancho' colspan='6' style='background-color: $color;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
+    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
 }
-$tabla .= "</tr>";
 
-$tabla .= "</table>
-            </td>";
+$tabla .= "</table>";
 
-$consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+$consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
-while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
-    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-    }
+$colores = array();
+$num = 0;
+while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+    $colores[] = $extraerColores['id_alfanumerico'];
 }
-$tabla .= "<tr>";
+$tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
+
 
 $numeracion = $filas;
 
@@ -351,7 +351,7 @@ for ($i = 1; $i <= $filas; $i++) {
 
     $tabla .= "<tr>";
 
-    for ($j = 1; $j <= $columnas; $j++) {
+    for ($j = 0; $j <= $columnas; $j++) {
 
         $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -869,21 +869,18 @@ $textoC = strval($filas + 3);
 $numero = 1;
 //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
 /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-$tabla = "<table border='1' width='80%' height='60%'>";
+$tabla = "<table border='1' width='100%' height='60%'>";
 $color_actual = ' ';
-$tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
-$tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+$tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
+$tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
 $tabla .= "<tr>";
-$tabla .= "";
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-$tabla .= "   <td class='verticalText'style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+$tabla .= "   <td class='verticalText'style='background-color:#00E0FF' colspan='3' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC'>
-                <table border='1'>";
+                <table>";
 $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 
 $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
@@ -898,21 +895,25 @@ while ($extraermatcolumnas = $consultarangos->fetch_array()) {
     $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'];
-    $tabla .= "<td widht='$ancho' colspan='6' style='background-color: $color;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "</center><b></td><tr>";
+    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
 }
-$tabla .= "</tr>";
 
-$tabla .= "</table>
-            </td>";
+$tabla .= "</table>";
 
 $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
+$colores = array();
+$num = 0;
 while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
-    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-    }
+    $colores[] = $extraerColores['id_alfanumerico'];
 }
-$tabla .= "<tr>";
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
+
+
 
 $numeracion = $filas;
 
