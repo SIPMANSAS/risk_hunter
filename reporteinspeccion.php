@@ -363,7 +363,6 @@ if ($origen == '1') {
         $color = $colores[$num-1];
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
-    $tabla .="<td></td>";
     $tabla .= "</tr>";
 
     $tabla .= "</table>
@@ -385,7 +384,7 @@ if ($origen == '1') {
 
     $numeracion = $filas;
 
-    for ($i = 0; $i <= $filas; $i++) {
+    for ($i = 1; $i <= $filas; $i++) {
 
         $tabla .= "<tr>";
 
