@@ -390,6 +390,7 @@ if ($origen == '1') {
 
         for ($j = 0; $j <= $columnas; $j++) {
 
+            
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
                                                                         WHERE fila='$i' 
@@ -397,8 +398,14 @@ if ($origen == '1') {
                                                                         AND MC.identificador = PM.color
                                                                         GROUP BY MC.codigo;");
             $datocolor = $hay_color->fetch_array(MYSQLI_ASSOC);
+            if ($j = 0) {
+                $colorCantidad = 1;
+                $color = "#ffffff";  
+            }
+            
             $colorCantidad = $datocolor['Cantidad'];
             $color = $datocolor['codigo'];
+            
             if ($colorCantidad > 0) {
                 $color_actual = $color;
             }
