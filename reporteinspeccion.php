@@ -333,7 +333,7 @@ if ($origen == '1') {
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-    $tabla = "<table border='1' width='80%' height='60%'>";
+    $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
     $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
     $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
