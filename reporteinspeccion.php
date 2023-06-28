@@ -335,20 +335,17 @@ if ($origen == '1') {
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $tabla = "<table border='1' width='80%' height='60%'>";
     $color_actual = ' ';
-    $tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
+    $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
     $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
     $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF;width: 50px;' colspan='1' rowspan='$textoC'>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC' bgcolor='#00E0FF'>
                 <table>";
-
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $colores = array();
@@ -365,8 +362,7 @@ if ($origen == '1') {
     }
     $tabla .= "</tr>";
 
-    $tabla .= "</table>
-            </td>";
+    $tabla .= "</table>";
 
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
@@ -375,7 +371,7 @@ if ($origen == '1') {
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
-    $tabla .= "<td style='background-color:#00E0FF;width: 50;' colspan='1'><b><center>Escala</center><b></td>";
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
         $color = $colores[$num-1];
