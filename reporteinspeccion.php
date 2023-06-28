@@ -393,10 +393,6 @@ if ($origen == '1') {
                                                                         AND MC.identificador = PM.color
                                                                         GROUP BY MC.codigo;");
             $datocolor = $hay_color->fetch_array(MYSQLI_ASSOC);
-            if ($j <= 0) {
-                $colorCantidad = 1;
-                $color = "#ffffff";
-            }
 
             $colorCantidad = $datocolor['Cantidad'];
             $color = $datocolor['codigo'];
@@ -719,7 +715,7 @@ if ($origen == '1') {
     $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "<td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "<td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
@@ -765,7 +761,7 @@ if ($origen == '1') {
 
         $tabla .= "<tr>";
 
-        for ($j = 1; $j <= $columnas; $j++) {
+        for ($j = 0; $j <= $columnas; $j++) {
 
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -1095,12 +1091,10 @@ if ($origen == '1') {
     $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "<td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC' bgcolor='#00E0FF'>
                 <table>";
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
@@ -1117,10 +1111,9 @@ if ($origen == '1') {
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
 
-    $tabla .= "</tr>";
+    // $tabla .= "</tr>";
 
-    $tabla .= "</table>
-            </td>";
+    $tabla .= "</table>";
 
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
@@ -1135,7 +1128,7 @@ if ($origen == '1') {
         $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
 
-    $tabla .= "<tr>";
+    //$tabla .= "<tr>";
 
     $numeracion = $filas;
 
