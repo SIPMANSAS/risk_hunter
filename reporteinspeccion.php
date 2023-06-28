@@ -357,7 +357,7 @@ if ($origen == '1') {
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'] . "%";
         $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td></tr>";
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
    // $tabla .= "";
 
