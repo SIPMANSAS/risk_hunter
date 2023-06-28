@@ -1158,11 +1158,11 @@ if ($origen == '1') {
     }
     $tabla .= "</table>";
 }
-// echo $tabla;
+echo $tabla;
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 
 // LIBRERIA DE DOMPDF
-
+/*
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
@@ -1238,4 +1238,4 @@ $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 unlink('MostrarPDF/Imagen_Grafica.png');
 unlink('MostrarPDF/Imagen_Grafica2.png');
 unlink('MostrarPDF/mapa.png');
-/* */
+ */

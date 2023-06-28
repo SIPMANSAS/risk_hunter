@@ -64,7 +64,7 @@
                     $html .= '<div class="campos-p">';
 
                     $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
-                    $html .= '<input type="text" value="' . $row["respuesta_texto"] . '" name="respuesta" onkeypress="javascript:if (event.keyCode == 13) {submitForm()}" class="inp_med">';
+                    $html .= '<input type="text" value="' . $row["respuesta_texto"] . '" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== "") { submitForm(); } else { alert("El valor está vacío."); } }" class="inp_med">';
                     $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                     $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                     $html .= '<input type="hidden" value="' . $row["id_respuesta"] . '" name="idrestpt">';
@@ -99,7 +99,7 @@
 
                     $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
                     $date = date_create($row["respuesta_texto"]);
-                    $html .= '<input type="date" value="' . date_format($date, "Y-m-d") . '" name="respuesta" onkeypress="javascript:if (event.keyCode == 13) {submitForm()}" class="inp_med">';
+                    $html .= '<input type="date" value="' . date_format($date, "Y-m-d") . '" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== "") { submitForm(); } else { alert("El valor está vacío."); } }" class="inp_med">';
                     $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                     $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                     $html .= '<input type="hidden" value="' . $row["id_respuesta"] . '" name="idrestpt">';
@@ -131,7 +131,7 @@
                     $html .= '<div class="campos-p">';
 
                     $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
-                    $html .= '<input type="number" step="0.01" value="' . $row["respuesta_texto"] . '" name="respuesta" onkeypress="javascript:if (event.keyCode == 13) {submitForm()}" class="inp_med">';
+                    $html .= '<input type="number" step="0.01" value="' . $row["respuesta_texto"] . '" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== "") { submitForm(); } else { alert("El valor está vacío."); } }" class="inp_med">';
                     $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                     $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                     $html .= '<input type="hidden" value="' . $row["id_respuesta"] . '" name="idrestpt">';
