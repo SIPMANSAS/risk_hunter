@@ -922,7 +922,7 @@ for ($i = 1; $i <= $filas; $i++) {
 
     $tabla .= "<tr>";
 
-    for ($j = 1; $j <= $columnas; $j++) {
+    for ($j = 0; $j <= $columnas; $j++) {
 
         $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
