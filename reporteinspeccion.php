@@ -340,7 +340,7 @@ if ($origen == '1') {
     $tabla .= "<tr>";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA ///////////////////////// colspan='1'
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF;width: 50px;height: 150px;' rowspan=$textoC>
+    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF;width: 50px;height: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
