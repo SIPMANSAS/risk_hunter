@@ -56,7 +56,7 @@ if ($origen == '1') {
 
     $consultatextolinderos = $mysqli->query("SELECT p_informe_obligatorio($identificador) AS InformeO");
     $extraerDatosTextoLindero = $consultatextolinderos->fetch_array(MYSQLI_ASSOC);
-    $textofinlalinderos = 'DESDE CA' . $f_ci . $extraerDatosTextoLindero['InformeO'];
+    $textofinlalinderos =  $f_ci . $extraerDatosTextoLindero['InformeO'];
 
 
     $consultaimagenes = $mysqli->query("SELECT * FROM enc_imagenes_inspeccion WHERE id_inspeccion='$identificador'");
@@ -444,7 +444,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE FI</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
@@ -821,7 +821,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE IN</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
