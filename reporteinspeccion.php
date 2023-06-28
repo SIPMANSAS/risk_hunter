@@ -359,9 +359,10 @@ if ($origen == '1') {
         $color = $colores[$num - 1];
         $tabla .= "<td class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
+    $tabla .= "</table>";
     $tabla .= "</tr>";
 
-    $tabla .= "</table>";
+
     /* 
 */
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
