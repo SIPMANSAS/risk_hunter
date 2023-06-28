@@ -97,7 +97,7 @@ function Consulta($p_codigo, $p_respuesta, $p_pregunta_actual, $id_inspeccion, $
 
                         $html .= '<div class="campos-p">';
                         $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
-                        $html .= '<input type="text" id="result1" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert("El valor está vacío."); } }" required>';
+                        $html .= '<input type="text" id="result1" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert(`El valor está vacío.`); } }" required>';
                         $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                         $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                         $html .= '<input type="hidden" value="' . $row["codigo"] . '" name="codigo">';
@@ -128,7 +128,7 @@ function Consulta($p_codigo, $p_respuesta, $p_pregunta_actual, $id_inspeccion, $
                         $html .= '</div>';
                         $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
                         $html .= '<div class="campos-p">';
-                        $html .= '<input type="date" id="result1" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert("El valor está vacío."); } }" required>';
+                        $html .= '<input type="date" id="result1" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert(`El valor está vacío.`); } }" required>';
                         $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                         $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                         $html .= '<input type="hidden" value="' . $row["codigo"] . '" name="codigo">';
@@ -160,7 +160,7 @@ function Consulta($p_codigo, $p_respuesta, $p_pregunta_actual, $id_inspeccion, $
                         $html .= '</div>';
                         $html .= '<b><p class="h7">Escriba la respuesta y pulse enter para continuar</p></b>';
                         $html .= '<div class="campos-p">';
-                        $html .= '<input type="number" min="0" pattern="[0-9]" step="0.01" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert("El valor está vacío."); } }" required>';
+                        $html .= '<input type="number" min="0" pattern="[0-9]" step="0.01" name="respuesta" onkeypress="if (event.keyCode === 13) { if (this.value.trim() !== null) { submitForm(); } else { alert(`El valor está vacío.`); } }" required>';
                         $html .= '<input type="hidden" value="' . $id_inspeccion . '" name="id_inspeccion" id="id_inspeccion">';
                         $html .= '<input type="hidden" value="' . $id_bloque_inspeccion . '" name="id_bloque_inspeccion" id="id_bloque_inspeccion">';
                         $html .= '<input type="hidden" value="' . $row["codigo"] . '" name="codigo">';
