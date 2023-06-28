@@ -325,7 +325,7 @@ while ($extraermatcolumnas = $consultarangos->fetch_array()) {
     $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'];
-    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;border: 1px solid black;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
 }
 
 $tabla .= "</table>";
@@ -895,12 +895,12 @@ while ($extraermatcolumnas = $consultarangos->fetch_array()) {
     $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
     $ancho = $extraermatcolumnas['Cantidad'] . "%";
-    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+    $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;border: 1px solid black;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
 }
 
 $tabla .= "</table>";
 
-$consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+$consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
 $colores = array();
 $num = 0;
