@@ -344,8 +344,7 @@ if ($origen == '1') {
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-                ";
-    /* <table>
+                <table>";
                 $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $colores = array();
@@ -363,6 +362,7 @@ if ($origen == '1') {
     $tabla .= "</tr>";
 
     $tabla .= "</table>";
+    /* 
 */
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
