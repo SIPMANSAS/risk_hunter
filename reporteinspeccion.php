@@ -378,7 +378,7 @@ if ($origen == '1') {
         $color = $colores[$num - 1];
         $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
     }
-    $tabla .= "<tr>";
+ //   $tabla .= "<tr>";
 
     $numeracion = $filas;
 
