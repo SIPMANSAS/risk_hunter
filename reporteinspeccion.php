@@ -398,7 +398,7 @@ if ($origen == '1') {
                                                                         AND MC.identificador = PM.color
                                                                         GROUP BY MC.codigo;");
             $datocolor = $hay_color->fetch_array(MYSQLI_ASSOC);
-            if ($j = 0) {
+            if ($j <= 0) {
                 $colorCantidad = 1;
                 $color = "#ffffff";  
             }
