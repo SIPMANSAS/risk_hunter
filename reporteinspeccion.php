@@ -388,7 +388,7 @@ if ($origen == '1') {
 
         $tabla .= "<tr>";
         
-        for ($j = 1; $j <= $columnas; $j++) {
+        for ($j = 1; $j <= $columnas+1; $j++) {
 
             
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
