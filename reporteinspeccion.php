@@ -333,7 +333,7 @@ if ($origen == '1') {
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA ///////////////////////// colspan='$textoF+$columnas'
-    $tabla = "<table border='1' width='100%' height='60%'>";
+    $tabla = "<table border='1' width='100%' height='40%'>";
     $color_actual = ' ';
     $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
     $tabla .= "<th colspan=$columnas style='background-color:#00E0FF;'><h3>Impacto o Intensidad<h3></th>";
@@ -345,18 +345,18 @@ if ($origen == '1') {
                     <center>Probabilidad(%)</center>
                 </h3>
                 <table>";
-                $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $colores = array();
     $num = 0;
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
-        $colores[] =$extraerColores['id_alfanumerico'];
+        $colores[] = $extraerColores['id_alfanumerico'];
     }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad']."%";
-        $color = $colores[$num-1];
+        $ancho = $extraermatcolumnas['Cantidad'] . "%";
+        $color = $colores[$num - 1];
         $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
