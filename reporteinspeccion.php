@@ -336,7 +336,7 @@ if ($origen == '1') {
     $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
     $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
-    $tabla .= "<th colspan=$textoF style='background-color:#00E0FF;'><h3>Impacto o Intensidad<h3></th>";
+    $tabla .= "<th colspan=$columnas style='background-color:#00E0FF;'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
