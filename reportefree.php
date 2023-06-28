@@ -904,9 +904,10 @@ $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio W
 $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
 $colores = array();
 $num = 0;
-while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
+while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
     $colores[] = $extraerColores['id_alfanumerico'];
 }
+$tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
         $color = $colores[$num - 1];
@@ -921,7 +922,7 @@ for ($i = 1; $i <= $filas; $i++) {
 
     $tabla .= "<tr>";
 
-    for ($j = 1; $j <= $columnas; $j++) {
+    for ($j = 0; $j <= $columnas; $j++) {
 
         $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
