@@ -266,7 +266,7 @@
     <h1>
         <center>MAPA DE RIESGOS</center>
     </h1>
-    <?php echo $tabla;//str_replace('&nbsp;', '',$tabla ); ?>
+    <?php echo str_replace('&nbsp;', '',$tabla ); ?>
     <h1>
         <center>ANÁLISIS RISK HUNTER +
     </h1>
