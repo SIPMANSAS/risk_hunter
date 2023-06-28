@@ -332,11 +332,11 @@ if ($origen == '1') {
     $textoC = strval($filas + 3);
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
-    /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
+    /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA ///////////////////////// $textoF+$columnas
     $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
     $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
-    $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+    $tabla .= "<th colspan='$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
     $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
