@@ -384,10 +384,10 @@ if ($origen == '1') {
 
     $numeracion = $filas;
 
-    for ($i = 1; $i <= $filas; $i++) {
+    for ($i = 0; $i <= $filas; $i++) {
 
         $tabla .= "<tr>";
-
+        
         for ($j = 0; $j <= $columnas; $j++) {
 
             
@@ -398,7 +398,7 @@ if ($origen == '1') {
                                                                         AND MC.identificador = PM.color
                                                                         GROUP BY MC.codigo;");
             $datocolor = $hay_color->fetch_array(MYSQLI_ASSOC);
-            if ($j <= 0) {
+                if ($j <= 0) {
                 $colorCantidad = 1;
                 $color = "#ffffff";  
             }
