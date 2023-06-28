@@ -876,7 +876,7 @@ $tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o 
 $tabla .= "<tr>";
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-$tabla .= "   <td class='verticalText'style='background-color:#00E0FF' colspan='3' rowspan=$textoC>
+$tabla .= "<td class='verticalText'style='background-color:#00E0FF;width: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
@@ -884,7 +884,7 @@ $tabla .= "   <td class='verticalText'style='background-color:#00E0FF' colspan='
 $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
 
 $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-$tabla .= "<br><br><br>";
+
 $colores = array();
 $num = 0;
 while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
@@ -894,7 +894,7 @@ while ($extraermatcolumnas = $consultarangos->fetch_array()) {
     $num++;
     $color = $colores[$num - 1];
     $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-    $ancho = $extraermatcolumnas['Cantidad'];
+    $ancho = $extraermatcolumnas['Cantidad'] . "%";
     $tabla .= "<td colspan='6' style='background-color: $color;height: $ancho;' class='verticalTextB'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
 }
 
@@ -922,7 +922,7 @@ for ($i = 1; $i <= $filas; $i++) {
 
     $tabla .= "<tr>";
 
-    for ($j = 0; $j <= $columnas; $j++) {
+    for ($j = 1; $j <= $columnas; $j++) {
 
         $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -950,13 +950,6 @@ $tabla .= "</table>";
 
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 
-$tabla .= "<style>
-
-.table {
-    width: 50%;
-    height: 300px;
-  }
-</style>";
 
 // LIBRERIA DE DOMPDF
 use Dompdf\Dompdf;
