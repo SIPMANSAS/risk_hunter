@@ -385,7 +385,7 @@ if ($origen == '1') {
 
     $numeracion = $filas;
 
-    for ($i = 1; $i <= $filas; $i++) {
+    for ($i = 0; $i <= $filas; $i++) {
 
         $tabla .= "<tr>";
 
