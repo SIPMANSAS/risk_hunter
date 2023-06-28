@@ -747,6 +747,7 @@ if ($origen == '1') {
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
         $color = $colores[$num - 1];
@@ -1118,6 +1119,7 @@ if ($origen == '1') {
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
     while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
         $num++;
         $color = $colores[$num - 1];
