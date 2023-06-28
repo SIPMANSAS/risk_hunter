@@ -352,12 +352,13 @@ if ($origen == '1') {
     while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
         $colores[] = $extraerColores['id_alfanumerico'];
     }
+    // colspan='6' 
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
         $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'] . "%";
         $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $tabla .= "<td class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
     $tabla .= "</tr>";
 
