@@ -338,14 +338,13 @@ if ($origen == '1') {
     $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
     $tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
-    $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////colspan='1'  
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
     $tabla .= "   <td class='verticalText' style='background-color:#00E0FF;width: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-                <table>";
+                <table><tr>";
     $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
     $colores = array();
@@ -358,7 +357,7 @@ if ($origen == '1') {
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
         $ancho = $extraermatcolumnas['Cantidad'] . "%";
         $color = $colores[$num - 1];
-        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td></tr>";
     }
    // $tabla .= "";
 
