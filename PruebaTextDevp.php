@@ -908,8 +908,12 @@
             <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
             <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
 
-            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN</button>
-
+            <button type="submit" class="btn_azul" onClick="abrirCaptura()" name="terminar">TERMINAR INSPECCIÓN</button>
+            <script>
+                function myFunction() {
+                    window.open("capturaubicacionB.php");
+                }
+            </script>
         </form>
         <?php
         }
