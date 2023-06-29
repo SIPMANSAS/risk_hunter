@@ -893,7 +893,7 @@
         <script>
         function myFunction() {
             alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
-            window.open("capturarubicacionB.php");
+            window.open("capturarubicacionBB.php");
             window.location.href = "menu.php";
             //setTimeout("window.close('menu.php')", 3000)
         }
