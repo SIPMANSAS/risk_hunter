@@ -1,4 +1,5 @@
 <?php
+///controller
 include '../conexion/conexion.php';
 
 if(isset($_POST['registraencabezado'])){
