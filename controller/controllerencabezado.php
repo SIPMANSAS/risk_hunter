@@ -1,5 +1,5 @@
 <?php
-///controller
+///controller desde local a servidor
 include '../conexion/conexion.php';
 
 if(isset($_POST['registraencabezado'])){
