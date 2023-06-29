@@ -24,7 +24,7 @@ include 'conexion/conexion.php';
 
     $result = $mysqli->query("SELECT * FROM fc_servicios");
 
-    $facturacion = $mysqli->query('SELECT fc_facturacion.id,fc_facturacion.InformeTipo,ter_terceros.nombres,fc_facturacion.fecha_inicio,fc_facturacion.fecha_fin,fc_facturacion.inspecciones,fc_facturacion.inspecciones_cliente,fc_facturacion.valor_total  FROM fc_facturacion INNER JOIN ter_terceros ON ter_terceros.identificacion = fc_facturacion.cliente_id;');
+    $facturacion = $mysqli->query('SELECT fc.id,fc.InformeTipo,ter.nombres,fc.fecha_inicio,fc.fecha_fin,fc.inspecciones,fc.inspecciones_cliente,fc.valor_total,fc.valor_iva,fc.valor_descuento,fc.valor_neto  FROM fc_facturacion fc INNER JOIN ter_terceros ter ON ter.identificacion = fc.cliente_id');
 
     $ter_terceros = $mysqli->query('SELECT ter_terceros.identificacion,ter_terceros.nombres FROM ter_terceros');
 
@@ -48,18 +48,6 @@ include 'conexion/conexion.php';
     <div class="contenedor_front" style="margin-bottom: 20px;">
         <center>
 
-            <?php
-            if ($facturacion->fetch_assoc()["id"]) {
-                echo `<div style="background-color: #5cb85c;height: 30px;margin: 20px;" id="AlertSucess">
-                <h2 style="color: white;">Se creo el registro correctamente</h2>
-            </div>`;
-            } else {
-                echo `<div style="background-color: #d9534f;height: 30px;margin: 20px;" id="AlertDanger">
-                <h2 style="color: white;">No se puede crear el registro</h2>
-            </div>`;
-            }
-
-            ?>
             <h2>Crear facturacion para clientes prepago y postpago</h2>
             <div class="campos-p">
                 <label>Tipo Cliente</label>
@@ -92,7 +80,7 @@ include 'conexion/conexion.php';
                     </div>
                     <div class="campos-p">
                         <label>Ingrese el Total de Inspecciones</label>
-                        <input type="number" min="0" name="ClaseAInspeccion">
+                        <input type="number" min="0" name="ClaseAInspeccion" require>
                     </div>
                     <div class="campos-p">
                         <button type="submit" class="btn_azul">Guardar</button>
@@ -126,13 +114,16 @@ include 'conexion/conexion.php';
             <thead>
                 <tr class="titulo">
                     <th>#</th>
-                    <th>Clasificado</th>
-                    <th>Periocidad</th>
+                    <th>Tipo</th>
+                    <th>Cliente</th>
                     <th>Comienzo</th>
                     <th>Vencimiento</th>
-                    <th>precio</th>
-                    <th>Inspecciones</th>
-                    <th>Ins hecha cliente</th>
+                    <th>valor servicio</th>
+                    <th>iva</th>
+                    <th>descuento</th>
+                    <th>valor neto</th>
+                    <th>Cupos</th>
+                    <th>Cupos cliente</th>
                     <th>Opciones</th>
                 </tr>
             </thead>
@@ -140,18 +131,19 @@ include 'conexion/conexion.php';
                 <?php foreach ($facturacion as $row) { ?>
                     <tr>
                         <td><?php echo $row["id"]; ?></td>
-
-                        <td><?php echo ($row["InformeTipo"] == 817) ? 'Clase A' : (($row["InformeTipo"] == 818) ? 'Clase B' : 'Clase C'); ?>
+                        <td><?php echo $row["InformeTipo"]; ?>
                         </td>
-                        <td><?php echo $row["nombres"]; ?></td>
+                        <td style="max-width: 100px;"><?php echo $row["nombres"]; ?></td>
                         <td><?php echo ($row["fecha_inicio"]) ? $row["fecha_inicio"] : "SIN FECHA"; ?></td>
                         <td><?php echo ($row["fecha_fin"]) ? $row["fecha_fin"] : "SIN FECHA"; ?></td>
                         <td><?php echo "$" . number_format($row["valor_total"], 0, ',', '.'); ?></td>
+                        <td><?php echo "$" . number_format($row["valor_iva"], 0, ',', '.'); ?></td>
+                        <td><?php echo "$" . number_format($row["valor_descuento"], 0, ',', '.'); ?></td>
+                        <td><?php echo "$" . number_format($row["valor_neto"], 0, ',', '.'); ?></td>
                         <td><?php echo $row["inspecciones"]; ?></td>
                         <td><?php echo ($row["inspecciones_cliente"]) ? $row["inspecciones_cliente"] : 0; ?>
                         </td>
                         <td>
-                            <a class="btn_azul" href="PanelControlFacturacionshow.php?show=<?php echo $row["id"]; ?>">Visualizar</a>
                             <a class="btn_azul" href="PanelControlFacturacionedit.php?edit=<?php echo $row["id"]; ?>">editar</a>
                         </td>
                     </tr>
@@ -186,69 +178,39 @@ include 'conexion/conexion.php';
                     $("input[name=Tipo]").val(numero);
                     $("#ClaseA").css('display', 'block');
                     break;
-                case "2":
-                    $("#ClaseA").css('display', 'none');
-
-                    $("input[name=Tipo]").val(numero);
-                    $("#ClaseB").css('display', 'block');
-                    break;
-                case "3":
-                    $("#ClaseA").css('display', 'none');
-
-                    $("input[name=Tipo]").val(numero);
-                    $("#ClaseB").css('display', 'block');
-                    break;
-
-                case "4":
-                    $("#ClaseA").css('display', 'none');
-
-                    $("input[name=Tipo]").val(numero);
-                    $("#ClaseB").css('display', 'block');
-                    break;
-
-                case "5":
-                    $("#ClaseA").css('display', 'none');
-
-                    $("input[name=Tipo]").val(numero);
-                    $("#ClaseB").css('display', 'block');
-                    break;
                 default:
+                    $("#ClaseA").css('display', 'none');
+
+                    $("input[name=Tipo]").val(numero);
+                    $("#ClaseB").css('display', 'block');
                     break;
             }
-
 
             var fechaInicio = new Date($('#fechaInicio').val());
             var fechaFin = new Date(fechaInicio);
 
-            if (numero === "2") {
-                fechaFin.setMonth(fechaFin.getMonth() + 1);
-            } else if (numero === "3") {
-                fechaFin.setMonth(fechaFin.getMonth() + 3);
-            } else if (numero === "4") {
-                fechaFin.setMonth(fechaFin.getMonth() + 6);
-            } else if (numero === "5") {
-                fechaFin.setFullYear(fechaFin.getFullYear() + 1);
-            }
+            $.ajax({
+                type: "POST",
+                url: "controller/controllerFacturacion.php",
+                data: {
+                    filtro: numero,
+                },
+                success: function(response) {
+                    var parsedResponse = parseInt(response);
 
-            var year = fechaFin.getFullYear();
-            var month = (fechaFin.getMonth() + 1).toString().padStart(2, '0');
-            var day = fechaFin.getDate().toString().padStart(2, '0');
-            var fechaFinFormateada = year + '-' + month + '-' + day;
+                    fechaFin.setMonth(fechaFin.getMonth() + parsedResponse);
 
-            $('#diferenciaFecha').val(fechaFinFormateada);
+                    var year = fechaFin.getFullYear();
+                    var month = (fechaFin.getMonth() + 1).toString().padStart(2, '0');
+                    var day = fechaFin.getDate().toString().padStart(2, '0');
+                    var fechaFinFormateada = year + '-' + month + '-' + day;
+
+                    $('#diferenciaFecha').val(fechaFinFormateada);
+                }
+            });
+
         });
 
-        function hideSucess() {
-            var alertElement = document.getElementById('AlertSucess');
-            alertElement.style.display = 'none';
-        }
-
-        function hideDanger() {
-            var alertElement = document.getElementById('AlertDanger');
-            alertElement.style.display = 'none';
-        }
-        setTimeout(hideSucess, 2000);
-        setTimeout(hideDanger, 2000);
     </script>
     <?php include 'footer.php';  ?>
 </body>
