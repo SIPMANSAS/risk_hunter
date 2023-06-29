@@ -7,7 +7,7 @@ $origen = $_POST['proceso'];
 require_once  'vendor/autoload.php';
 include 'vendor/dompdf';
 ////////////////////////////////////// FIN DE LA CONEXION //////////////////////////////////////////
-$mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+$mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
 $inspeccion = $_POST['inspeccion'];
 $identificador = $_POST['identificador'];
@@ -46,7 +46,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -56,7 +56,7 @@ if ($origen == '1') {
 
     $consultatextolinderos = $mysqli->query("SELECT p_informe_obligatorio($identificador) AS InformeO");
     $extraerDatosTextoLindero = $consultatextolinderos->fetch_array(MYSQLI_ASSOC);
-    $textofinlalinderos = 'DESDE CA' . $f_ci . $extraerDatosTextoLindero['InformeO'];
+    $textofinlalinderos =  $f_ci . $extraerDatosTextoLindero['InformeO'];
 
 
     $consultaimagenes = $mysqli->query("SELECT * FROM enc_imagenes_inspeccion WHERE id_inspeccion='$identificador'");
@@ -178,7 +178,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -333,44 +333,48 @@ if ($origen == '1') {
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-    $tabla = "<table border='1' width='80%' height='60%'>";
+    $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
-    $tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
-    $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+    $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
+    $tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
-    $tabla .= "";
-    /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
+    /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////colspan='1'  
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "<td class='verticalText' style='background-color:#00E0FF;width: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC'>
-                <table border='1'>";
-
-    $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+                <table>";
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+    $consultarangos = $mysqli->query("SELECT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
+    }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-        $colors = ($extraermatcolumnas['nombre'] === "Muy Alta") ? "#800000" : ($extraermatcolumnas['nombre'] === "Alta") ? "#FF0000" : ($extraermatcolumnas['nombre'] === "Media") ? "#FFF700" : ($extraermatcolumnas['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
+        $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $colors;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $ancho = $extraermatcolumnas['Cantidad'] . "%";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
-    $tabla .= "</tr>";
 
-    $tabla .= "</table>
-            </td>";
+    $tabla .= "</table>";
 
-    $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
-    while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
-        while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td style='background-color:$colors;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-        }
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
     }
-    $tabla .= "<tr>";
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
 
     $numeracion = $filas;
 
@@ -378,7 +382,8 @@ if ($origen == '1') {
 
         $tabla .= "<tr>";
 
-        for ($j = 1; $j <= $columnas; $j++) {
+        for ($j = 0; $j <= $columnas; $j++) {
+
 
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -387,8 +392,10 @@ if ($origen == '1') {
                                                                         AND MC.identificador = PM.color
                                                                         GROUP BY MC.codigo;");
             $datocolor = $hay_color->fetch_array(MYSQLI_ASSOC);
+
             $colorCantidad = $datocolor['Cantidad'];
             $color = $datocolor['codigo'];
+
             if ($colorCantidad > 0) {
                 $color_actual = $color;
             }
@@ -410,7 +417,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -437,7 +444,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE FI</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
@@ -545,7 +552,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -699,44 +706,54 @@ if ($origen == '1') {
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-    $tabla = "<table border='1' width='80%' height='60%'>";
+    $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
-    $tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
-    $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+    $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
+    $tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
     $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "<td class='verticalText' style='background-color:#00E0FF;width: 50px;' rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC'>
-                <table border='1'>";
+                <table>";
 
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
+    }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-        $colors = ($extraermatcolumnas['nombre'] === "Muy Alta") ? "#800000" : ($extraermatcolumnas['nombre'] === "Alta") ? "#FF0000" : ($extraermatcolumnas['nombre'] === "Media") ? "#FFF700" : ($extraermatcolumnas['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
+        $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $colors;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $ancho = $extraermatcolumnas['Cantidad'] . "%";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
-    $tabla .= "</tr>";
 
-    $tabla .= "</table>
-            </td>";
+    //$tabla .= "</tr>";
 
-    $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+    $tabla .= "</table>";
+
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
-    while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
-        while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $colors;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-        }
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
     }
-    $tabla .= "<tr>";
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color:$color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
+    //$tabla .= "<tr>";
 
     $numeracion = $filas;
 
@@ -744,7 +761,7 @@ if ($origen == '1') {
 
         $tabla .= "<tr>";
 
-        for ($j = 1; $j <= $columnas; $j++) {
+        for ($j = 0; $j <= $columnas; $j++) {
 
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -777,7 +794,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -804,7 +821,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE IN</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
@@ -912,7 +929,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = 'localhost';
+    $dbHost = '185.212.71.204';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -1066,44 +1083,50 @@ if ($origen == '1') {
     $numero = 1;
     //////////////////////////// END TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     /////////////////////////// PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
-    $tabla = "<table border='1' width='80%' height='60%'>";
+    $tabla = "<table border='1' width='100%' height='60%'>";
     $color_actual = ' ';
-    $tabla .= "<th colspan='4' style='background-color:#00E0FF'><h2><h2></th>";
-    $tabla .= "<th colspan='$textoF+$columnas' style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
+    $tabla .= "<th colspan='2' style='background-color:#00E0FF'><h2><h2></th>";
+    $tabla .= "<th colspan=$columnas style='background-color:#00E0FF'><h3>Impacto o Intensidad<h3></th>";
     $tabla .= "<tr>";
-    $tabla .= "";
     /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
     $consultaFilas = $mysqli->query("SELECT D.nombre,D.identificador ,COUNT(D.identificador) AS Cantidad FROM mat_filas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY `D`.`identificador` DESC");
-    $tabla .= "   <td class='verticalText' style='background-color:#00E0FF' colspan='3' rowspan='$textoC'>
+    $tabla .= "<td class='verticalText' style='background-color:#00E0FF;width: 50px;'  rowspan=$textoC>
                 <h3>
                     <center>Probabilidad(%)</center>
                 </h3>
-            </td>
-            <td rowspan='$textoC'>
-                <table border='1'>";
-
+                <table>";
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultarangos = $mysqli->query("SELECT DISTINCT nombre ,COUNT(nombre) Cantidad FROM mat_filas  C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador DESC");
-    $tabla .= "<br><br><br>";
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
+    }
     while ($extraermatcolumnas = $consultarangos->fetch_array()) {
-        $colors = ($extraermatcolumnas['nombre'] === "Muy Alta") ? "#800000" : ($extraermatcolumnas['nombre'] === "Alta") ? "#FF0000" : ($extraermatcolumnas['nombre'] === "Media") ? "#FFF700" : ($extraermatcolumnas['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
+        $num++;
         $extraermatcolumnas['Cantidad'] . '-' . $extraermatcolumnas['nombre'];
-        $ancho = $extraermatcolumnas['Cantidad'];
-        $tabla .= "<td width='$ancho' colspan='6' class='verticalTextB' style='background-color: $colors;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
+        $ancho = $extraermatcolumnas['Cantidad'] . "%";
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='6' class='verticalTextB' style='background-color: $color;height: $ancho;border: 1px solid black;'><b>" . $extraermatcolumnas['nombre'] . "<b></td><tr>";
     }
-    $tabla .= "</tr>";
 
-    $tabla .= "</table>
-            </td>";
+    $tabla .= "</table>";
 
-    $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
+    $consultalabelshorizontales = $mysqli->query("SELECT id_alfanumerico FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
     $consultaColumnas = $mysqli->query("SELECT D.identificador ,COUNT(D.identificador) AS Cantidad,D.nombre FROM mat_columnas C ,cg_valores_dominio D WHERE C.vdom_calificacion = D.identificador GROUP BY D.identificador ORDER BY D.identificador DESC");
-    while ($extraerDatos = $consultalabelshorizontales->fetch_array()) {
-        while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-            $colors = ($extraerlongitudes['nombre'] === "Muy Alta") ? "#800000" : ($extraerlongitudes['nombre'] === "Alta") ? "#FF0000" : ($extraerlongitudes['nombre'] === "Media") ? "#FFF700" : ($extraerlongitudes['nombre'] === "Baja") ? "#FF6400" : "#0CFF00";
-            $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $colors;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-        }
+    $colores = array();
+    $num = 0;
+    while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
+        $colores[] = $extraerColores['id_alfanumerico'];
     }
-    $tabla .= "<tr>";
+    $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
+
+
 
     $numeracion = $filas;
 
@@ -1111,7 +1134,7 @@ if ($origen == '1') {
 
         $tabla .= "<tr>";
 
-        for ($j = 1; $j <= $columnas; $j++) {
+        for ($j = 0; $j <= $columnas; $j++) {
 
             $hay_color = $mysqli->query("SELECT MC.codigo,COUNT(1) AS Cantidad 
                                                                         FROM par_pintar_matriz PM,mat_colores MC
@@ -1137,18 +1160,11 @@ if ($origen == '1') {
     }
     $tabla .= "</table>";
 }
-
+// echo $tabla;
 /////////////////////////// END PINTA LOS TITULOS MAS EXTERNOS DE LA MATRIZ ARRIBA /////////////////////////
 
-$tabla .= "<style>
-
-.table {
-    width: 50%;
-    height: 300px;
-  }
-</style>";
-
 // LIBRERIA DE DOMPDF
+
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
@@ -1224,4 +1240,4 @@ $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 unlink('MostrarPDF/Imagen_Grafica.png');
 unlink('MostrarPDF/Imagen_Grafica2.png');
 unlink('MostrarPDF/mapa.png');
-/*  */
+/* */

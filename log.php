@@ -19,10 +19,10 @@
 <body>  
     <div class="titulo2">
         <i class="fa-solid fa-user"></i>
-        <a href=""> Login de Usuariooooo</a>
+        <a href=""> Login de Usuario</a>
     </div>
     <div class="contenedor_titulos ">
-        <div class="campos titulo">Iniciar Sesiónnnnnnnnnn</div>
+        <div class="campos titulo">Iniciar Sesión</div>
     </div>
     <div class="contenedor">
         <form class="log" action="index.php" method="post">
