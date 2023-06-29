@@ -49,8 +49,9 @@ if (isset($_POST['registrarFirmas'])) {
         $cuerpo = $datossaludo.$texto.$datosusuario."</body></html>";
     
         //para el env�o en formato HTML
-        $headers = "MIME-Version: 1.0\r\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+       $headers = "MIME-Version: 1.0\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
     
         //direcci�n del remitente
         $headers .= "From: Administracion de Gestion de Riesgos Risk Hunter <". $remite.">\r\n";

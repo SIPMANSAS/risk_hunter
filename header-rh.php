@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ERROR);
     include_once 'clases/gabriel.class.php';
     include 'conexion/conexion.php';
 

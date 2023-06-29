@@ -108,7 +108,8 @@ if(isset($_POST['registraencabezadocompania'])){
             
             //para el envío en formato HTML 
             $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
             
             //dirección del remitente 
             $headers .= "From: Administracion de Gestion de Riesgos Risk Hunter <adminrh@rh.com>\r\n"; 
@@ -145,7 +146,7 @@ if(isset($_POST['registraencabezadocompania'])){
             
             //para el envío en formato HTML 
             $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
             
             //dirección del remitente 
             $headers .= "From: Administracion de Gestion de Riesgos Risk Hunter <adminrh@rh.com>\r\n"; 
@@ -243,8 +244,9 @@ if(isset($_POST['registraencabezadofirma'])){
             $cuerpo = $datossaludo.$texto.$mensajedelink.'<br>'.$saludo."</body></html>";
     
             //para el env�o en formato HTML
-            $headers = "MIME-Version: 1.0\r\n";
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+            $headers = "MIME-Version: 1.0\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
     
             //direcci�n del remitente
             
@@ -364,8 +366,9 @@ if(isset($_POST['editaencabezadocompania'])){
             $cuerpo = $datossaludo.$texto.$mensajedelink.$saludo."</body></html>";
             
             //para el env�o en formato HTML
-            $headers = "MIME-Version: 1.0\r\n";
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+            $headers = "MIME-Version: 1.0\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
             
             //direcci�n del remitente
             
@@ -453,7 +456,8 @@ if(isset($_POST['editaencabezadofirmas'])){
             
             //para el envío en formato HTML 
             $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
             
             //dirección del remitente 
             $headers .= "From: Administracion de Gestion de Riesgos Risk Hunter <adminrh@rh.com>\r\n"; 

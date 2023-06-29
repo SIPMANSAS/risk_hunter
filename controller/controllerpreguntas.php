@@ -212,9 +212,9 @@ if(isset($_POST['terminar'])){
             </html> 
             '; 
             
-            //para el envío en formato HTML 
             $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+            $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+            
             
             //dirección del remitente 
             $headers .= "From: Administracion de Gestion de Riesgos Risk Hunter <adminrh@rh.com>\r\n"; 
