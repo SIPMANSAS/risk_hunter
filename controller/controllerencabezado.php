@@ -1,5 +1,5 @@
 <?php
-///controller desde local a servidor
+///controller desde local a servidor prueba B
 include '../conexion/conexion.php';
 
 if(isset($_POST['registraencabezado'])){
