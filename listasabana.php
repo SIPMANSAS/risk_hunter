@@ -256,10 +256,10 @@
                      <input  type="hidden" value="<?php echo $npersonaatiende;  ?>" name="nombrepersonaatiende">
                      <input  type="hidden" value="<?php echo $cpersonaatiende;  ?>" name="contactopersonaatiende">
                      <input  type="hidden" value="<?php echo $inspectorasignadoF;  ?>" name="inspectorasignado">
-                     <input  type="" value="<?php echo $longitud;  ?>" name="longitud">
-                     <input  type="" value="<?php echo $latitud;  ?>" name="latitud">
-                     <input  type="" value="<?php echo $espacio_geografico?>" name="espaciogeografico">
-                     <input  type="" value="<?php echo $estrato?>" name="estrato">
+                     <input  type="hidden" value="<?php echo $longitud;  ?>" name="longitud">
+                     <input  type="hidden" value="<?php echo $latitud;  ?>" name="latitud">
+                     <input  type="hidden" value="<?php echo $espacio_geografico?>" name="espaciogeografico">
+                     <input  type="hidden" value="<?php echo $estrato?>" name="estrato">
                      <input  type="hidden" value="<?php echo $oficinaB;  ?>" name="oficina">
                      <input  type="hidden" value="<?php echo $fecha_terminacion ?>" name="fecha_terminacion">
                      <input  type="hidden" value="<?php echo $fecha_actualizacion ?>" name="fecha_actualizacion">
