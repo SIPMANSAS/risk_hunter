@@ -893,6 +893,7 @@
         <script>
         function myFunction() {
             alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
+            window.open("capturarubicacionB.php");
             window.location.href = "menu.php";
             //setTimeout("window.close('menu.php')", 3000)
         }
@@ -908,12 +909,8 @@
             <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
             <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
 
-            <button type="submit" class="btn_azul" onClick="abrirCaptura()" name="terminar">TERMINAR INSPECCIÓN</button>
-            <script>
-                function myFunction() {
-                    window.open("capturaubicacionB.php");
-                }
-            </script>
+            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN</button>
+
         </form>
         <?php
         }
