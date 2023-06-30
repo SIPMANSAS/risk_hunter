@@ -338,11 +338,11 @@ while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
     $colores[] = $extraerColores['id_alfanumerico'];
 }
 $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
-while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-    $num++;
-    $color = $colores[$num - 1];
-    $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-}
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td style='background-color:$color;' colspan='" . $extraerlongitudes['Cantidad'] . "'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
 
 
 $numeracion = $filas;
@@ -908,11 +908,11 @@ while ($extraerColores = $consultalabelshorizontales->fetch_array()) {
     $colores[] = $extraerColores['id_alfanumerico'];
 }
 $tabla .= "<td style='background-color:#00E0FF;width: 50px;' colspan='1'><b><center>Escala</center><b></td>";
-while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
-    $num++;
-    $color = $colores[$num - 1];
-    $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
-}
+    while ($extraerlongitudes = $consultaColumnas->fetch_array()) {
+        $num++;
+        $color = $colores[$num - 1];
+        $tabla .= "<td colspan='" . $extraerlongitudes['Cantidad'] . "' style='background-color: $color;'><b><center>" . $extraerlongitudes['nombre'] . "</center><b></td>";
+    }
 
 
 
