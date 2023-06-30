@@ -7,7 +7,7 @@ $origen = $_POST['proceso'];
 require_once  'vendor/autoload.php';
 include 'vendor/dompdf';
 ////////////////////////////////////// FIN DE LA CONEXION //////////////////////////////////////////
-$mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+$mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
 $inspeccion = $_POST['inspeccion'];
 $identificador = $_POST['identificador'];
@@ -46,7 +46,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -56,7 +56,7 @@ if ($origen == '1') {
 
     $consultatextolinderos = $mysqli->query("SELECT p_informe_obligatorio($identificador) AS InformeO");
     $extraerDatosTextoLindero = $consultatextolinderos->fetch_array(MYSQLI_ASSOC);
-    $textofinlalinderos = 'DESDE CA' . $f_ci . $extraerDatosTextoLindero['InformeO'];
+    $textofinlalinderos =  $f_ci . $extraerDatosTextoLindero['InformeO'];
 
 
     $consultaimagenes = $mysqli->query("SELECT * FROM enc_imagenes_inspeccion WHERE id_inspeccion='$identificador'");
@@ -178,7 +178,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = '185.212.71.204';
+    $dbHost = 'localhost';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -417,7 +417,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -444,7 +444,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE FI</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
@@ -552,7 +552,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = '185.212.71.204';
+    $dbHost = 'localhost';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
@@ -794,7 +794,7 @@ if ($origen == '1') {
     $extraerRutaImagen = $consultaimagenportada->fetch_array(MYSQLI_ASSOC);
     $rutaImagen = $extraerRutaImagen['archivo'];
 
-    $mysqli = new mysqli('185.212.71.204', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
+    $mysqli = new mysqli('localhost', 'u571892443_risk_hunter', '#6mL0I[Jd7ZW', 'u571892443_risk_hunter');
 
     $enc_inmuebles = $mysqli->query("SELECT * FROM enc_inmuebles WHERE id_encuesta= '$identificador'");
 
@@ -821,7 +821,7 @@ if ($origen == '1') {
     $ColorRiesgo = '<table>
 <thead>
     <tr>
-        <td>Descripción DESDE IN</td>
+        <td>Descripción</td>
         <td>Sugerencias</td>
     </tr>
 </thead>
@@ -929,7 +929,7 @@ if ($origen == '1') {
     file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
 
 
-    $dbHost = '185.212.71.204';
+    $dbHost = 'localhost';
     $dbUsername = 'u571892443_risk_hunter';
     $dbPassword = '#6mL0I[Jd7ZW';
     $dbName = 'u571892443_risk_hunter';
