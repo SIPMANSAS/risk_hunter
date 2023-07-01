@@ -245,7 +245,7 @@
                 <td style="color:white;">ESPA</td>
                 <td>
                     <?php
-                    if($estrato == '784'){
+                    /*if($estrato == '784'){
                         echo 'Uno' ;
                     }elseif($estrato == '785'){
                         echo 'Dos' ;
@@ -257,7 +257,7 @@
                         echo 'Cinco' ;
                     }elseif($estrato == '789'){
                         echo 'Seis' ; 
-                    }
+                    }*/
                     echo $estrato
                     ?>
                 </td>
