@@ -24,7 +24,7 @@ include 'conexion/conexion.php';
 
     $ValoresDominio = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE identificador BETWEEN 817 AND 820");
 
-    $result = $mysqli->query("SELECT * FROM fc_servicios");
+    $result = $mysqli->query("SELECT fc.identificador,fc.nombre AS FCnombre,cg.nombre AS CGnombre,cg.descripcion AS CGdesc,fc. fecha_vigencia,fc.fecha_creacion,fc.precio,fc.porcentaje_Iva,fc.porcentaje_descuento,fc.meses FROM fc_servicios fc INNER JOIN cg_valores_dominio cg ON cg.identificador = fc.clase_usuario_dom;");
 
     $ter_terceros = $mysqli->query('SELECT ter_terceros.identificacion,ter_terceros.nombres FROM ter_terceros');
     $html = null;
@@ -41,38 +41,43 @@ include 'conexion/conexion.php';
 
     <div class="contenedor_front" style="margin-bottom: 20px;">
         <center>
-
-            <?php
-            if ($result->fetch_assoc()["id"]) {
-                echo `<div style="background-color: #5cb85c;height: 30px;margin: 20px;" id="AlertSucess">
-                <h2 style="color: white;">Se creo el registro correctamente</h2>
-            </div>`;
-            } else {
-                echo `<div style="background-color: #d9534f;height: 30px;margin: 20px;" id="AlertDanger">
-                <h2 style="color: white;">No se puede crear el registro</h2>
-            </div>`;
-            }
-
-            ?>
             <h2>Crear servicio para facturacion</h2>
             <form action="controller/controllerFacturacion.php" method="post">
                 <div class="campos-p">
+                    <input type="hidden" name="service" value="1">
+                    <label>Nombre Servicio</label>
+                    <input type="text" name="servicio" require>
+                </div>
+                <div class="campos-p">
+                    <label>% iva</label>
+                    <input type="number" min="0" name="iva" require>
+                </div>
+                <div class="campos-p">
+                    <label>% descuento</label>
+                    <input type="number" min="0" name="descuento" require>
+                </div>
+                <div class="campos-p">
+                    <label>meses</label>
+                    <input type="number" min="0" name="meses" require>
+                </div>
+                <div class="campos-p">
+                    <label>Precio</label>
+                    <input type="number" name="precio" require>
+                </div>
+                <div class="campos-p">
+                    <label>Fecha vigencia</label>
+                    <input type="date" name="vigencia" id="" require>
+                </div>
+                <div class="campos-p">
                     <label>Tipo Cliente</label>
-                        <input type="hidden" name="id_dominio">
-                        <input type="hidden" name="descripcion">
-                        <input type="hidden" name="tipo_estado">
-                        <input type="hidden" name="estado">
-                    <select id="CondicionTipo" require>
+                    <select id="CondicionTipo" name="clase_usuario_dom" require>
                         <option value="" selected disabled>Seleccione una opcion</option>
                         <?php while ($row = $ValoresDominio->fetch_assoc()) { ?>
                             <option value="<?php echo $row['identificador']; ?>"><?php echo $row['nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
-                <div class="campos-p">
-                    <label>Tipo de Informe</label>
-                    <input type="number" name="precio">
-                </div>
+
                 <div class="campos-p">
                     <button type="submit" class="btn_azul">Guardar</button>
                 </div>
@@ -82,48 +87,40 @@ include 'conexion/conexion.php';
         <table style="margin: 50px;">
             <thead>
                 <tr class="titulo">
+                    <th>#</th>
                     <th>Nombre</th>
-                    <th>fecha vigencia</th>
-                    <th>fecha vencimiento</th>
+                    <th>clase de usuario</th>
+                    <th>F Creación</th>
+                    <th>F Vigencia</th>
                     <th>Precio</th>
-                    <th>porcentaje Iva</th>
-                    <th>porcentaje descuento</th>
-                    <th>meses</th>
+                    <th>% Iva</th>
+                    <th>% desc</th>
+                    <th>Meses</th>
                     <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($result as $row) { ?>
                     <tr>
-                        <td><?php echo $row["nombre"]; ?></td>
-                        <td><?php echo $row["fecha_vengencia"]; ?></td>
+                        <td><?php echo $row["identificador"]; ?></td>
+                        <td><?php echo $row["FCnombre"]; ?></td>
+                        <td style="max-width: 200px;"><?php echo $row["CGnombre"] . " - " . $row["CGdesc"]; ?></td>
                         <td><?php echo $row["fecha_creacion"]; ?></td>
+                        <td><?php echo $row["fecha_vigencia"]; ?></td>
                         <td><?php echo "$" . number_format($row["precio"], 0, ',', '.'); ?></td>
                         <td><?php echo $row["porcentaje_Iva"]; ?></td>
                         <td><?php echo $row["porcentaje_descuento"]; ?>
+                        <td><?php echo $row["meses"]; ?>
                         </td>
                         <td>
-                            <a class="btn_azul" href="PanelControlFacturacion.php?show=<?php echo $row["id"]; ?>">Visualizar</a>
-                            <a class="btn_azul" href="PanelControlFacturacion.php?edit=<?php echo $row["id"]; ?>">editar</a>
+                            <a class="btn_azul" href="PanelControlFacturacionServiciosedit.php?edit=<?php echo $row["identificador"]; ?>">editar</a>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
-    <script>
-        function hideSucess() {
-            var alertElement = document.getElementById('AlertSucess');
-            alertElement.style.display = 'none';
-        }
 
-        function hideDanger() {
-            var alertElement = document.getElementById('AlertDanger');
-            alertElement.style.display = 'none';
-        }
-        setTimeout(hideSucess, 2000);
-        setTimeout(hideDanger, 2000);
-    </script>
     <?php include 'footer.php';  ?>
 </body>
 
