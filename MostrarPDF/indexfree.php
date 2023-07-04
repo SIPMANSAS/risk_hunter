@@ -259,7 +259,7 @@
                     }elseif($estrato == '789'){
                         echo 'Seis' ; 
                     }
-                    echo $estrato
+                    //echo $estrato
                     ?>
                 </td>
                 <td style="color:white;">ESPA</td>
