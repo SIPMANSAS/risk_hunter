@@ -16,7 +16,7 @@ include  "clases/bloques.class.php";
 $bloques = new bloques;
 $consulta = $bloques->iniciarVariables();
 
-$id_inspeccion = $_POST['id_inspeccion'];
+$id_inspeccion = $_REQUEST['id_inspeccion'];
 $id_usuario = $_GET['id_usuario'];
 $countries = array();
 

@@ -184,8 +184,8 @@ $color_nr = [];
 if ($resultgrafica->num_rows > 0) {
     while ($row = $resultgrafica->fetch_assoc()) {
         $riesgo[] = utf8_encode($row['riesgo']);
-        $nr[] = $row['cr'];
-        $color_nr[] = $row['color_cr'];
+        $nr[] = $row['nr'];
+        $color_nr[] = $row['color_nr'];
     }
     $grafica_data[] = [
         'label' => $riesgo,
@@ -534,8 +534,8 @@ $color_nr = [];
 if ($resultgrafica->num_rows > 0) {
     while ($row = $resultgrafica->fetch_assoc()) {
         $riesgo[] = utf8_encode($row['riesgo']);
-        $nr[] = $row['cr'];
-        $color_nr[] = $row['color_cr'];
+        $nr[] = $row['nr'];
+        $color_nr[] = $row['color_nr'];
     }
     $grafica_data[] = [
         'label' => $riesgo,
@@ -801,8 +801,8 @@ $color_nr = [];
 if ($resultgrafica->num_rows > 0) {
     while ($row = $resultgrafica->fetch_assoc()) {
         $riesgo[] = utf8_encode($row['riesgo']);
-        $nr[] = $row['cr'];
-        $color_nr[] = $row['color_cr'];
+        $nr[] = $row['nr'];
+        $color_nr[] = $row['color_nr'];
     }
     $grafica_data[] = [
         'label' => $riesgo,

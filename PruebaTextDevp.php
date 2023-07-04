@@ -887,7 +887,7 @@
             <input type="hidden" name="usuario_id" value=<?php echo $id_usuario_ext ?>>
             <input type="hidden" name="tipo_proceso" value="FR">
             <button type="submit" class="btn_azul" onClick="myFunction()" name="capturarubicacionfree">TERMINAR
-                INSPECCIÓN FREEMIUM </button>
+                INSPECCIÓN </button>
         </form>
 
         <script>
@@ -908,7 +908,7 @@
             <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
             <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
 
-            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN</button>
+            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN FREMIUM</button>
 
         </form>
         <?php

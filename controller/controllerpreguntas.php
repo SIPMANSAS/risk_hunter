@@ -171,7 +171,7 @@ if(isset($_POST['agregarcolumnas'])){
 }
 
 if(isset($_POST['terminar'])){
-    $id_inspeccion = $_POST['id_inspeccion'] or $_GET['id_inspeccion'] ;
+    $id_inspeccion = $_POST['id_inspeccion'] ;
     '<br>';
     $bloque_inspeccion = $_POST['bloque_inspeccion'];
     '<br>';
@@ -182,7 +182,7 @@ if(isset($_POST['terminar'])){
     $extraerDatosE = $consultaprevia->fetch_array(MYSQLI_ASSOC);
     $fechaextrae = $extraerDatosE['fecha_terminacion'];
     $numeroInspeccion = $extraerDatosE['numero_inspeccion'];
-    $id_usuario = $_POST['id_usuario'];
+    $id_usuario = $extraerDatosE['id_usuario'];
     $consultausuario = $mysqli->query("SELECT * FROM sg_usuarios WHERE identificador = '$id_usuario'");
     $extraerDatos = $consultausuario->fetch_array(MYSQLI_ASSOC);
     $correo_usuario = $extraerDatos['email'];
@@ -194,19 +194,26 @@ if(isset($_POST['terminar'])){
         date_default_timezone_set('America/Bogota');
         'FECHA INS';
         $fecha_actual = date('Y-m-d H:i:s');
+        //echo "UPDATE enc_inspeccion SET usuario_actualizacion='$id_usuario',fecha_terminacion = '$fecha_actual' WHERE identificador = '$id_inspeccion'";
         $actualizafecha = $mysqli->query("UPDATE enc_inspeccion SET usuario_actualizacion='$id_usuario',fecha_terminacion = '$fecha_actual' WHERE identificador = '$id_inspeccion'");
+        $consultainformacioncorreo = $mysqli->query("SELECT asunto,REPLACE(texto,'NUMEROINSPECCION','$numeroInspeccion') texto FROM ad_comunicaciones WHERE identificador = '5' ")or die (mysqli_error($mysqli));
+        $extraerinformacioncorreo = $consultainformacioncorreo->fetch_array(MYSQLI_ASSOC);
+        $asuntoBD = $extraerinformacioncorreo['asunto'];
+        $textoBD = $extraerinformacioncorreo['texto'];
+        echo 'A';
+        
         
             $destinatario = $correo_usuario;//"juanrinconaxl926@gmail.com"; 
-            $asunto = "Inspeccion Finalizada"; 
+            $asunto = $asuntoBD; 
             $cuerpo = ' 
             <html> 
             <head> 
-               <title>Inspeccion "'.$numeroInspeccion.'" finalizada</title> 
+               <title>Inspección "'.$numeroInspeccion.'" finalizada</title> 
             </head> 
             <body> 
             <h1>Señor(a) '.$datosUsuario.',</h1> 
             <p> 
-            Le informamos que en este momento se encuentra disponible el Informe de la inspección número  <b>'.$numeroInspeccion.'</b> ,asi que ya puede ingresar al aplicativo Risk Hunter Plus y consultar el resultado.<br><br>Agradecemos la confianza depositada en IES Consultores Group S.A.S. para la inspección de los bienes,  esperamos que el resultado sea para ustedes muy útil. <br><br>Para ingresar a RH+ siga la siguiente ruta https://https://desarrollosysolucionesingenieriles.com.co/risk_hunter/log.php
+            '.$textoBD.'
             </p> 
             </body> 
             </html> 
@@ -222,14 +229,15 @@ if(isset($_POST['terminar'])){
             //dirección de respuesta, si queremos que sea distinta que la del remitente 
             
             mail($destinatario,$asunto,$cuerpo,$headers);
-        
-        /*echo "<script>
+            
+        echo "<script>
             if (confirm('Inspección Finalizada') == true) {
                    
-                   window.open('../capturarubicacionB?<?php  ?>.php');
-                   window.close();
+                  
+                  
             } 
-        </script>";*/
+        </script>";
+        $id_inspeccion;
         ?>
         <script> 
             window.onload=function(){
@@ -239,7 +247,7 @@ if(isset($_POST['terminar'])){
             }
         </script>
              
-            <form name="miformulario" action="../capturarubicacionB.php" method="POST" onsubmit="procesar(this.action);" target="_blank" >
+            <form name="miformulario" action="../capturarubicacionB.php" method="" onsubmit="procesar(this.action);" target="_blank" >
                       <input  type="hidden" value="<?php echo $id_inspeccion;  ?>" name="id_inspeccion">
                       <input  type="hidden" value="<?php echo $numerodeinspeccio;  ?>" name="numero_inspeccion">
                       <input  type="hidden" value="<?php echo $_POST['cia_seguros'];  ?>" name="cia_seguros">
@@ -284,16 +292,16 @@ if(isset($_POST['terminar'])){
         
     }else{
         date_default_timezone_set('America/Bogota');
-        'FECHA ACT';
+        echo 'FECHA ACT';
         $fecha_actual = date('Y-m-d H:i:s');
         $actualizafecha = $mysqli->query("UPDATE enc_inspeccion SET usuario_actualizacion='$id_usuario',fecha_actualizacion = '$fecha_actual' WHERE identificador = '$id_inspeccion'");
         
             $destinatario = $correo_usuario;//"juanrinconaxl926@gmail.com"; 
-            $asunto = "Inspeccion Finalizada"; 
+            $asunto = "Inspección Finalizada"; 
             $cuerpo = ' 
             <html> 
             <head> 
-               <title>Inspeccion "'.$numeroInspeccion.'" finalizada</title> 
+               <title>Inspección "'.$numeroInspeccion.'" finalizada</title> 
             </head> 
             <body> 
             <h1>Señor(a) '.$datosUsuario.',</h1> 
@@ -368,7 +376,6 @@ if(isset($_POST['terminar'])){
             </form>
 <?php 
     }
-    
 }
 
 
