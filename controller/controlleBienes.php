@@ -1,5 +1,5 @@
 <?php
-
+///Controlador bienes
 include '../conexions.php';
 
 if(isset($_POST['registrarBienes'])){
