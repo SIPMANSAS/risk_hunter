@@ -200,7 +200,7 @@ if(isset($_POST['terminar'])){
         $extraerinformacioncorreo = $consultainformacioncorreo->fetch_array(MYSQLI_ASSOC);
         $asuntoBD = $extraerinformacioncorreo['asunto'];
         $textoBD = $extraerinformacioncorreo['texto'];
-        echo 'A';
+        //echo 'A';
         
         
             $destinatario = $correo_usuario;//"juanrinconaxl926@gmail.com"; 
