@@ -19,7 +19,7 @@ $tipo_informe = $_POST['tipo_informe'];
 $texto_informe = $_POST['texto_informe'];
 $filtro = $id_respu = $_POST['id_respu'];
 $val_cierre = $_POST['val_cierre'];
-echo $id_resp_riesgo = $_POST['id_resp_riesgo'];
+ $id_resp_riesgo = $_POST['id_resp_riesgo'];
 $texto_ayuda = $_POST['ayuda'];
 ?>
 <head>

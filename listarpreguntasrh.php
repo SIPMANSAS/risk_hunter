@@ -257,6 +257,7 @@ if(isset($_POST["identificau"]) or (isset($_POST["idbloque"])))
         $fecha_efectiva = $xrowp["fecha_efectiva"];
         $estado = $xrowp["estado"];
         $idrespuesta = $xrowp["id_respuesta"];
+        $resp_act_riesg = $xrowp["id_valor_resp_activa_riesgo"];
         $valorrespcierre = $xrowp["respcierre"];
         $valorrespriesgo = $xrowp["respriesgo"];
         $valorcodigo = $xrowp["codigo"];
@@ -386,7 +387,7 @@ if(isset($_POST["identificau"]) or (isset($_POST["idbloque"])))
                 <input class="ver" value="<?php echo $tipoInfText?>" name="tipo_informe">
                 <input class="ver" value="<?php echo $texto_informe ?>" name="texto_informe">
                 <input class="ver" value="<?php echo $tipo_informe?>" name="id_tipo_inf">
-                <input class="ver" value="<?php echo $idrespuesta?>" name="id_respu">
+                <input class="" value="<?php echo $idrespuesta?>" name="id_respu">
                 <input class="ver" value="<?php echo $valorrespcierre ?>" name="val_cierre">
                 <input class="ver" value="<?php echo $valorrespriesgo?>" name="id_resp_riesgo">
                 <input class="ver" value="<?php echo $ayuda?>" name="ayuda">
