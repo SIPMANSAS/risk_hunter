@@ -90,13 +90,7 @@
     <div class="front">
         <div><img src="img/logorh.png" alt=""></div>
         <div>
-            <p>Desarrollo del aplicativo 
-            web (Risk Hunter Plus – RH+), de acceso rápido y seguro, capaz de recolectar información en 
-            tiempo real, usando un formulario que se pueda diligenciar usando celular, tableta o computador 
-            portátil; <br> <br> aplicativo en el que se puedan cargar y guardar fotografías, que pueda hacer cálculos para 
-            determinar niveles de riesgo, tanto numéricamente como mediante imágenes y gráficos, para la 
-            obtención de un documento descargable (Informe de inspección) que se obtiene automáticamente 
-            con base en los resultados obtenidos</p>
+            <p>Ah ingresado al aplicativo web Risk Hunter Plus (RH+), una metodologia simple de evaluación por puntos, que identifica riesgos y los valora con base en el contexto de una persona,organización o empresa <br> <br> En este aplicativo podrá cargar fotografías, archivos, que le ayuden a soportar los informes descargables,sus respuestas,sus conclusiones, así como valorar los riesgos identificados, de manera automática y en tiempo real.</p>
         </div>
     </div>
     
