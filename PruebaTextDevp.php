@@ -516,10 +516,8 @@
                         if (name === "respuesta" && value.trim() !== "") {
                             array.push(value);
 
-                        } else if (name.startsWith("id_")) {
-                            console.log(name + " " + value);
-                            form_data.append(name, value);
-                        }
+                        } 
+                        form_data.append(name, value);
                     });
                     /*
                                         form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
@@ -583,10 +581,8 @@
                     if (name === "respuesta" && value.trim() !== "") {
                         array.push(value);
 
-                    } else if (name.startsWith("id_")) {
-                        console.log(name + " " + value);
-                        form_data.append(name, value);
                     }
+                    form_data.append(name, value);
                 });
                 /*
                                 form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
@@ -646,10 +642,8 @@
                     if (name === "respuesta" && value.trim() !== "") {
                         array.push(value);
 
-                    } else if (name.startsWith("id_")) {
-                        console.log(name + " " + value);
-                        form_data.append(name, value);
                     }
+                    form_data.append(name, value);
                 });
                 /*
                             form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
@@ -732,10 +726,8 @@
                 if (name === "respuesta" && value.trim() !== "") {
                     array.push(value);
 
-                } else if (name.startsWith("id_")) {
-                    console.log(name + " " + value);
-                    form_data.append(name, value);
                 }
+                form_data.append(name, value);
             });
             /*
                     form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop("files") : null);
