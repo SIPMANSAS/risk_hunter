@@ -240,7 +240,7 @@
     </table>
     <br>
     <br>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/mapa.png" ?>" alt="map not found"
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/mapa_$identificador.png" ?>" alt="map not found"
         width="600" height="300">
 
     <?php echo "<h2 align='center'>" . $textofinlalinderos . "</h2>"; ?>
@@ -276,7 +276,7 @@
             Niveles Por Riesgo
         </center>
     </h2>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica.png" ?>"
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica_$identificador.png" ?>"
         alt="Gráfico de nivel de riesgos" width="500" height="300">
     <br>
     <br>
@@ -289,7 +289,7 @@
     <br>
     <br>
     <br>
-    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica2.png" ?>"
+    <img src="<?php echo "https://" . $_SERVER['HTTP_HOST'] . "/risk_hunter/MostrarPDF/Imagen_Grafica2_$identificador.png" ?>"
         alt="Gráfico de nivel de riesgos" width="500" height="300">
     <br>
     <br>

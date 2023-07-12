@@ -175,7 +175,7 @@ if ($origen == '1') {
     // Obtener Cordenadas de google maps
     $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
     $imagenmapa = file_get_contents($url);
-    file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
+    file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
 
     $dbHost = 'localhost';
@@ -250,7 +250,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica = base64_encode(file_get_contents($chartUrl));
-    file_put_contents('MostrarPDF/Imagen_Grafica.png', file_get_contents($chartUrl));
+    file_put_contents('MostrarPDF/Imagen_Grafica_' . $identificador . '.png', file_get_contents($chartUrl));
 
     // GRAFICA #2
     $resultgrafica2 = $db->query("SELECT * FROM v_matriz_riesgos_x_inspeccion WHERE id_inspeccion = $identificador ORDER BY riesgo");
@@ -316,7 +316,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica2 = base64_encode(file_get_contents($chartUrl2));
-    file_put_contents('MostrarPDF/Imagen_Grafica2.png', file_get_contents($chartUrl2));
+    file_put_contents('MostrarPDF/Imagen_Grafica2_' . $identificador . '.png', file_get_contents($chartUrl2));
 
 
     //////////////////////////// TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
@@ -549,7 +549,7 @@ if ($origen == '1') {
     // Obtener Cordenadas de google maps
     $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
     $imagenmapa = file_get_contents($url);
-    file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
+    file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
 
     $dbHost = 'localhost';
@@ -625,7 +625,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica = base64_encode(file_get_contents($chartUrl));
-    file_put_contents('MostrarPDF/Imagen_Grafica.png', file_get_contents($chartUrl));
+    file_put_contents('MostrarPDF/Imagen_Grafica_' . $identificador . '.png', file_get_contents($chartUrl));
 
     // GRAFICA #2
     $resultgrafica2 = $db->query("SELECT * FROM v_matriz_riesgos_x_inspeccion WHERE id_inspeccion = $identificador ORDER BY riesgo");
@@ -691,7 +691,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica2 = base64_encode(file_get_contents($chartUrl2));
-    file_put_contents('MostrarPDF/Imagen_Grafica2.png', file_get_contents($chartUrl2));
+    file_put_contents('MostrarPDF/Imagen_Grafica2_' . $identificador . '.png', file_get_contents($chartUrl2));
 
     //////////////////////////// TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
@@ -926,7 +926,7 @@ if ($origen == '1') {
     // Obtener Cordenadas de google maps
     $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
     $imagenmapa = file_get_contents($url);
-    file_put_contents('MostrarPDF/mapa.png', $imagenmapa);
+    file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
 
     $dbHost = 'localhost';
@@ -1001,7 +1001,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica = base64_encode(file_get_contents($chartUrl));
-    file_put_contents('MostrarPDF/Imagen_Grafica.png', file_get_contents($chartUrl));
+    file_put_contents('MostrarPDF/Imagen_Grafica_' . $identificador . '.png', file_get_contents($chartUrl));
 
     // GRAFICA #2
     $resultgrafica2 = $db->query("SELECT * FROM v_matriz_riesgos_x_inspeccion WHERE id_inspeccion = $identificador ORDER BY riesgo");
@@ -1068,7 +1068,7 @@ if ($origen == '1') {
 
     // Obtener la imagen en formato PNG desde la URL de QuickChart
     $Imagen_Grafica2 = base64_encode(file_get_contents($chartUrl2));
-    file_put_contents('MostrarPDF/Imagen_Grafica2.png', file_get_contents($chartUrl2));
+    file_put_contents('MostrarPDF/Imagen_Grafica2_' . $identificador . '.png', file_get_contents($chartUrl2));
 
     //////////////////////////// TAMAÑO DE LA MATRIZ  ////////////////////////////////////////////
     $consultalabelshorizontales = $mysqli->query("SELECT * FROM cg_valores_dominio WHERE id_dominio=34 ORDER BY cg_valores_dominio.identificador DESC;");
@@ -1237,7 +1237,7 @@ $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 $dompdf->stream('ejemplo.pdf', array("Attachment" => false));
 
-unlink('MostrarPDF/Imagen_Grafica.png');
-unlink('MostrarPDF/Imagen_Grafica2.png');
-unlink('MostrarPDF/mapa.png');
+unlink('MostrarPDF/Imagen_Grafica_' . $identificador . '.png');
+unlink('MostrarPDF/Imagen_Grafica2_' . $identificador . '.png');
+unlink('MostrarPDF/mapa_' . $identificador . '.png');
 /* */
