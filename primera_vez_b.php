@@ -7,7 +7,7 @@
 <html lang="es">
 
 <head>
-  <title>Registro Compañia de Seguros</title>
+  <title>Registro Compañia de Segurosssss</title>
   <script src="https://kit.fontawesome.com/ba54e2cec4.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
