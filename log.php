@@ -32,7 +32,28 @@
             </div>
             <div class="campos">
                 <legend>contraseña</legend>
-                <input type="password" name="password" id="" placeholder="Su Contraseña">
+                <input type="password" name="password" id="contra" placeholder="Su Contraseña">
+                <br>
+                <!--<button class="btn_azul" type="button" onclick="mostrarContrasena()"><i class="fa fa-eye"></i></button>-->
+            </div>
+            <div class="campos">
+                <input type="checkbox" name="check_mostrar" onclick='handleClick(this);'><b> Mostrar contraseña</b><br>
+                <script>
+                    function handleClick(cb) {
+                          if(cb.checked)
+                             $('#contra').attr("type","text");
+                          else
+                            $('#contra').attr("type","password");
+                        }
+                    function mostrarContrasena(){
+                      var tipo = document.getElementById("contra");
+                      if(tipo.type == "password"){
+                          tipo.type = "text";
+                      }else{
+                          tipo.type = "password";
+                      }
+                    }
+                </script>
             </div>
             <div class="campos">
                 <input class="btn_azul" type="submit" value="Entrar" name="entrar">

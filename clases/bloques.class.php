@@ -1041,42 +1041,6 @@ class bloques extends utidatos {
             $consulta = "SELECT * FROM carga_masiva WHERE identificador > 1";
             return  $this->con->consulta($consulta);
         }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-   
+    }   
 }
-
 ?>

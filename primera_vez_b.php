@@ -1,4 +1,4 @@
-  <?php 
+<?php 
     include 'sec_login.php'; 
     include  "clases/bloques.class.php";
     ?>
@@ -51,7 +51,21 @@
                 echo '          <div><label for="">Pasword:</label> <input name="password1" id="passw1" type="text" placeholder="password" value="'.$password.'" required></div> ';
 
                 echo '          <div><label for="">Ingrese nuevo Password:</label> <input name="password2" id="passw2" type="password" placeholder="Nuevo password" required></div> ';
-
+                ?>
+                <br>
+                <div>
+                <input type="checkbox" name="check_mostrar" onclick='handleClick(this);'><b> Mostrar contraseña</b><br>
+                <script>
+                    function handleClick(cb) {
+                          if(cb.checked)
+                             $('#passw2').attr("type","text");
+                          else
+                            $('#passw2').attr("type","password");
+                        }
+                    
+                </script>
+            </div>
+                <?php
                 echo '          <div>
                                     <input class="btn_gris" type="reset" name="limpiar" value="limpiar">  
                                     <input class="btn_azul" type="submit" name="guardar_pass" value="Guardar" onclick="return validateEmail()" />

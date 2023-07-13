@@ -10,18 +10,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- CDN for chosen plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
     </script>
 
     <!-- CDN for CSS of chosen plugin -->
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        .h7 {
-            color: #868D92;
-            font-size: 10px;
-        }
+    .h7 {
+        color: #868D92;
+        font-size: 10px;
+    }
     </style>
 </head>
 
@@ -493,262 +495,93 @@
     ?>
 
     <script>
-        $(document).ready(function() {
-            $("select").chosen();
-            $(document).on('DOMSubtreeModified', 'select', function() {
-                $(this).chosen();
-            });
-
-            $('input[id=result_primary]').keypress(function(e) {
-                if (e.keyCode == 13) {
-
-                    var activeInput = document.activeElement;
-                    var formData = $(activeInput).closest('form');
-                    var form_data = new FormData();
-                    var array = [];
-
-                    form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
-                    formData.serializeArray().forEach(item => {
-                        const {
-                            name,
-                            value
-                        } = item;
-                        if (name === "respuesta" && value.trim() !== "") {
-                            array.push(value);
-
-                        } 
-                        form_data.append(name, value);
-                    });
-                    /*
-                                        form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                                            "files") : null);
-
-                                        for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                                            (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(
-                                                formData.serialize().split('&')[index].split("respuesta=")[1]): '';
-                                            (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data
-                                                .append("id_inspeccion", formData.serialize().split('&')[index].split(
-                                                    "id_inspeccion=")[1]): undefined;
-                                            (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                                                    "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                                                undefined;
-                                            (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ?
-                                            form_data.append("id_bloque_inspeccion", formData.serialize().split('&')[index]
-                                                .split("id_bloque_inspeccion=")[1]): undefined;
-                                            (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data
-                                                .append("identificador", formData.serialize().split('&')[index].split(
-                                                    "identificador=")[1]): undefined;
-                                            (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                                                    "codigo", formData.serialize().split('&')[index].split("codigo=")[1]):
-                                                undefined;
-                                        }
-                    */
-                    form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
-
-                    $.ajax({
-                        method: "POST",
-                        url: "funcioness/obtenerInputDinamic2.php",
-                        data: form_data,
-                        contentType: false,
-                        processData: false,
-                        success: function(response) {
-                            $('#ResponseAjax').append(response);
-                        },
-                        error: function(error) {
-                            alert('Internal error: ' + error.responseText);
-                            location.reload();
-                        }
-                    });
-
-                    return false;
-                }
-            });
-
-            $('select[id=result_primary]').change(function(e) {
-                e.preventDefault();
-
-                var activeInput = document.activeElement;
-                var formData = $(activeInput).closest('form');
-                var form_data = new FormData();
-                var array = [];
-
-                form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
-                formData.serializeArray().forEach(item => {
-                    const {
-                        name,
-                        value
-                    } = item;
-                    if (name === "respuesta" && value.trim() !== "") {
-                        array.push(value);
-
-                    }
-                    form_data.append(name, value);
-                });
-                /*
-                                form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                                    "files") : null);
-
-                                for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                                    (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
-                                        .serialize().split('&')[index].split("respuesta=")[1]): '';
-                                    (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
-                                        "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
-                                            1]): undefined;
-                                    (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                                            "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                                        undefined;
-                                    (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
-                                        .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
-                                            "id_bloque_inspeccion=")[1]): undefined;
-                                    (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
-                                        "identificador", formData.serialize().split('&')[index].split("identificador=")[
-                                            1]): undefined;
-                                    (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                                        "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
-                                }
-                */
-                form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
-
-                $.ajax({
-                    method: "POST",
-                    url: "funcioness/obtenerInputDinamic2.php",
-                    data: form_data,
-                    contentType: false,
-                    processData: false,
-                    success: function(response) {
-                        $('#ResponseAjax').append(response);
-                    },
-                    error: function(error) {
-                        alert('Internal error: ' + error.responseText);
-                        location.reload();
-                    }
-                });
-
-            });
-
-            $("input[id=Verificar]").click(function() {
-
-                var activeInput = document.activeElement;
-                var formData = $(activeInput).closest('form');
-                var form_data = new FormData();
-                var array = [];
-
-                form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
-                formData.serializeArray().forEach(item => {
-                    const {
-                        name,
-                        value
-                    } = item;
-                    if (name === "respuesta" && value.trim() !== "") {
-                        array.push(value);
-
-                    }
-                    form_data.append(name, value);
-                });
-                /*
-                            form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                                "files") : null);
-
-                            for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                                (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
-                                    .serialize().split('&')[index].split("respuesta=")[1]): '';
-                                (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
-                                    "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
-                                        1]): undefined;
-                                (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                                        "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                                    undefined;
-                                (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
-                                    .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
-                                        "id_bloque_inspeccion=")[1]): undefined;
-                                (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
-                                    "identificador", formData.serialize().split('&')[index].split("identificador=")[
-                                        1]): undefined;
-                                (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                                    "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
-                            }
-                */
-                form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
-
-                $.ajax({
-                    method: "POST",
-                    url: "funcioness/obtenerInputDinamic2.php",
-                    data: form_data,
-                    contentType: false,
-                    processData: false,
-                    success: function(response) {
-                        $('#ResponseAjax').append(response);
-                    },
-                    error: function(error) {
-                        alert('Internal error: ' + error.responseText);
-                        location.reload();
-                    }
-                });
-
-            });
+    $(document).ready(function() {
+        $("select").chosen();
+        $(document).on('DOMSubtreeModified', 'select', function() {
+            $(this).chosen();
         });
 
-        function SelectAjaxResponse(identificador, id_inspeccion, id_bloque_inspeccion, valor_respuesta_ant) {
-            console.log(valor_respuesta_ant);
-            $.ajax({
-                type: "POST",
-                url: "funcioness/obtenerInputDinamic2.php",
-                data: {
-                    "id": identificador,
-                    "inspeccion": id_inspeccion,
-                    "bloque_inspeccion": id_bloque_inspeccion,
-                    "valor": valor_respuesta_ant
-                },
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(error) {
-                    alert('Internal error: ' + error.responseText);
-                    location.reload();
+        $('input[id=result_primary]').keypress(function(e) {
+            if (e.keyCode == 13) {
+
+                var activeInput = document.activeElement;
+                var formData = $(activeInput).closest('form');
+                var form_data = new FormData();
+                var array = [];
+
+                form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
+                    "files") : null);
+
+                for (let index = 0; index < formData.serialize().split('&').length; index++) {
+                    (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(
+                        formData.serialize().split('&')[index].split("respuesta=")[1]): '';
+                    (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data
+                        .append("id_inspeccion", formData.serialize().split('&')[index].split(
+                            "id_inspeccion=")[1]): undefined;
+                    (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
+                            "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
+                        undefined;
+                    (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ?
+                    form_data.append("id_bloque_inspeccion", formData.serialize().split('&')[index]
+                        .split("id_bloque_inspeccion=")[1]): undefined;
+                    (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data
+                        .append("identificador", formData.serialize().split('&')[index].split(
+                            "identificador=")[1]): undefined;
+                    (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
+                            "codigo", formData.serialize().split('&')[index].split("codigo=")[1]):
+                        undefined;
                 }
-            });
+                form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
 
-        }
+                $.ajax({
+                    method: "POST",
+                    url: "funcioness/obtenerInputDinamic2.php",
+                    data: form_data,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $('#ResponseAjax').append(response);
+                    },
+                    error: function(error) {
+                        alert('Internal error: ' + error.responseText);
+                        location.reload();
+                    }
+                });
 
-        function submitForm() {
+                return false;
+            }
+        });
+
+        $('select[id=result_primary]').change(function(e) {
+            e.preventDefault();
 
             var activeInput = document.activeElement;
             var formData = $(activeInput).closest('form');
             var form_data = new FormData();
             var array = [];
-            
-            form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
-            formData.serializeArray().forEach(item => {
-                const {
-                    name,
-                    value
-                } = item;
-                if (name === "respuesta" && value.trim() !== "") {
-                    array.push(value);
 
-                }
-                form_data.append(name, value);
-            });
-            /*
-                    form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop("files") : null);
-                    for (let index = 0; index < formData.serialize().split('&').length; index++) {
+            form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
+                "files") : null);
 
-                        (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData.serialize().split(
-                            '&')[index].split("respuesta=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append("id_inspeccion",
-                            formData.serialize().split('&')[index].split("id_inspeccion=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append("idrestpt", formData
-                            .serialize().split('&')[index].split("idrestpt=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data.append(
-                                "id_bloque_inspeccion", formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]):
-                            undefined;
-                        (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append("identificador",
-                            formData.serialize().split('&')[index].split("identificador=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append("codigo", formData
-                            .serialize().split('&')[index].split("codigo=")[1]): undefined;
-                    }
-            */
-            form_data.append("respuesta", JSON.stringify(decodeURIComponent(array)).replace(/^\w\s/gi, ""));
+            for (let index = 0; index < formData.serialize().split('&').length; index++) {
+                (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
+                    .serialize().split('&')[index].split("respuesta=")[1]): '';
+                (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
+                    "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
+                        1]): undefined;
+                (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
+                        "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
+                    undefined;
+                (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
+                    .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
+                        "id_bloque_inspeccion=")[1]): undefined;
+                (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
+                    "identificador", formData.serialize().split('&')[index].split("identificador=")[
+                        1]): undefined;
+                (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
+                    "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
+            }
+            form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
 
             $.ajax({
                 method: "POST",
@@ -758,143 +591,257 @@
                 processData: false,
                 success: function(response) {
                     $('#ResponseAjax').append(response);
-
-                    if (JSON.stringify(decodeURIComponent(array)).replace(/^\w\s/gi, "") == "N/A")
-                        location.reload();
-
                 },
                 error: function(error) {
                     alert('Internal error: ' + error.responseText);
                     location.reload();
-                },
+                }
             });
 
-            setTimeout(() => {
+        });
 
-                var duplicadoForms = [];
-                $('#ResponseAjax form#formulary').each(function(index, element) {
-                    duplicadoForms.push(element.outerHTML);
-                });
+        $("input[id=Verificar]").click(function() {
 
-                var duplicateForms = duplicadoForms.filter(function(form, index, self) {
-                    return self.indexOf(form) !== self.lastIndexOf(form);
-                });
-
-
-                $('#ResponseAjax form#formulary').each(function(index, element) {
-                    var outerHTML = element.outerHTML;
-                    if (duplicateForms[outerHTML] === undefined) {
-                        duplicateForms[outerHTML] = 1;
-                    } else {
-                        duplicateForms[outerHTML]++;
-                    }
-                    if (duplicateForms[outerHTML] > 1) {
-                        $(element).remove();
-                        duplicateForms[outerHTML]--;
-                    }
-                });
-
-
-            }, 1200);
-
-            if (formData.serialize().split('&')[0].split('=')[1] == 2) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "funcioness/obtenerInputDinamic2.php",
-                    data: {
-                        "estado": 1,
-                        "codigo": formData.serialize().split('&')[1].split('=')[1],
-                    },
-                    success: function(response) {
-                        $('#ResponseAjaxCild').append(response).hide();
-                    },
-                    error: function(error) {
-                        alert('Internal error: ' + error.responseText);
-                        location.reload();
-                    }
-                });
-
-
-
-                setTimeout(() => {
-
-                    var array1 = [];
-                    var array2 = [];
-
-                    $('#ResponseAjax form#formulary').each(function(index, element) {
-                        array1.push(element.outerHTML);
-                    });
-                    $('#ResponseAjaxCild form#formulary').each(function(index, element) {
-                        array2.push(element.outerHTML);
-                    });
-
-                    var duplicates = $.grep(array1, function(form) {
-                        return $.inArray(form, array2) !== -1;
-                    });
-
-                    $('#ResponseAjax form#formulary').each(function(index, element) {
-                        if ($.inArray(element.outerHTML, duplicates) !== -1) {
-                            $(element).remove();
-                        }
-                    });
-
-                    $('#ResponseAjaxCild form#formulary').each(function(index, element) {
-                        $(element).remove();
-                    });
-
-                    // $('#ResponseAjax form#formulary').each(function(index, element) {
-                    //  $(element).remove();
-                    // });
-
-
-                }, 1400);
-            }
-
-
-        }
-
-        function close_tab() {
-            window.close();
-        }
-
-        function PassPage() {
             var activeInput = document.activeElement;
             var formData = $(activeInput).closest('form');
+            var form_data = new FormData();
+            var array = [];
 
-            var id_inspeccion = formData.serialize().split('&')[1].split('=')[1];
-            var id_bloque_inspeccion = formData.serialize().split('&')[2].split('=')[1];
-            var id = formData.serialize().split('&')[4].split('=')[1];
-            var idRespuest = formData.serialize().split('&')[3].split('=')[1];
+            form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
+                "files") : null);
+
+            for (let index = 0; index < formData.serialize().split('&').length; index++) {
+                (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
+                    .serialize().split('&')[index].split("respuesta=")[1]): '';
+                (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
+                    "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
+                        1]): undefined;
+                (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
+                        "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
+                    undefined;
+                (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
+                    .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
+                        "id_bloque_inspeccion=")[1]): undefined;
+                (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
+                    "identificador", formData.serialize().split('&')[index].split("identificador=")[
+                        1]): undefined;
+                (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
+                    "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
+            }
+            form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
+
+            $.ajax({
+                method: "POST",
+                url: "funcioness/obtenerInputDinamic2.php",
+                data: form_data,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    $('#ResponseAjax').append(response);
+                },
+                error: function(error) {
+                    alert('Internal error: ' + error.responseText);
+                    location.reload();
+                }
+            });
+
+        });
+    });
+
+    function SelectAjaxResponse(identificador, id_inspeccion, id_bloque_inspeccion, valor_respuesta_ant) {
+        console.log(valor_respuesta_ant);
+        $.ajax({
+            type: "POST",
+            url: "funcioness/obtenerInputDinamic2.php",
+            data: {
+                "id": identificador,
+                "inspeccion": id_inspeccion,
+                "bloque_inspeccion": id_bloque_inspeccion,
+                "valor": valor_respuesta_ant
+            },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                alert('Internal error: ' + error.responseText);
+                location.reload();
+            }
+        });
+
+    }
+
+    function submitForm() {
+
+        var activeInput = document.activeElement;
+        var formData = $(activeInput).closest('form');
+        var form_data = new FormData();
+        var array = [];
+
+        form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop("files") : null);
+        for (let index = 0; index < formData.serialize().split('&').length; index++) {
+
+            (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData.serialize().split(
+                '&')[index].split("respuesta=")[1]): undefined;
+            (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append("id_inspeccion",
+                formData.serialize().split('&')[index].split("id_inspeccion=")[1]): undefined;
+            (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append("idrestpt", formData
+                .serialize().split('&')[index].split("idrestpt=")[1]): undefined;
+            (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data.append(
+                    "id_bloque_inspeccion", formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]):
+                undefined;
+            (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append("identificador",
+                formData.serialize().split('&')[index].split("identificador=")[1]): undefined;
+            (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append("codigo", formData
+                .serialize().split('&')[index].split("codigo=")[1]): undefined;
+        }
+
+        form_data.append("respuesta", JSON.stringify(decodeURIComponent(array)).replace(/^\w\s/gi, ""));
+
+        $.ajax({
+            method: "POST",
+            url: "funcioness/obtenerInputDinamic2.php",
+            data: form_data,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                $('#ResponseAjax').append(response);
+
+                if (JSON.stringify(decodeURIComponent(array)).replace(/^\w\s/gi, "") == "N/A")
+                    location.reload();
+
+            },
+            error: function(error) {
+                alert('Internal error: ' + error.responseText);
+                location.reload();
+            },
+        });
+
+        setTimeout(() => {
+
+            var duplicadoForms = [];
+            $('#ResponseAjax form#formulary').each(function(index, element) {
+                duplicadoForms.push(element.outerHTML);
+            });
+
+            var duplicateForms = duplicadoForms.filter(function(form, index, self) {
+                return self.indexOf(form) !== self.lastIndexOf(form);
+            });
+
+
+            $('#ResponseAjax form#formulary').each(function(index, element) {
+                var outerHTML = element.outerHTML;
+                if (duplicateForms[outerHTML] === undefined) {
+                    duplicateForms[outerHTML] = 1;
+                } else {
+                    duplicateForms[outerHTML]++;
+                }
+                if (duplicateForms[outerHTML] > 1) {
+                    $(element).remove();
+                    duplicateForms[outerHTML]--;
+                }
+            });
+
+
+        }, 1200);
+
+        if (formData.serialize().split('&')[0].split('=')[1] == 2) {
+
             $.ajax({
                 type: "POST",
                 url: "funcioness/obtenerInputDinamic2.php",
                 data: {
-                    Consecutivo: 100,
-                    identificador: id,
-                    idrestpt: idRespuest,
-                    id_inspeccion: id_inspeccion,
-                    bloque_inspeccion: id_bloque_inspeccion
+                    "estado": 1,
+                    "codigo": formData.serialize().split('&')[1].split('=')[1],
                 },
                 success: function(response) {
-                    var consecutivoSQL = response;
-                    window.open("detallebienes.php?id_pregunta=" + id + "&id_inspecion=" + id_inspeccion +
-                        "&bloque_inspeccion=" + id_bloque_inspeccion + "&idres=" + idRespuest +
-                        "&consecutivo=" + consecutivoSQL + "", "", "width=1150,height=700", "resizable=no");
-
+                    $('#ResponseAjaxCild').append(response).hide();
+                },
+                error: function(error) {
+                    alert('Internal error: ' + error.responseText);
+                    location.reload();
                 }
             });
 
+
+
+            setTimeout(() => {
+
+                var array1 = [];
+                var array2 = [];
+
+                $('#ResponseAjax form#formulary').each(function(index, element) {
+                    array1.push(element.outerHTML);
+                });
+                $('#ResponseAjaxCild form#formulary').each(function(index, element) {
+                    array2.push(element.outerHTML);
+                });
+
+                var duplicates = $.grep(array1, function(form) {
+                    return $.inArray(form, array2) !== -1;
+                });
+
+                $('#ResponseAjax form#formulary').each(function(index, element) {
+                    if ($.inArray(element.outerHTML, duplicates) !== -1) {
+                        $(element).remove();
+                    }
+                });
+
+                $('#ResponseAjaxCild form#formulary').each(function(index, element) {
+                    $(element).remove();
+                });
+
+                // $('#ResponseAjax form#formulary').each(function(index, element) {
+                //  $(element).remove();
+                // });
+
+
+            }, 1400);
         }
+
+
+    }
+
+    function close_tab() {
+        window.close();
+    }
+
+    function PassPage() {
+        var activeInput = document.activeElement;
+        var formData = $(activeInput).closest('form');
+
+        var id_inspeccion = formData.serialize().split('&')[1].split('=')[1];
+        var id_bloque_inspeccion = formData.serialize().split('&')[2].split('=')[1];
+        var id = formData.serialize().split('&')[4].split('=')[1];
+        var idRespuest = formData.serialize().split('&')[3].split('=')[1];
+        $.ajax({
+            type: "POST",
+            url: "funcioness/obtenerInputDinamic2.php",
+            data: {
+                Consecutivo: 100,
+                identificador: id,
+                idrestpt: idRespuest,
+                id_inspeccion: id_inspeccion,
+                bloque_inspeccion: id_bloque_inspeccion
+            },
+            success: function(response) {
+                var consecutivoSQL = response;
+                window.open("detallebienes.php?id_pregunta=" + id + "&id_inspecion=" + id_inspeccion +
+                    "&bloque_inspeccion=" + id_bloque_inspeccion + "&idres=" + idRespuest +
+                    "&consecutivo=" + consecutivoSQL + "", "", "width=1150,height=700", "resizable=no");
+
+            }
+        });
+
+    }
     </script>
     <style>
-        div.box {
-            width: 200px;
-            margin: 10px 50px;
-            padding: 20px;
-            background-color: #ffffff;
-            color: #000;
-        }
+    div.box {
+        width: 200px;
+        margin: 10px 50px;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #000;
+    }
     </style>
     <div class="titulo_p">
         <form action="" method="post"></form>
@@ -912,9 +859,9 @@
     if ($proceso == 'FR') {
         $id_inspeccion = $_REQUEST["id_encuesta"];
     ?>
-        <div class="link_int">
-            <div class="titulo2"> <a href="listarencabezadoencabezadofreemium">+Listar Encabezados Freemium</a></div>
-        </div>
+    <div class="link_int">
+        <div class="titulo2"> <a href="listarencabezadoencabezadofreemium">+Listar Encabezados Freemium</a></div>
+    </div>
     <?php
     }
     ?>
@@ -935,35 +882,35 @@
             $id_inspeccion = $_REQUEST["id_encuesta"];
         ?>
 
-            <form action="capturarubicacionB.php" target="_blank" method="POST">
-                <input type="hidden" name="id_encuesta" value="<?php echo $id_inspeccion ?>">
-                <input type="hidden" name="usuario_id" value=<?php echo $id_usuario_ext ?>>
-                <input type="hidden" name="tipo_proceso" value="FR">
-                <button type="submit" class="btn_azul" onClick="myFunction()" name="capturarubicacionfree">TERMINAR
-                    INSPECCIÓN </button>
-            </form>
+        <form action="capturarubicacionB.php" target="_blank" method="POST">
+            <input type="hidden" name="id_encuesta" value="<?php echo $id_inspeccion ?>">
+            <input type="hidden" name="usuario_id" value=<?php echo $id_usuario_ext ?>>
+            <input type="hidden" name="tipo_proceso" value="FR">
+            <button type="submit" class="btn_azul" onClick="myFunction()" name="capturarubicacionfree">TERMINAR
+                INSPECCIÓN </button>
+        </form>
 
-            <script>
-                function myFunction() {
-                    alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
-                    window.location.href = "menu.php";
-                    //setTimeout("window.close('menu.php')", 3000)
-                }
-            </script>
+        <script>
+        function myFunction() {
+            alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
+            window.location.href = "menu.php";
+            //setTimeout("window.close('menu.php')", 3000)
+        }
+        </script>
         <?php
         } else {
         ?>
-            <form action="controller/controllerpreguntas.php" method="POST">
-                <?php
+        <form action="controller/controllerpreguntas.php" method="POST">
+            <?php
                 $id_inspeccion = $_REQUEST["id_encuesta"];
                 ?>
-                <input type="hidden" name="id_inspeccion" value="<?php echo $id_inspeccion ?>">
-                <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
-                <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
+            <input type="hidden" name="id_inspeccion" value="<?php echo $id_inspeccion ?>">
+            <input type="hidden" name="bloque_inspeccion" value="<?php echo $id_bloque_inspeccion ?>">
+            <input type="hidden" name="id_usuario" value="<?php echo $id_menu_p ?>">
 
-                <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN FREMIUM</button>
+            <button type="submit" class="btn_azul" name="terminar">TERMINAR INSPECCIÓN FREMIUM</button>
 
-            </form>
+        </form>
         <?php
         }
         ?>

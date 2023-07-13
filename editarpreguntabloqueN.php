@@ -19,7 +19,7 @@ $tipo_informe = $_POST['tipo_informe'];
 $texto_informe = $_POST['texto_informe'];
 $filtro = $id_respu = $_POST['id_respu'];
 $val_cierre = $_POST['val_cierre'];
- $id_resp_riesgo = $_POST['id_resp_riesgo'];
+echo $id_resp_riesgo = $_POST['id_resp_riesgo'];
 $texto_ayuda = $_POST['ayuda'];
 ?>
 <head>
@@ -55,7 +55,7 @@ $texto_ayuda = $_POST['ayuda'];
             <?php 
                 $datatipores = $bloques->buscatiporesB();
 
-                echo '<select id="paises_id" class="" name="tipo_res" required>';
+                echo '<select id="paises_id" class="" name="tipo_res" >';
        
                 while ($c = $bloques->obtener_fila($datatipores)) {
     
@@ -78,7 +78,7 @@ $texto_ayuda = $_POST['ayuda'];
                 
                 $datacieere = $bloques->seldepB($val_cierre);
                 
-                echo ' <select id="departamento_id" name="resp_cierre" required> ';
+                echo ' <select id="departamento_id" name="resp_cierre" > ';
                 
                 while($d = $bloques->obtener_fila($datacieere)){
                     
@@ -100,7 +100,7 @@ $texto_ayuda = $_POST['ayuda'];
                 
                 $dataactries = $bloques->seldepB($val_cierre);
                 
-                echo ' <select id="ciudad_id" name="resp_act_riesgo" required> ';
+                echo ' <select id="ciudad_id" name="resp_act_riesgo" > ';
                 
                 while($d = $bloques->obtener_fila($dataactries)){
                     
@@ -119,7 +119,7 @@ $texto_ayuda = $_POST['ayuda'];
        
          <div class="inputs_r">
             <label>Tipo Texto Respuesta</label>
-            <select class="form-control" name="tipo_respuesta" required>
+            <select class="form-control" name="tipo_respuesta" >
                 <option value="">--SELECCIONAR TIPO TEXTO RESPUESTA--</option>
                 <?php
                 while ($t = $bloques->obtener_fila($consultatiporespuestatexto)){
