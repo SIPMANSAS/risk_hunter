@@ -1,4 +1,5 @@
 <?php 
+///// Cargar
     include 'sec_login.php'; 
     include  "clases/bloques.class.php";
     ?>
