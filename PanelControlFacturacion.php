@@ -41,6 +41,12 @@ include 'conexion/conexion.php';
     ?>
     <div class="titulo_p"><i class="fa fa-credit-card"></i>&nbsp;Panel de Control Facturación</div>
 
+
+    <div class="link_int">
+        <div class=""></div>
+        <div class="titulo3"><i class="fa-solid fa-plus"></i><a href="PanelControlPasarela.php"> Crear Pasarela de pago</a></div>
+    </div>
+
     <div class="contenedor_titulos">
         <div class="titulo">Facturación</div>
     </div>
@@ -210,7 +216,6 @@ include 'conexion/conexion.php';
             });
 
         });
-
     </script>
     <?php include 'footer.php';  ?>
 </body>
