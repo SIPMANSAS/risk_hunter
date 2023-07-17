@@ -892,7 +892,7 @@
     </div>
 
 
-
+    <a href="#" id="refreshButton" class="floating-button">Refrescar</a>
     <?php echo $html; ?>
     <div id="ResponseAjax"></div>
     <div id="ResponseAjaxCild"></div>
