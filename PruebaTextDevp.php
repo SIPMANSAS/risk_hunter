@@ -831,6 +831,13 @@
             });
 
         }
+        document.getElementById('refreshButton').addEventListener('click', function() {
+            // Mostramos una alerta
+            alert('Has hecho clic en el botón.');
+
+            // Actualizamos la página
+            location.reload();
+        });
     </script>
     <style>
         div.box {
@@ -912,14 +919,6 @@
             </form>
 
             <script>
-                document.getElementById('refreshButton').addEventListener('click', function() {
-                    // Mostramos una alerta
-                    alert('Has hecho clic en el botón.');
-
-                    // Actualizamos la página
-                    location.reload();
-                });
-
                 function myFunction() {
                     alert("Por último, bríndanos información del Estrato y el Espacio Geográfico del Inmueble");
                     window.location.href = "menu.php";
