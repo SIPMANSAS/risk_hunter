@@ -831,14 +831,6 @@
             });
 
         }
-        $('#refreshButton').click(function(e) {
-            e.preventDefault();
-            // Mostramos una alerta
-            alert('Has hecho clic en el botón.');
-
-            // Actualizamos la página
-            location.reload();
-        });
     </script>
     <style>
         div.box {
@@ -900,7 +892,7 @@
     </div>
 
 
-    <a href="#" id="refreshButton" class="floating-button">Refrescar</a>
+    <a href="PruebaTextDevp.php" class="floating-button">Refrescar</a>
     <?php echo $html; ?>
     <div id="ResponseAjax"></div>
     <div id="ResponseAjaxCild"></div>
