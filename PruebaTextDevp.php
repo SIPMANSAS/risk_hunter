@@ -831,7 +831,8 @@
             });
 
         }
-        document.getElementById('refreshButton').addEventListener('click', function() {
+        $('#refreshButton').click(function(e) {
+            e.preventDefault();
             // Mostramos una alerta
             alert('Has hecho clic en el botón.');
 
