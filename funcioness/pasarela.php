@@ -23,7 +23,7 @@ if (isset($_POST["key"], $_POST["update"])) {
     $key = $_POST["key"];
 
     Update($id, $key);
-
+    
     header('Location: ../PanelControlPasarela.php');
 }
 
