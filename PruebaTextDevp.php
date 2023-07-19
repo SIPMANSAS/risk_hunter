@@ -507,28 +507,18 @@
                     var form_data = new FormData();
                     var array = [];
 
-                    form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                        "files") : null);
+                    form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
+                    formData.serializeArray().forEach(item => {
+                        const {
+                            name,
+                            value
+                        } = item;
+                        if (name === "respuesta" && value.trim() !== "") {
+                            array.push(value);
 
-                    for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                        (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(
-                            formData.serialize().split('&')[index].split("respuesta=")[1]): '';
-                        (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data
-                            .append("id_inspeccion", formData.serialize().split('&')[index].split(
-                                "id_inspeccion=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                                "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                            undefined;
-                        (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ?
-                        form_data.append("id_bloque_inspeccion", formData.serialize().split('&')[index]
-                            .split("id_bloque_inspeccion=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data
-                            .append("identificador", formData.serialize().split('&')[index].split(
-                                "identificador=")[1]): undefined;
-                        (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                                "codigo", formData.serialize().split('&')[index].split("codigo=")[1]):
-                            undefined;
-                    }
+                        }
+                        form_data.append(name, value);
+                    });
                     form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
 
                     $.ajax({
@@ -558,27 +548,18 @@
                 var form_data = new FormData();
                 var array = [];
 
-                form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                    "files") : null);
+                form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
+                formData.serializeArray().forEach(item => {
+                    const {
+                        name,
+                        value
+                    } = item;
+                    if (name === "respuesta" && value.trim() !== "") {
+                        array.push(value);
 
-                for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                    (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
-                        .serialize().split('&')[index].split("respuesta=")[1]): '';
-                    (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
-                        "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
-                            1]): undefined;
-                    (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                            "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                        undefined;
-                    (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
-                        .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
-                            "id_bloque_inspeccion=")[1]): undefined;
-                    (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
-                        "identificador", formData.serialize().split('&')[index].split("identificador=")[
-                            1]): undefined;
-                    (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                        "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
-                }
+                    }
+                    form_data.append(name, value);
+                });
                 form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
 
                 $.ajax({
@@ -605,27 +586,18 @@
                 var form_data = new FormData();
                 var array = [];
 
-                form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop(
-                    "files") : null);
+                form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
+                formData.serializeArray().forEach(item => {
+                    const {
+                        name,
+                        value
+                    } = item;
+                    if (name === "respuesta" && value.trim() !== "") {
+                        array.push(value);
 
-                for (let index = 0; index < formData.serialize().split('&').length; index++) {
-                    (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData
-                        .serialize().split('&')[index].split("respuesta=")[1]): '';
-                    (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append(
-                        "id_inspeccion", formData.serialize().split('&')[index].split("id_inspeccion=")[
-                            1]): undefined;
-                    (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append(
-                            "idrestpt", formData.serialize().split('&')[index].split("idrestpt=")[1]):
-                        undefined;
-                    (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data
-                        .append("id_bloque_inspeccion", formData.serialize().split('&')[index].split(
-                            "id_bloque_inspeccion=")[1]): undefined;
-                    (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append(
-                        "identificador", formData.serialize().split('&')[index].split("identificador=")[
-                            1]): undefined;
-                    (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append(
-                        "codigo", formData.serialize().split('&')[index].split("codigo=")[1]): undefined;
-                }
+                    }
+                    form_data.append(name, value);
+                });
                 form_data.append("respuesta", JSON.stringify(decodeURI(array)).replace(/^\w\s/gi, ""));
 
                 $.ajax({
@@ -675,23 +647,18 @@
             var form_data = new FormData();
             var array = [];
 
-            form_data.append("fileinput", $(formData[0][6]).prop("files") ? $(formData[0][6]).prop("files") : null);
-            for (let index = 0; index < formData.serialize().split('&').length; index++) {
+            form_data.append("fileinput", $(formData).find('[name="fileinput"]').prop("files")[0] || null);
+            formData.serializeArray().forEach(item => {
+                const {
+                    name,
+                    value
+                } = item;
+                if (name === "respuesta" && value.trim() !== "") {
+                    array.push(value);
 
-                (formData.serialize().split('&')[index].split("respuesta=")[1]) ? array.push(formData.serialize().split(
-                    '&')[index].split("respuesta=")[1]): undefined;
-                (formData.serialize().split('&')[index].split("id_inspeccion=")[1]) ? form_data.append("id_inspeccion",
-                    formData.serialize().split('&')[index].split("id_inspeccion=")[1]): undefined;
-                (formData.serialize().split('&')[index].split("idrestpt=")[1]) ? form_data.append("idrestpt", formData
-                    .serialize().split('&')[index].split("idrestpt=")[1]): undefined;
-                (formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]) ? form_data.append(
-                        "id_bloque_inspeccion", formData.serialize().split('&')[index].split("id_bloque_inspeccion=")[1]):
-                    undefined;
-                (formData.serialize().split('&')[index].split("identificador=")[1]) ? form_data.append("identificador",
-                    formData.serialize().split('&')[index].split("identificador=")[1]): undefined;
-                (formData.serialize().split('&')[index].split("codigo=")[1]) ? form_data.append("codigo", formData
-                    .serialize().split('&')[index].split("codigo=")[1]): undefined;
-            }
+                }
+                form_data.append(name, value);
+            });
 
             form_data.append("respuesta", JSON.stringify(decodeURIComponent(array)).replace(/^\w\s/gi, ""));
 
@@ -787,11 +754,6 @@
                     $('#ResponseAjaxCild form#formulary').each(function(index, element) {
                         $(element).remove();
                     });
-
-                    // $('#ResponseAjax form#formulary').each(function(index, element) {
-                    //  $(element).remove();
-                    // });
-
 
                 }, 1400);
             }
