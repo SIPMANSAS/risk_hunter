@@ -12,6 +12,23 @@ class consultasbd extends utidatos
     }
 
 
+    function pasarelaInsert($key, $currency, $tax_base, $tax, $country, $lang, $external, $confirmation, $response)
+    {
+        if ($this->con->conectar() == true) {
+            $consulta = "INSERT INTO PaymentGateway (gateway_key, currency, tax_base, tax, country, lang, external, confirmation, response)
+            VALUES ('$key', '$currency', '$tax_base', '$tax', '$country', '$lang', '$external', '$confirmation', '$response')";
+            return $this->con->consulta($consulta);
+        }
+    }
+
+    function pasarelaUpdate($id, $key)
+    {
+        if ($this->con->conectar() == true) {
+            $consulta = "UPDATE PaymentGateway SET gateway_key = '$key' WHERE id = '$id'";
+            return $this->con->consulta($consulta);
+        }
+    }
+
     function buscarConsecutivo($id_inspeccion, $id_bloque_inspeccion)
     {
         if ($this->con->conectar() == true) {
@@ -23,7 +40,7 @@ class consultasbd extends utidatos
     function SeachTextToNumber($identificador, $p_respuesta)
     {
         if ($this->con->conectar() == true) {
-             $p_respuesta = str_replace(',', "','", $p_respuesta);
+            $p_respuesta = str_replace(',', "','", $p_respuesta);
             $consulta = "SELECT Min(enc_lista_valores.identificador) as id_valores FROM enc_preguntas,enc_respuestas,enc_lista_valores,cg_valores_dominio WHERE enc_preguntas.id_respuesta = enc_respuestas.identificador AND enc_respuestas.identificador = enc_lista_valores.id_respuesta AND enc_respuestas.vdom_tipo_dato = cg_valores_dominio.identificador AND enc_preguntas.identificador ='" . $identificador . "' AND enc_lista_valores.valor_alfa_numerico in ('$p_respuesta')";
             return $this->con->consulta($consulta);
         }
@@ -32,7 +49,7 @@ class consultasbd extends utidatos
     function buscarConsecutivoExists($id_inspeccion, $p_pregunta_actual, $id_respuesta)
     {
         if ($this->con->conectar() == true) {
-             $consulta = "SELECT consecutivo FROM enc_detalles_inspeccion WHERE id_inspeccion = '" . $id_inspeccion . "' AND id_pregunta = '" . $p_pregunta_actual . "' AND id_respuesta='" . $id_respuesta . "'";
+            $consulta = "SELECT consecutivo FROM enc_detalles_inspeccion WHERE id_inspeccion = '" . $id_inspeccion . "' AND id_pregunta = '" . $p_pregunta_actual . "' AND id_respuesta='" . $id_respuesta . "'";
             return $this->con->consulta($consulta);
         }
     }
@@ -105,7 +122,7 @@ class consultasbd extends utidatos
         }
     }
 
-    function buscarProcedimientoResponseSelectAjax($identificador,$id_inspeccion,$id_bloque_inspeccion,$valor_respuesta_ant)
+    function buscarProcedimientoResponseSelectAjax($identificador, $id_inspeccion, $id_bloque_inspeccion, $valor_respuesta_ant)
     {
         if ($this->con->conectar() == true) {
             $consulta = "select enc_lista_valores.identificador as id_valores,enc_lista_valores.valor_alfa_numerico from enc_preguntas,enc_respuestas,enc_lista_valores,cg_valores_dominio WHERE enc_preguntas.id_respuesta = enc_respuestas.identificador AND enc_respuestas.identificador = enc_lista_valores.id_respuesta AND enc_respuestas.vdom_tipo_dato = cg_valores_dominio.identificador AND enc_preguntas.identificador ='" . $identificador . "' AND llave_foranea = (SELECT d.id_valor_respuesta llave_foranea FROM enc_detalles_inspeccion d WHERE d.id_inspeccion = $id_inspeccion AND d.bloque_inspeccion = $id_bloque_inspeccion AND d.id_pregunta = $valor_respuesta_ant) ";
