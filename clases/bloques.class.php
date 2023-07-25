@@ -11,6 +11,21 @@ class bloques extends utidatos {
 
 	}
 	
+	function consultalistaparametrizacion(){
+	   if($this->con->conectar()==true){     
+            $consulta= "SELECT * FROM ad_comunicaciones WHERE estado=1";
+            return  $this->con->consulta($consulta);
+        }
+	}
+	
+	function consultalistaparametrizacioninactiva(){
+	   if($this->con->conectar()==true){     
+            $consulta= "SELECT * FROM ad_comunicaciones WHERE estado=0";
+            return  $this->con->consulta($consulta);
+        }
+	}
+	
+	
 	function buscadetalleencuesta(){
         if($this->con->conectar()==true){     
             $consulta= "SELECT * FROM `v_detalle_encuestas` GROUP BY id_encuesta";

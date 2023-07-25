@@ -1,4 +1,4 @@
-    <?php include 'sec_login.php'; ?>
+<?php include 'sec_login.php'; ?>
     <!DOCTYPE html>
     <?php
     
