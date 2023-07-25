@@ -26,7 +26,7 @@
 </style>
 <head>
     <meta charset="UTF-8">
-    <title>Reporte Inspección Freeeee <?php echo $numeroInspeccion ?></title>
+    <title>Reporte Inspección Freeeeeeeeeeeeeeeeeeeee <?php echo $numeroInspeccion ?></title>
     <style>
         .page-break {
             page-break-after: always;
