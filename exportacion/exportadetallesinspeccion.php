@@ -1,5 +1,5 @@
 <?php
-///Desde el server local aaaaaa
+///Desde el server local aaaaaaaaa
 
 include '../conexion/conexion.php';
 
