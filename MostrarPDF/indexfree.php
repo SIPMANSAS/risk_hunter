@@ -26,7 +26,7 @@
 </style>
 <head>
     <meta charset="UTF-8">
-    <title>Reporte Inspección Freeeeeeeeeeeeeeeeeeeee <?php echo $numeroInspeccion ?></title>
+    <title>Reporte Inspección Fremiummmm <?php echo $numeroInspeccion ?></title>
     <style>
         .page-break {
             page-break-after: always;
@@ -100,7 +100,7 @@
     if ($origen == 1) {
     ?>
         <h1>
-            <center>DATOS BASICOS DE LA INSPECCIÓN</center>
+            <center style="font-size: 14px;">DATOS BASICOS DE LA INSPECCIÓN</center>
         </h1>
         <br>
         <br>
@@ -209,8 +209,8 @@
     }
     ?>
     <h1>
-        <center>
-            INFORMACIÓN GEOESTACIONARIA
+        <center  style="font-size: 16px;">
+           UBICACIÓN GEOGRÁFICA
         </center>
     </h1>
     <br>
@@ -299,8 +299,14 @@
     <?php echo str_replace('&nbsp;', '', $tabla); ?>
     <div class="page-break"></div>
     <h1>
-        <center>ANÁLISIS RISK HUNTER +
+        <center style="font-size: 16px;">ANÁLISIS RISK HUNTER PLUS (RH+)
     </h1>
+    <br>
+    <br>
+    <p style="font-size: 12px;">
+        A continuación, IES Consultores Group S.A.S. se permite compartirle un gráfico comparativo de los riesgos identificados por Risk Hunter Plus (RH+). Este gráfico viene por colores y por puntos; según sea el puntaje de cada riesgo irán variando los colores: verde, amarillo y anaranjado, denominados Niveles de atención.
+    </p>
+    <br>
     <br>
     <h2>
         <center>
@@ -343,7 +349,8 @@
         <br>
     <?php echo 'F CI' . $f_ci . 'SELECT f_ci(' . $identificacion . ') AS f_ci';
     } ?>
-  
+    <p style="font-size: 12px;">
+       Recuerde, todos los riesgos pueden ser importantes, los Niveles de atención le permitirán mirar con detenimiento aquellos riesgos que puedan necesitar de gestión, de administración: en cuanto mayor puntaje y más grande sea la barra de color, mayor atención requerirá ese riesgo.
     <h1>
         <center>CONVENCIONES</center>
         <br>
