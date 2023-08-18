@@ -173,7 +173,7 @@ if ($origen == '1') {
 </table>';
 
     // Obtener Cordenadas de google maps
-    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
+    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=";
     $imagenmapa = file_get_contents($url);
     file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
@@ -547,7 +547,7 @@ if ($origen == '1') {
 </table>';
 
     // Obtener Cordenadas de google maps
-    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
+    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=";
     $imagenmapa = file_get_contents($url);
     file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
@@ -924,7 +924,7 @@ if ($origen == '1') {
 </table>';
 
     // Obtener Cordenadas de google maps
-    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=AIzaSyBUdqwj6Cp2rVXv2RzGdXU40rZt8agrMNE";
+    $url = "https://maps.googleapis.com/maps/api/staticmap?center={$latitud},{$longitud}&zoom=15&size=640x640&markers=color:red%7Clabel:M%7C{$latitud},{$longitud}&key=";
     $imagenmapa = file_get_contents($url);
     file_put_contents('MostrarPDF/mapa_' . $identificador . '.png', $imagenmapa);
 
