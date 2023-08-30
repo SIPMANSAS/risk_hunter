@@ -62,7 +62,7 @@
                     </script>
                 </div>
                 <div class="campos">
-                <div class="g-recaptcha" data-sitekey="6Lfe_IQeAAAAAPZAHvytP-yX9HYSfydu20cSD-Iz"></div>
+                <div class="g-recaptcha" data-sitekey="6LeV8-UnAAAAABpyrLPMbbPPIY9JR8jxnYLNq_rt"></div>
                     <input class="btn_azul" type="submit" value="Entrar" name="entrar">
                 </div>
             </form>
