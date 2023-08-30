@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/regiones.css">
     <script src="https://kit.fontawesome.com/ba54e2cec4.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -61,6 +62,7 @@
                     </script>
                 </div>
                 <div class="campos">
+                <div class="g-recaptcha" data-sitekey="6Lfe_IQeAAAAAPZAHvytP-yX9HYSfydu20cSD-Iz"></div>
                     <input class="btn_azul" type="submit" value="Entrar" name="entrar">
                 </div>
             </form>

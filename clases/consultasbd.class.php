@@ -10,7 +10,23 @@ class consultasbd extends utidatos
     {
         $this->con->destruir();
     }
+    
 
+    function ValidaInformacionInspecciones($numero,$fecha)
+    {
+        if ($this->con->conectar() == true) {
+            $consulta = "CALL validar_facturacion('" . $numero . "','" . $fecha . "')";
+            return $this->con->consulta($consulta);
+        }
+    }
+
+    function Contador($numero)
+    {
+        if ($this->con->conectar() == true) {
+            $consulta = "CALL IncrementInspeccionesCliente('" . $numero . "')";
+            return $this->con->consulta($consulta);
+        }
+    }
 
     function pasarelaInsert($key, $currency, $tax_base, $tax, $country, $lang, $external, $confirmation, $response)
     {
